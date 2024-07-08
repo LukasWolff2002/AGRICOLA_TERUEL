@@ -1,0 +1,24 @@
+p {
+    font-size: 17px; /* Tamaño de fuente */
+    line-height: 1.5; /* Altura de línea para un espaciado adecuado entre líneas */
+    margin: 0%; /* Elimina todo el margen (incluido el margen inferior) */
+
+  }
+  
+  .container p {
+    position: relative; /* Posición absoluta para poder ajustar top, bottom, left, right */
+    margin-top: 2%; /* Ajusta el margen superior */
+    left: 0%; /* Ajusta la posición desde la izquierda */
+    text-align: left; /* Alinea el texto a la izquierda */
+  }
+  
+  p.highlighted {
+    background-color: #ffffcc; /* Fondo resaltado */
+    padding: 0%; /* Espaciado interno */
+  }
+  
+  .section p {
+    font-weight: bold; /* Texto en negrita */
+    color: #d43e3e; /* Color de texto */
+  }
+  

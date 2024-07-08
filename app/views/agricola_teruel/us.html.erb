@@ -1,0 +1,12 @@
+<%= stylesheet_link_tag 'portada' %>
+<%= stylesheet_link_tag 'text_with_line' %>
+<%= stylesheet_link_tag 'paragraph' %>
+<%= stylesheet_link_tag 'columns' %>
+<%= stylesheet_link_tag 'slides' %>
+
+<div class="portada-container">
+  <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, 20%);" %>
+  <div class="image-text" style='font-size: 80px;'>
+    Nosotros
+  </div>
+</div>

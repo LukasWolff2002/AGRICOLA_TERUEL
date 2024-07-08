@@ -1,0 +1,33 @@
+.image-gallery {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .image-gallery td, .image-gallery th {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .thumbnail {
+    max-width: 100px;  /* Ajusta el tamaño de la miniatura */
+    height: auto;
+  }
+  
+  .btn {
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .btn-danger {
+    background-color: red;
+    color: white;
+    /* Otros estilos para el botón */
+  }
+  
+  .btn-secondary {
+    background-color: gray;
+    color: white;
+    /* Otros estilos para el botón */
+  }
+  

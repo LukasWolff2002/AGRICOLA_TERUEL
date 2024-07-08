@@ -1,0 +1,188 @@
+<%= stylesheet_link_tag 'portada' %>
+<%= stylesheet_link_tag 'text_with_line' %>
+<%= stylesheet_link_tag 'paragraph' %>
+<%= stylesheet_link_tag 'columns' %>
+<%= stylesheet_link_tag 'slides' %>
+<%= stylesheet_link_tag 'modal' %>
+
+<div class="portada-container">
+  <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
+  <div class="image-text" style='background-color: rgba(229, 8, 8, 0.7); font-size: 32px;'>
+    Sabores Que No<br>
+    Dañan Tu Cuerpo
+  </div>
+</div>
+
+<div class="text-container">
+  <div class="text-with-line">
+    <span class="colored-text">Entrégale Vida<br>A Tu Mesa</span>
+  </div>
+</div>
+
+<div class="container">
+  <p>Comparte con nosotros el placer de una alimentación<br>sana y entretenida con distintos formatos de productos</p>
+</div>
+
+<div class='container' style='margin-top: 30px;'></div>
+
+<div class="columnas_4_contenedor">
+  <div class="column">
+    <div class="column-red-container">
+      <%= image_tag @variedad_1.archivo.url, alt: @variedad_1.name, class: "red-container" %>
+    </div>
+    <span class="column-text">Tomate Granel</span>
+    <div class="column-paragraph">
+      <p>El mejor acompañante de la cocina chilena</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="column-red-container">
+      <%= image_tag @variedad_2.archivo.url, alt: @variedad_2.name, class: "red-container" %>
+    </div>
+    <span class="column-text">Tomate Racimo</span>
+    <div class="column-paragraph">
+      <p>Conservamos Todas Las Propiedades Del Tomate A Través De Una Presentación Más Natural.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="column-red-container">
+      <%= image_tag @variedad_3.archivo.url, alt: @variedad_3.name, class: "red-container" %>
+    </div>
+    <span class="column-text">Tomate Beef</span>
+    <div class="column-paragraph">
+      <p>¿Necesitamos Tamaño? ¿o un sabor intenso? Prueba nuestros Beefs inócuos, sabrosos y contundentes.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="column-red-container">
+      <%= image_tag @variedad_4.archivo.url, alt: @variedad_4.name, class: "red-container" %>
+    </div>
+    <span class="column-text">Tomate Cherry</span>
+    <div class="column-paragraph">
+      <p>Deleita tu paladar con el especial "crunch" de nuestros cherry.</p>
+    </div>
+  </div>
+</div>
+
+<div class="slides-container">
+  <div class="background_card" style='top: var(--card-top, 30px); left: var(--card-left, 885px); width: var(--card-width, 25%); height: var(--card-height, 85%);'></div> 
+  <div class="card left-card" style='top: var(--left-card-top, 20px); left: var(--left-card-left, 300px);'>
+    <%= image_tag @slides_1.archivo.url, alt: @slides_1.name, class: "background-image" %>
+  </div>
+  <div class="card right-card" style='top: var(--right-card-top, 130px); left: var(--right-card-left, 300px);'>
+    <div class="text-container" style='text-align: left; left: 0%;'>
+      <div class="text-with-line" >
+        <span class="colored-text">Un Secreto Que <br>Muy Pocos Saben</span>
+      </div>
+    </div>
+    <p>Nuestros tomates respetan procesos de inocuidad y de baja utilización de pesticidas. Sólo así cuidamos el área donde está la mayor cantidad de nutrientes: La piel. ¿Lo sabías?</p>
+    <ul>
+      <li>Altos en Vitamina C</li>
+      <li>Rico en Potasio</li>
+      <li>Contiene Licopeno</li>
+    </ul>
+
+    <button type="button" class="open-modal button-style">Hablemos</button>
+
+    <!-- Modal -->
+    <div class="modal my-modal" style="display:none;">
+      <!-- Contenido del modal -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <%= render 'comments/new', comment: @comment %>
+      </div>
+    </div>
+
+    <button type="button" class="open-modal button-style">Más Información</button>
+  </div>
+</div>
+
+<div class="text-container">
+  <div class="text-with-line">
+    <span class="colored-text">Nuestras Redes</span>
+  </div>
+</div>
+
+<div class='container' style='margin-top: 30px;'></div>
+
+<div class="columnas_4_contenedor">
+  <div class="column">
+    <div class="column-red-container">
+      <%= link_to(image_tag(@red_1.archivo.url, alt: @red_1.name, class: "red-container"), 'https://www.instagram.com/p/C7_uxrKRzwZ/') %>
+    </div>
+    <span class="column-text">Un Tomate Verde</span>
+  </div>
+  <div class="column">
+    <div class="column-red-container">
+      <%= link_to(image_tag(@red_2.archivo.url, alt: @red_2.name, class: "red-container"), 'https://www.instagram.com/p/C8rwKVTRh2I/') %>
+    </div>
+    <span class="column-text">Nuestros Cherry</span>
+  </div>
+  <div class="column">
+    <div class="column-red-container">
+      <%= link_to(image_tag(@red_3.archivo.url, alt: @red_3.name, class: "red-container"), 'https://www.instagram.com/p/C5QhJSNrGTa/') %>
+    </div>
+    <span class="column-text">Carlo Cocina</span>
+  </div>
+  <div class="column">
+    <div class="column-red-container">
+      <%= link_to(image_tag(@red_4.archivo.url, alt: @red_4.name, class: "red-container"), 'https://www.instagram.com/p/C0rD88mO_th/') %>
+    </div>
+    <span class="column-text">Cocina</span>
+  </div>
+</div>
+
+<div class="slides-container">
+  <div class="background_card" style='top: var(--card-top, 45px); left: var(--card-left, 720px); width: var(--card-width, 40%); height: var(--card-height, 60%);'></div> 
+  <div class="card left-card" style='top: var(--left-card-top, 60px); left: var(--left-card-left, 250px); width: 40%;'>
+    <%= image_tag @slides_2.archivo.url, alt: @slides_2.name, class: "background-image" %>
+  </div>
+  <div class="card right-card" style='top: var(--rigth-card-top, 100px); left: var(--rigth-card-left, 160px);'>
+    <div class="text-container" style='text-align: left; left: 0%;'>
+      <div class="text-with-line" >
+        <span class="colored-text">¿Por qué somos el tomate más <br> sabroso
+        que no encontrarás <br> en cualquier lugar?</span>
+      </div>
+    </div>
+    <ul>
+      <li>Inocuidad y sustentabilidad en nuestros procesos productivos</li>
+      <li>Tomates llenos de sabor, variedad y aroma que no dañan tu cuerpo</li>
+      <li>Tomates Limpios y firmes. Nada de residuos</li>
+      <li>Producimos con un Manejo Integrado de Plagas (MIP) para cuidar tu salud.</li>
+      <li>Evita riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
+      <li>Tenemos certificaciones GlobalGap, FSMA, GRASP.</li>
+    </ul>
+    <!-- Botón para abrir el modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uniqueModalId">
+      Abrir Modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="uniqueModalId" tabindex="-1" aria-labelledby="uniqueModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="uniqueModalLabel">Título del Modal</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <span class="close">&times;</span>
+            <%= render 'comments/new', comment: @comment %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button type="button" class="open-modal button-style">Más Información</button>
+  </div>
+</div>
+
+
+
+
+

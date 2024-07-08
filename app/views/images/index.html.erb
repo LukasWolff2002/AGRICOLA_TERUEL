@@ -1,0 +1,55 @@
+<%= stylesheet_link_tag 'show_images' %>
+<%= stylesheet_link_tag 'modal' %>
+
+<table class="image-gallery">
+  <tbody>
+    <% @images.each do |imagen| %>
+      <tr>
+        <!-- Columna para la imagen -->
+        <td>
+          <% if imagen.archivo.present? %>
+            <%= image_tag imagen.archivo.url, alt: imagen.name, class: "thumbnail" %>
+          <% else %>
+            <p>No hay imagen disponible</p>
+          <% end %>
+        </td>
+
+        <!-- Columna para el nombre de la imagen -->
+        <td>
+          <p><%= imagen.name %></p>
+        </td>
+
+        <!-- Columna para el botón de cambiar nombre -->
+        <td>
+          <!-- Botón para abrir el modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#commentModal-<%= imagen.id %>">Añadir Comentario</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="commentModal-<%= imagen.id %>" tabindex="-1" aria-labelledby="commentModalLabel-<%= imagen.id %>" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="commentModalLabel-<%= imagen.id %>">Nuevo Comentario</h5>
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <%= render "edit", image: imagen %>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </td>
+
+        <!-- Columna para el botón de eliminar -->
+        <td>
+         <%= link_to 'Destroy', imagen, data: { turbo_confirm: 'Are you sure?', turbo_method: "delete" }, class: 'btn btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

@@ -1,0 +1,40 @@
+.portada-container {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centra verticalmente */
+  position: relative; /* Añade posición relativa para manejar posición absoluta de la imagen */
+}
+
+.portada-container img {
+  width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+  height: auto; /* Altura automática para mantener la proporción */
+  /* Elimina los ajustes de posición para permitir control desde HTML */
+}
+
+  .image-text {
+    position: absolute;
+    bottom: 40%; /* Ajusta la distancia desde abajo */
+    left: 20%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Centra perfectamente horizontalmente */
+    color: white;
+    padding: 10px 20px;
+  }
+
+  .column-red-container{
+    justify-content: center; /* Centra horizontalmente dentro de .container */
+    align-items: center; /* Centra verticalmente dentro de .container */
+}
+
+
+  .red-container {
+    max-width: 180px; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Altura automática para mantener la proporción */
+
+  }
+
+
+  

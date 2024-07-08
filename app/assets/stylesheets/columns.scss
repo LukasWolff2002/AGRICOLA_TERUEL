@@ -1,0 +1,48 @@
+.columnas_4_contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 0 10%;
+}
+
+.column {
+  flex: 1 1 calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Asegura que todo el contenido esté centrado horizontalmente */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.column-red-container {
+  width: 100%;
+  display: flex; /* Habilita flexbox para centrar la imagen dentro de este div */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  height: auto; /* Altura se ajusta al contenido */
+}
+
+.red-container {
+  width: auto; /* Ancho se ajusta al contenido, útil si la imagen es más pequeña que el contenedor */
+  max-width: 100%; /* No permite que la imagen exceda el ancho del contenedor */
+  height: auto; /* Altura se ajusta para mantener la proporción */
+  object-fit: cover; /* Cubre el área del contenedor, recortando si es necesario */
+}
+
+.column-text {
+  color: green;
+  font-size: 25px;
+  margin-top: 15px; /* Espacio después de la imagen */
+}
+
+.column-paragraph {
+  text-align: center;
+  font-size: 17px;
+  color: #666;
+  margin-top: 10px; /* Espacio después del título */
+}

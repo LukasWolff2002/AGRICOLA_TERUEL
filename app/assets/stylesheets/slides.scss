@@ -1,0 +1,93 @@
+.slides-container {
+  margin-top: 10px;
+  position: relative;
+  width: 100%;  /* Asegura que ocupa el ancho del contenedor padre */
+  height: 600px;  /* Ajusta la altura automáticamente según el contenido */
+  max-height: 670px;  /* Puedes mantener esto si quieres limitar la altura máxima */
+  overflow: hidden;  /* Ajusta según la necesidad de mostrar o no el desbordamiento */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background_card {
+    position: absolute;
+    background-color: rgb(9, 54, 1);  /* Color verde */
+    border-radius: 8px;
+    z-index: 1;  /* Asegura que esté detrás de todos los otros contenidos */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ligera para efecto de profundidad */
+}
+  .card {
+    position: absolute;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0px 0px rgba(0,0,0,0.2);
+    overflow: hidden; /* Esconde cualquier contenido fuera de los bordes */
+  }
+  
+  
+  .card.left-card {
+    top: var(--left-card-top, 20px); /* Posición inicial modificable */
+    left: var(--left-card-left, 300px); /* Posición inicial modificable */
+    width: 25%; /* Ajusta según necesites */
+    height: auto; /* Ajusta según necesites */
+    overflow: hidden; /* Esconde cualquier contenido fuera de los bordes */
+    z-index: 1;  /* Mayor que background_card */
+  }
+  
+  .card.right-card {
+    position: absolute;
+    top: var(--right-card-top, 20px);  /* Ajusta estos valores según sea necesario */
+    left: var(--right-card-left, 20px);  /* Asegúrate de que no estén posicionando el contenido fuera de la vista */
+    width: 40%;
+    height: auto;
+    padding: 20px;
+    overflow: visible;  /* Cambia a 'visible' si 'hidden' está cortando partes importantes */
+    z-index: 2;  /* Asegúrate de que esto coloca la tarjeta sobre otros elementos si es necesario */
+  }
+  
+  
+  .background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin distorsionarse */
+    border-radius: 8px; /* Bordes redondeados */
+  }
+  
+  h1, p, ul, button {
+    margin-top: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFA500;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: #cc8400;
+  }
+  
+  .button-style {
+    display: inline-block; /* Importante para que los estilos de padding y dimensiones apliquen correctamente */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFA500;
+    color: white;
+    text-align: center;
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+  }
+  
+  .button-style:hover {
+    background-color: #cc8400;
+  }

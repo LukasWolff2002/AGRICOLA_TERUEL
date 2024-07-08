@@ -1,0 +1,24 @@
+<h1>Editar Nombre de la Imagen</h1>
+
+<%= form_with(model: image, local: true) do |form| %>
+  <% if image.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(image.errors.count, "error") %> prohibido que esta imagen sea guardada:</h2>
+      <ul>
+        <% image.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name, "Nuevo Nombre" %>
+    <%= form.text_field :name, id: :image_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit "Actualizar Imagen" %>
+  </div>
+<% end %>
+
