@@ -10,13 +10,21 @@
   flex: 1 1 calc(25% - 20px);
   display: flex;
   flex-direction: column;
-  align-items: center; /* Asegura que todo el contenido esté centrado horizontalmente */
+  align-items: center;
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   padding: 20px;
   overflow: hidden;
+  position: relative; /* Posición relativa para el posicionamiento absoluto del botón */
+}
+
+.column-content {
+  flex: 1; /* Ocupa todo el espacio disponible, empujando el botón hacia abajo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .column-red-container {
@@ -45,4 +53,19 @@
   font-size: 17px;
   color: #666;
   margin-top: 10px; /* Espacio después del título */
+}
+
+.button-style {
+  margin-top: auto; /* Empuja el botón hacia abajo */
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #FFA500;
+  color: white;
+  text-decoration: none; /* Importante para que no parezca un enlace */
+}
+
+.button-style:hover {
+  background-color: #cc8400;
 }

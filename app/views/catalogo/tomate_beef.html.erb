@@ -1,0 +1,97 @@
+<%= stylesheet_link_tag 'portada' %>
+<%= stylesheet_link_tag 'product' %>
+<%= stylesheet_link_tag 'informacion_nutricional' %>
+<%= stylesheet_link_tag 'bandeja' %>
+
+<div class="portada-container">
+  <%= image_tag @catalogo.archivo.url, alt: @catalogo.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
+  <div class="image-text" style='font-size: 60px; top: 80px'>
+    El Mejor <br> Compañero De <br> Una Burger
+  </div>
+</div>
+
+<div class="product-container">
+    <div class="product-image">
+        <%= image_tag @variedad_3.archivo.url, alt: @variedad_3.name, class: "red-container" %>
+    </div>
+    <div class="product-info">
+        <h2>Tomate Beef</h2>
+        <p>¿Necesitamos tamaño? ¿O un sabor intenso? Prueba nuestros Beefs inocuos, sabrosos y contundentes.</p>
+        <div class="product-details">
+            <h3>Características</h3>
+            <ul>
+                <li>Gran Color, Firme, Rico, Vibrante Y Carnoso.</li>
+            </ul>
+            <h3>Ideales Para</h3>
+            <ul>
+                <li>Hamburguesas, Sándwiches, Salsa De Tomates</li>
+            </ul>
+            <h3>Disponible</h3>
+            <ul>
+                <li>Septiembre A Enero / Marzo A Junio</li>
+            </ul>
+            <h3>Formatos Disponibles</h3>
+            <ul>
+                <li>Caja de 7 kilos Granel Color Rojo</li>
+            </ul>
+            <h3>Grados Brix</h3>
+            <ul>
+                <li>4,5 a 5 Grados Brix</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="bandeja" style="background-image: url(<%= @bandeja_1.archivo.url %>);">
+    <div class="content">
+        <h1>Así de rico puedes cocinar con estos <br>tomates</h1>
+        <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
+        <a href="/catalogo" class="btn" style='z-index: 1;'>Ver Catálogo</a>
+    </div>
+</div>
+
+<div class="content-container">
+    <div class="description-container">
+        <h1>Palabras de nuestro catador de tomates</h1>
+        <p>Tomates grandes y carnosos que quedan perfectos cortados en rodajas en un sándwich o picados en una salsa fresca. Este tomate versátil va a cualquier parte. ¿Te gusta la salsa? Este lo logras obtener con este tipo de tomate y un cultivo fresco-sano.</p>
+        <p>Ideal para la preparación de la hamburguesa. Este tipo es ideal para salsa de tomate y te sorprenderá a la parrilla como un sustituto de la hamburguesa en rodajas gruesas. Los tomates rojos de ternera son el tomate triturador ideal con mucho jugo y son una base encantadora para salsas frías y salsas.</p>
+        <p>Nuestros tomates beef son grandes y de pulpa roja son el centro del plato, perfectos y excelentes para rellenar, asar a la parrilla o servidos en rodajas para hamburguesas y sándwiches. Los tomates beef grandes y jugosos son conocidos por su textura y sabores tradicionales a tomate.</p>
+        <p>Córtalo en cuadros para obtener salsas sanas y con mucho sabor o como una sabrosa adición a sus platos favoritos: calidad asegurada, saludable y deliciosa.</p>
+        <p>Córtalo en cuadros para obtener salsas sanas y con mucho sabor o como una sabrosa adición a sus platos favoritos: calidad asegurada, saludable y deliciosa.</p>
+        <p>Elígelas de color rojo o rosa, sin magulladuras ni excesiva suavidad. Conservar en la encimera de la cocina a temperatura ambiente y consumir con un color rojo brillante. Evite poner los tomates en temperaturas frías refrigeradas, ya que esto reducirá el sabor.</p>
+    </div>
+    <div class="nutrition-container">
+        <h2>Información Nutricional</h2>
+        <table>
+            <tr>
+                <th>Tamaño de porción:</th>
+                <td>1 Tomate 160 g</td>
+            </tr>
+            <tr>
+                <td>Energía (kcal)</td>
+                <td>18 / 29</td>
+            </tr>
+            <tr>
+                <td>Proteínas (g)</td>
+                <td>0.88 / 1.4</td>
+            </tr>
+            <tr>
+                <td>Grasas Totales (g)</td>
+                <td>0.2 / 0.32</td>
+            </tr>
+            <tr>
+                <td>Hidratos de Carbono disponibles (g)</td>
+                <td>3.89 / 6.2</td>
+            </tr>
+            <tr>
+                <td>Azúcares Totales (g)</td>
+                <td>2.63 / 4.2</td>
+            </tr>
+            <tr>
+                <td>Sodio (mg)</td>
+                <td>5 / 8</td>
+            </tr>
+        </table>
+    </div>
+</div>
+

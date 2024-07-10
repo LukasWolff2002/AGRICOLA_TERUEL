@@ -13,6 +13,11 @@ Rails.application.routes.draw do
 
   get '/home', to: 'agricola_teruel#home' 
   get '/us', to: 'agricola_teruel#us' 
+
+  get '/catalogo/tomate_granel', to: 'catalogo#tomate_granel' 
+  get '/catalogo/tomate_racimo', to: 'catalogo#tomate_racimo' 
+  get '/catalogo/tomate_beef', to: 'catalogo#tomate_beef' 
+  get '/catalogo/tomate_cherry', to: 'catalogo#tomate_cherry' 
   
   root 'agricola_teruel#home'
 

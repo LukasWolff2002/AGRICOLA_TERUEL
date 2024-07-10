@@ -4,8 +4,8 @@
     align-items: center; /* Centra el contenido verticalmente */
     justify-content: start; /* Alinea el contenido a la izquierda */
     padding-left: 50px; /* Espacio desde el borde izquierdo */
-    color: #ffffff; /* Color de texto */
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Sombra para mejorar la legibilidad */
+    color: #fff; /* Cambia aquí el color del texto si es necesario, p.ej., blanco */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.7); /* Sombra para mejorar la legibilidad */
     background-size: cover; /* Asegura que la imagen cubra completamente el fondo */
     background-position: center; /* Centra la imagen de fondo */
 }
@@ -13,11 +13,13 @@
 .content h1 {
     font-size: 24px; /* Tamaño grande para el encabezado */
     margin-bottom: 20px; /* Espacio entre el encabezado y el párrafo */
+    color: #ffffff; /* Asegúrate de que el color aquí sea visible contra el fondo */
 }
 
 .content p {
     font-size: 16px; /* Tamaño del texto */
     max-width: 60%; /* Máximo ancho del texto para mejor lectura */
+    color: #ffffff; /* Asegura la legibilidad del texto */
 }
 
 .btn {
@@ -25,11 +27,12 @@
     border-radius: 5px;
     cursor: pointer;
     border: none;
-    background-color: #FFA500;
-    color: white;
+    background-color: #FFA500; /* Fondo amarillo */
+    color: white; /* Texto en blanco */
+    font-weight: bold; /* Opcional: Hace el texto del botón en negrita */
+    text-transform: uppercase; /* Opcional: Texto en mayúsculas para más énfasis */
 }
 
 .btn:hover {
     background-color: #cc8e00; /* Un tono de amarillo más oscuro para el efecto hover */
 }
-

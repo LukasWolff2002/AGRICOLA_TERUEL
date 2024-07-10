@@ -9,3 +9,5 @@
 //= link modal.css
 //= link bandeja.css
 //= link images_hover.css
+//= link product.css
+//= link informacion_nutricional.css
