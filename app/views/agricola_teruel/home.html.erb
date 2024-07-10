@@ -3,7 +3,7 @@
 <%= stylesheet_link_tag 'paragraph' %>
 <%= stylesheet_link_tag 'columns' %>
 <%= stylesheet_link_tag 'slides' %>
-<%= stylesheet_link_tag 'modal' %>
+
 
 <div class="portada-container">
   <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
@@ -82,16 +82,32 @@
       <li>Contiene Licopeno</li>
     </ul>
 
-    <button type="button" class="open-modal button-style">Hablemos</button>
+    
+    <!-- Botón para abrir el modal de Hablemos -->
+    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#talkModal">Hablemos</button>
 
-    <!-- Modal -->
-    <div class="modal my-modal" style="display:none;">
-      <!-- Contenido del modal -->
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <%= render 'comments/new', comment: @comment %>
+    <div id="contenedor-modal" style="position: relative; z-index: 1050;"></div>
+    <!-- Modal Hablemos -->
+    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <%= render 'comments/new', comment: @comment %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
       </div>
     </div>
+    
+
 
     <button type="button" class="open-modal button-style">Más Información</button>
   </div>
@@ -152,35 +168,83 @@
       <li>Evita riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
       <li>Tenemos certificaciones GlobalGap, FSMA, GRASP.</li>
     </ul>
-    <!-- Botón para abrir el modal -->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uniqueModalId">
-      Abrir Modal
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+      Launch static backdrop modal
     </button>
 
     <!-- Modal -->
-    <div class="modal fade" id="uniqueModalId" tabindex="-1" aria-labelledby="uniqueModalLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="uniqueModalLabel">Título del Modal</h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <span class="close">&times;</span>
-            <%= render 'comments/new', comment: @comment %>
+            ...
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
           </div>
         </div>
       </div>
     </div>
 
+   
     <button type="button" class="open-modal button-style">Más Información</button>
   </div>
 </div>
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
+  Launch static backdrop modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var myModal = document.getElementById('talkModal');
+  var contenedorModal = document.getElementById('contenedor-modal');
+
+  // Mueve el modal al contenedor modal
+  contenedorModal.appendChild(myModal);
+
+  // Foco en el input cuando el modal se muestra
+  var myInput = document.getElementById('commentInput');
+  myModal.addEventListener('shown.bs.modal', function () {
+    myInput.focus();
+  });
+});
+</script>
+
+
+
+
+
+
+
 
 
 

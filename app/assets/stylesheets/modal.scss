@@ -7,7 +7,7 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 1050;
+    z-index: 10000;
     left: 0;
     top: 0;
     width: 100%;
@@ -54,19 +54,4 @@
     opacity: 0.75;
 }
 
-.modal-content {
-    background-color: #fff; /* Fondo blanco */
-    border: 1px solid #999; /* Borde sutil */
-    border-radius: 0.3rem; /* Bordes redondeados */
-    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
-}
 
-.modal-header, .modal-footer {
-    padding: 1rem; /* Padding consistente */
-}
-
-.close {
-    float: right; /* Asegúrate de que el botón cerrar está a la derecha */
-    font-size: 1.5rem; /* Tamaño adecuado para fácil interacción */
-    line-height: 1; /* Ajuste de línea */
-}
