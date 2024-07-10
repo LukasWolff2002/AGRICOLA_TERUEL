@@ -1,0 +1,35 @@
+.bandeja {
+    height: 300px; /* Altura de la bandeja */
+    display: flex;
+    align-items: center; /* Centra el contenido verticalmente */
+    justify-content: start; /* Alinea el contenido a la izquierda */
+    padding-left: 50px; /* Espacio desde el borde izquierdo */
+    color: #ffffff; /* Color de texto */
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5); /* Sombra para mejorar la legibilidad */
+    background-size: cover; /* Asegura que la imagen cubra completamente el fondo */
+    background-position: center; /* Centra la imagen de fondo */
+}
+
+.content h1 {
+    font-size: 24px; /* Tamaño grande para el encabezado */
+    margin-bottom: 20px; /* Espacio entre el encabezado y el párrafo */
+}
+
+.content p {
+    font-size: 16px; /* Tamaño del texto */
+    max-width: 60%; /* Máximo ancho del texto para mejor lectura */
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    background-color: #FFA500;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #cc8e00; /* Un tono de amarillo más oscuro para el efecto hover */
+}
+

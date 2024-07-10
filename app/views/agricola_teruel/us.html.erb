@@ -3,6 +3,8 @@
 <%= stylesheet_link_tag 'paragraph' %>
 <%= stylesheet_link_tag 'columns' %>
 <%= stylesheet_link_tag 'slides' %>
+<%= stylesheet_link_tag 'bandeja' %>
+<%= stylesheet_link_tag 'images_hover' %>
 
 <div class="portada-container">
   <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, 20%);" %>
@@ -10,3 +12,77 @@
     Nosotros
   </div>
 </div>
+
+<div class="slides-container">
+  <div class="background_card" style='top: var(--card-top, 110px); left: var(--card-left, 740px); width: var(--card-width, 45%); height: var(--card-height, 70%);'></div> 
+  <div class="card left-card" style='top: var(--left-card-top, 50px); left: var(--left-card-left, 300px); width: 45%;'>
+    <%= image_tag @slides_1.archivo.url, alt: @slides_1.name, class: "background-image" %>
+  </div>
+  <div class="card right-card" style='top: var(--right-card-top, 100px); left: var(--right-card-left, 80px); width: 50%;'>
+    <div class="text-container" style='text-align: left; left: 0%;'>
+      <div class="text-with-line" >
+        <span class="colored-text">Nuestra Historia</span>
+      </div>
+    </div>
+    <p>Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!</p>
+    <ul>
+      <li>Producimos con un Manejo Integrado de Plagas (MIP)</li>
+      <li>Utilizamos técnicas de producción de baja cantidad de pesticidas, para garantizar productos limpios y de bajo residuo.</li>
+      <li>Nuestro proceso productivo permite obtener un producto de calidad que disminuya riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
+      <li>Contamos con Certificaciones GlobalGap, FSMA, GRASP.</li>
+    </ul>
+  </div>
+</div>
+
+<div class="bandeja" style="background-image: url(<%= @bandeja_1.archivo.url %>);">
+    <div class="content">
+        <h1>Llena de sabor tu día a día con productos que no dañan tu cuerpo.</h1>
+        <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sostenibilidad de cada tomate para acompañar tu paladar y salud!</p>
+        <a href="/catalogo" class="btn" style='z-index: 1;'>Ver Catálogo</a>
+
+    </div>
+</div>
+
+
+<div class="text-container">
+  <div class="text-with-line">
+    <span class="colored-text">Nuestro Equipo</span>
+  </div>
+</div>
+
+<div class="container">
+  <p>Recogemos lo que sembranos, y en nuestro caso, sembramos y cultivamos amor,<br> paciencia y consciencia por productos limpios para tu familia y mesa.</p>
+</div>
+
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      <div class="image-container">
+        <%= image_tag @diego.archivo.url, alt: "Diego Ortiz", class: "hover-image" %>
+        <div class="fixed-text">
+          <div class="name">Diego Ortiz</div>
+          <div class="title">Gerente General</div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="image-container">
+        <%= image_tag @javier.archivo.url, alt: "Javier Martínez", class: "hover-image" %>
+        <div class="fixed-text">
+          <div class="name">Javier Devia</div>
+          <div class="description">Gerente Técnico - Director</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

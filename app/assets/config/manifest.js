@@ -7,3 +7,5 @@
 //= link slides.css
 //= link show_images.css
 //= link modal.css
+//= link bandeja.css
+//= link images_hover.css

@@ -18,6 +18,10 @@ class AgricolaTeruelController < ApplicationController
 
     def us
         @portada = Image.find_by(name: 'PORTADA_US')
+        @slides_1 = Image.find_by(name: 'SLIDES_1_US')
+        @bandeja_1 = Image.find_by(name: 'BANDEJA_1_US')
+        @diego = Image.find_by(name: 'DIEGO_US')
+        @javier = Image.find_by(name: 'JAVIER_US')
     end
 
 end
