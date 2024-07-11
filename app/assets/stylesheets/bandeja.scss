@@ -22,17 +22,19 @@
     color: #ffffff; /* Asegura la legibilidad del texto */
 }
 
-.btn {
+.boton-bandeja {
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     border: none;
     background-color: #FFA500; /* Fondo amarillo */
     color: white; /* Texto en blanco */
-    font-weight: bold; /* Opcional: Hace el texto del botón en negrita */
-    text-transform: uppercase; /* Opcional: Texto en mayúsculas para más énfasis */
+    font-weight: bold; /* Texto en negrita para mejor visibilidad */
+    text-transform: uppercase; /* Texto en mayúsculas para un estilo más enfático */
+    display: inline-block; /* Asegura el correcto padding y dimensiones */
 }
 
-.btn:hover {
-    background-color: #cc8e00; /* Un tono de amarillo más oscuro para el efecto hover */
+.boton-bandeja:hover {
+    background-color: #cc8e00; /* Color más oscuro en hover para efecto visual */
 }
+

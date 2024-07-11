@@ -20,6 +20,18 @@
   position: relative; /* Posición relativa para el posicionamiento absoluto del botón */
 }
 
+.column-empty {
+  flex: 1 1 calc(25% - 20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  overflow: hidden;
+  position: relative; /* Posición relativa para el posicionamiento absoluto del botón */
+}
+
 .column-content {
   flex: 1; /* Ocupa todo el espacio disponible, empujando el botón hacia abajo */
   display: flex;
