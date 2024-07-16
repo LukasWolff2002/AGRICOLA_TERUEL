@@ -1,3 +1,4 @@
+
 <%= stylesheet_link_tag 'portada' %>
 <%= stylesheet_link_tag 'text_with_line' %>
 <%= stylesheet_link_tag 'paragraph' %>
@@ -77,17 +78,17 @@
 <div class='container' style='margin-top: 30px;'></div>
 
 <div class="slides-container">
-  <div class="card background-card" id="background-card-1" style='top: var(--card-top, 8%); left: var(--card-left, 67%); width: 25%;'></div> 
-  <div class="card left-card" id="left-card-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 28%); width: 25%;'>
+  <div class="card background-card" id="home-background-card-1"></div> 
+  <div class="card left-card" id="home-left-card-1">
     <%= image_tag @slides_1.archivo.url, alt: @slides_1.name, class: "background-image" %>
   </div>
-  <div class="card right-card" id="right-card-1" style='top: var(--left-card-top, 0%); left: var(--left-card-left, -10%); width: 60%;'>
+  <div class="card right-card" id="home-right-card-1">
     <div class="text-container">
-      <h2 class="text-with-line">
+      <h2 class="text-with-line" style='margin-top: 20px;'>
         <span class="colored-text">Un Secreto Que <br>Muy Pocos Saben</span>
       </h2>
     </div>
-    <p>Nuestros tomates respetan procesos de inocuidad y de baja utilización de pesticidas. Sólo así cuidamos el área donde está la mayor cantidad de nutrientes: La piel. ¿Lo sabías?</p>
+    <p style='margin: 20px;'>Nuestros tomates respetan procesos de inocuidad y de baja utilización de pesticidas. Sólo así cuidamos el área donde está la mayor cantidad de nutrientes: La piel. ¿Lo sabías?</p>
     <ul>
       <li>Altos en Vitamina C</li>
       <li>Rico en Potasio</li>
@@ -114,10 +115,10 @@
     </div>
     <a href="beneficios_tomate" class="button-style">Más Información</a>
   </div>
-   <div class="card left-card2" id="left-card-extra-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%);'></div>
+   <div class="card extra-card" id="home-extra-card-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%);'></div>
 </div>
 
-<div class='container' style='margin-top: 30px;'></div>
+<div class='container' style='margin-top: 60px;'></div>
 
 <div class="text-container">
   <div class="text-with-line">
@@ -154,14 +155,20 @@
   </div>
 </div>
 
+<div class="columnas_4_contenedor">
+  <div class="column-empty">
+    <a href="https://www.instagram.com/agricolateruel/" class="button-style" style='background-color: rgb(51, 142, 11)'>Visitar Instagram</a>
+  </div>
+</div>
+
 <div class='container' style='margin-top: 30px;'></div>
 
 <div class="slides-container">
-  <div class="card background-card" id="background-card-2" style='top: var(--card-top, 8%); left: var(--card-left, 48.5%); width: 40%;'></div> 
-  <div class="card left-card" id="left-card-2" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%); width: 40%;'>
+  <div class="card background-card" id="home-background-card-2"></div> 
+  <div class="card left-card" id="home-left-card-2">
     <%= image_tag @slides_2.archivo.url, alt: @slides_2.name, class: "background-image" %>
   </div>
-  <div class="card right-card" id="right-card-2" style='top: var(--rigth-card-top, 0%); left: var(--rigth-card-left, -10%); width: 60%;'>
+  <div class="card right-card" id="home-right-card-2">
     <div class="text-container" style='text-align: left; left: 0%; width: 100%; padding: 20px;'>
       <h2 class="text-with-line">
         <span class="colored-text">¿Por qué somos el tomate más <br> sabroso que no encontrarás <br> en cualquier lugar?</span>
@@ -199,37 +206,12 @@
         </div>
       </div>
     </div>
-
     <a href="us" class="button-style">Más De Nootros</a>
   </div>
-  <div class="card left-card2" id="left-card-extra-2" style='top: 5%; left: 17%;'></div>
+  <div class="card extra-card" id="home-extra-card-2"></div>
 </div>
 
 <div class='container' style='margin-top: 30px;'></div>
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
-  Launch static backdrop modal
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Understood</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <script>
@@ -257,41 +239,41 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  adjustHeight('left-card-1', 'background-card-1');
-  adjustHeight('left-card-2', 'background-card-2');
+  adjustHeight('home-left-card-1', 'home-background-card-1');
+  adjustHeight('home-left-card-2', 'home-background-card-2');
 
   window.addEventListener('resize', () => {
-    adjustHeight('left-card-1', 'background-card-1');
-    adjustHeight('left-card-2', 'background-card-2');
+    adjustHeight('home-left-card-1', 'home-background-card-1');
+    adjustHeight('home-left-card-2', 'home-background-card-2');
   });
 });
 
 document.addEventListener('DOMContentLoaded', function() {
   function calculateOverlapHeight(card1, card2) {
-    const card1Rect = card1.getBoundingClientRect();
-    const card2Rect = card2.getBoundingClientRect();
+    var card1Rect = card1.getBoundingClientRect();
+    var card2Rect = card2.getBoundingClientRect();
 
-    const card1Top = card1Rect.top;
-    const card1Bottom = card1Rect.bottom;
-    const card2Top = card2Rect.top;
-    const card2Bottom = card2Rect.bottom;
+    var card1Top = card1Rect.top;
+    var card1Bottom = card1Rect.bottom;
+    var card2Top = card2Rect.top;
+    var card2Bottom = card2Rect.bottom;
 
-    const overlapTop = Math.max(card1Top, card2Top);
-    const overlapBottom = Math.min(card1Bottom, card2Bottom);
+    var overlapTop = Math.max(card1Top, card2Top);
+    var overlapBottom = Math.min(card1Bottom, card2Bottom);
 
-    const overlapHeight = Math.max(0, overlapBottom - overlapTop);
+    var overlapHeight = Math.max(0, overlapBottom - overlapTop);
     return overlapHeight;
   }
 
   function updateHeights() {
-    const leftCard = document.getElementById('left-card-1');
-    const leftCard2 = document.getElementById('left-card-extra-1');
-    const rightCard = document.getElementById('right-card-1');
+    var leftCard = document.getElementById('home-left-card-1');
+    var leftCard2 = document.getElementById('home-extra-card-1');
+    var rightCard = document.getElementById('home-right-card-1');
 
-    const overlapHeight = calculateOverlapHeight(leftCard, rightCard);
+    var overlapHeight = calculateOverlapHeight(leftCard, rightCard);
 
-    const rightCardHeight = rightCard.offsetHeight;
-    const leftHeight = rightCardHeight - overlapHeight;
+    var rightCardHeight = rightCard.offsetHeight;
+    var leftHeight = rightCardHeight - overlapHeight;
 
     leftCard2.style.height = `${leftHeight}px`;
   }
@@ -305,32 +287,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   function calculateOverlapHeight(card1, card2) {
-    const card1Rect = card1.getBoundingClientRect();
-    const card2Rect = card2.getBoundingClientRect();
+    var card1Rect = card1.getBoundingClientRect();
+    var card2Rect = card2.getBoundingClientRect();
 
-    const card1Top = card1Rect.top;
-    const card1Bottom = card1Rect.bottom;
-    const card2Top = card2Rect.top;
-    const card2Bottom = card2Rect.bottom;
+    var card1Top = card1Rect.top;
+    var card1Bottom = card1Rect.bottom;
+    var card2Top = card2Rect.top;
+    var card2Bottom = card2Rect.bottom;
 
-    const overlapTop = Math.max(card1Top, card2Top);
-    const overlapBottom = Math.min(card1Bottom, card2Bottom);
+    var overlapTop = Math.max(card1Top, card2Top);
+    var overlapBottom = Math.min(card1Bottom, card2Bottom);
 
-    const overlapHeight = Math.max(0, overlapBottom - overlapTop);
+    var overlapHeight = Math.max(0, overlapBottom - overlapTop);
     return overlapHeight;
   }
 
   function updateHeights() {
-    const leftCard = document.getElementById('left-card-2');
-    const leftCard2 = document.getElementById('left-card-extra-2');
-    const rightCard = document.getElementById('right-card-2');
+    var leftCard = document.getElementById('home-left-card-2');
+    var leftCard2 = document.getElementById('home-extra-card-2');
+    var rightCard = document.getElementById('home-right-card-2');
 
-    const overlapHeight = calculateOverlapHeight(leftCard, rightCard);
+    if (leftCard && leftCard2 && rightCard) {
+      var overlapHeight = calculateOverlapHeight(leftCard, rightCard);
+      var rightCardHeight = rightCard.offsetHeight;
+      var leftHeight = rightCardHeight - overlapHeight;
 
-    const rightCardHeight = rightCard.offsetHeight;
-    const leftHeight = rightCardHeight - overlapHeight;
+      // Asegura que leftHeight no sea negativo
+      leftHeight = Math.max(0, leftHeight);
 
-    leftCard2.style.height = `${leftHeight}px`;
+      leftCard2.style.height = `${leftHeight}px`;
+    }
   }
 
   // Llama a updateHeights al cargar la página
@@ -339,6 +325,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // Llama a updateHeights cada vez que la ventana cambia de tamaño
   window.addEventListener('resize', updateHeights);
 });
+
+
 
 </script>
 

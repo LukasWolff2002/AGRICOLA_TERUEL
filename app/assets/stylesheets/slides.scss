@@ -10,23 +10,27 @@
   position: absolute;
   background-color: #cf1c1c;
   border-radius: 8px;
-  border: none;  /* Explicitly remove any borders */
-  outline: none;  /* Remove any focus outline that might be showing as a border */
+  border: none;  /* Explicitamente eliminar cualquier borde con importancia */
+  outline: none !important;  /* Eliminar cualquier contorno de enfoque con importancia */
+  box-shadow: none !important;  /* Eliminar cualquier sombra con importancia */
   overflow: visible;
   transition: all 0.3s ease-in-out;
 }
 
-
 .card.left-card {
+  border: none !important;
   z-index: 2;
 }
 
-.card.left-card2 {
+.card.extra-card {
+  border: none !important;
   z-index: -1;
 }
 
 .card.right-card {
   position: absolute;
+  background-color: #f8fff6;
+  border: 1px solid  #666;
   z-index: 3;
 }
 
@@ -34,7 +38,9 @@
   position: absolute;
   background-color: rgb(9, 54, 1);
   border-radius: 8px;
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
+  border: none !important;  /* Explicitamente eliminar cualquier borde con importancia */
+  outline: none !important;  /* Eliminar cualquier contorno de enfoque con importancia */
+  box-shadow: none !important;  /* Eliminar cualquier sombra con importancia */
   z-index: 1;
 }
 
@@ -56,8 +62,10 @@ ul {
 }
 
 button {
+  align-self: center;
   padding: 10px 20px;
   border-radius: 5px;
+  width: 80%;
   cursor: pointer;
   border: none;
   background-color: #FFA500;
@@ -69,9 +77,12 @@ button:hover {
 }
 
 .button-style {
+  align-self: center;
+  margin-bottom: 1%;
   display: inline-block;
   padding: 10px 20px;
   border-radius: 5px;
+  width: 80%;
   cursor: pointer;
   border: none;
   background-color: #FFA500;
@@ -82,4 +93,219 @@ button:hover {
 
 .button-style:hover {
   background-color: #cc8400;
+}
+
+@media (min-width: 1441px) {
+  /* Ajustes para pantallas mayores a 1024 px */
+  #home-left-card-1 {
+    top: 10%;
+    left: 55%;
+    width: 20%;
+  }
+
+  #home-right-card-1 {
+    top: 20%;
+    left: 17%;
+    width: 40%;
+  }
+
+  #home-background-card-1 {
+    top: 3%;
+    left: 56.0%;
+    width: 20%;
+  }
+
+  #home-left-card-2 {
+    top: 5%;
+    left: 48%;
+    width: 40%;
+  }
+
+  #home-right-card-2 {
+    top: 22%;
+    left: 10%;
+    width: 50%;
+  }
+
+  #home-background-card-2 {
+    top: 4%;
+    left: 49%;
+    width: 40%;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  /* Ajustes para pantallas mayores a 1024 px */
+  #home-left-card-1 {
+    top: 10%;
+    left: 60%;
+    width: 30%;
+  }
+
+  #home-right-card-1 {
+    top: 20%;
+    left: 12%;
+    width: 55%;
+  }
+
+  #home-background-card-1 {
+    top: 3%;
+    left: 61.0%;
+    width: 30%;
+  }
+
+  #home-left-card-2 {
+    top: 5%;
+    left: 47%;
+    width: 40%;
+  }
+
+  #home-right-card-2 {
+    top: 25%;
+    left: 10%;
+    width: 60%;
+  }
+
+
+  #home-background-card-2 {
+    top: 4%;
+    left: 48.5%;
+    width: 40%;
+  }
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 1024px) {
+  /* Ajustes para pantallas medianas */
+  #home-left-card-1 {
+    top: 10%;
+    left: 72%;
+    transform: translateX(-50%);
+    width: 30%;
+  }
+
+  #home-right-card-1 {
+    top: 35%;
+    left: 10%;
+    width: 65%;
+  }
+
+  #home-background-card-1 {
+    top: 3.5%;
+    left: 74%;
+    transform: translateX(-50%);
+    width: 30%;
+  }
+
+  #home-left-card-2 {
+    top: 10%;
+    left: 72%;
+    transform: translateX(-50%);
+    width: 40%;
+  }
+
+  #home-right-card-2 {
+    top: 20%;
+    left: 7%;
+    width: 65%;
+  }
+
+  #home-background-card-2 {
+    top: 3%;
+    left: 73.5%;
+    transform: translateX(-50%);
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para pantallas pequeñas */
+  #home-left-card-1 {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  #home-right-card-1 {
+    top: 50%;
+    left: 5%;
+    width: 90%;
+  }
+
+
+  #home-background-card-1 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  #home-left-card-2 {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+
+  #home-right-card-2 {
+    top: 50%;
+    left: 5%;
+    width: 90%;
+  }
+
+
+  #home-background-card-2 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para pantallas muy pequeñas */
+  #home-left-card-1 {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+  }
+
+  #home-right-card-1 {
+    top: 50%;
+    left: 2.5%;
+    width: 95%;
+  }
+
+
+
+  #home-background-card-1 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+  }
+
+  #home-left-card-2 {
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+  }
+
+  #home-right-card-2 {
+    top: 50%;
+    left: 2.5%;
+    width: 95%;
+  }
+
+
+
+  #home-background-card-2 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+  }
 }

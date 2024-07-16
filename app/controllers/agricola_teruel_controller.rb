@@ -25,7 +25,7 @@ class AgricolaTeruelController < ApplicationController
     end
 
     def beneficios_tomate
-         
+        @comment = Comment.new
     end
 
 end
