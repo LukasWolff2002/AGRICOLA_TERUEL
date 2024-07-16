@@ -2,78 +2,40 @@
 .slides-container {
   position: relative;
   width: 100vw;  /* Utilizar el ancho del viewport para responsividad */
-  height: 600px; /* Altura fija que puedes ajustar según necesidad */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: block; /* Cambiar de flex a block para evitar problemas con absoluto */
   overflow: visible;
 }
 
 .card {
   position: absolute;
-  background-color: #fff;
+  background-color: #cf1c1c;
   border-radius: 8px;
-  box-shadow: 0 0px 0px rgba(0,0,0,0.2);
+  border: none;  /* Explicitly remove any borders */
+  outline: none;  /* Remove any focus outline that might be showing as a border */
   overflow: visible;
-  transition: all 0.3s ease-in-out; /* Transición suave para todos los cambios */
+  transition: all 0.3s ease-in-out;
 }
 
+
 .card.left-card {
-  top: var(--left-card-top, 20px);
-  left: var(--left-card-left, 300px);
-  width: 25%;
   z-index: 2;
+}
+
+.card.left-card2 {
+  z-index: -1;
 }
 
 .card.right-card {
-  top: var(--right-card-top, 130px);
-  left: var(--right-card-left, 300px);
-  width: 40%;
-  z-index: 2;
+  position: absolute;
+  z-index: 3;
 }
 
 .card.background-card {
   position: absolute;
-  width: 25%;
   background-color: rgb(9, 54, 1);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0);
   z-index: 1;
-}
-
-/* Media Queries para Tablet */
-@media (max-width: 768px) {
-  .card.background-card {
-    width: 40%; 
-    left: calc(60% - 20px);
-    height: 75%;
-  }
-
-  .card.left-card, .card.right-card {
-    left: 50%;  
-    transform: translateX(-50%);
-    width: 80%; 
-  }
-}
-
-/* Media Queries para Móvil */
-@media (max-width: 480px) {
-  .slides-container {
-    height: 400px; /* Altura reducida para pantallas más pequeñas */
-  }
-
-  .card.left-card, .card.right-card {
-    top: var(--right-card-top, 200px);
-    left: 50%;  /* Centrado con transformación */
-    transform: translateX(-50%);
-    width: 100%; 
-  }
-
-  .card.background-card {
-    width: 70%; /* Más ancho en dispositivos móviles para mejor visualización */
-    left: 15%; /* Centrado ajustado */
-    height: 75%;
-  }
 }
 
 /* Estilos adicionales para otros elementos */

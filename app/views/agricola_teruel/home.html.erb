@@ -74,12 +74,14 @@
   </div>
 </div>
 
+<div class='container' style='margin-top: 30px;'></div>
+
 <div class="slides-container">
-  <div class="card background-card" id="background-card-1"></div> 
-  <div class="card left-card" id="left-card-1">
+  <div class="card background-card" id="background-card-1" style='top: var(--card-top, 8%); left: var(--card-left, 67%); width: 25%;'></div> 
+  <div class="card left-card" id="left-card-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 28%); width: 25%;'>
     <%= image_tag @slides_1.archivo.url, alt: @slides_1.name, class: "background-image" %>
   </div>
-  <div class="card right-card">
+  <div class="card right-card" id="right-card-1" style='top: var(--left-card-top, 0%); left: var(--left-card-left, -10%); width: 60%;'>
     <div class="text-container">
       <h2 class="text-with-line">
         <span class="colored-text">Un Secreto Que <br>Muy Pocos Saben</span>
@@ -112,8 +114,10 @@
     </div>
     <a href="beneficios_tomate" class="button-style">Más Información</a>
   </div>
+   <div class="card left-card2" id="left-card-extra-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%);'></div>
 </div>
 
+<div class='container' style='margin-top: 30px;'></div>
 
 <div class="text-container">
   <div class="text-with-line">
@@ -150,12 +154,14 @@
   </div>
 </div>
 
+<div class='container' style='margin-top: 30px;'></div>
+
 <div class="slides-container">
   <div class="card background-card" id="background-card-2" style='top: var(--card-top, 8%); left: var(--card-left, 48.5%); width: 40%;'></div> 
   <div class="card left-card" id="left-card-2" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%); width: 40%;'>
     <%= image_tag @slides_2.archivo.url, alt: @slides_2.name, class: "background-image" %>
   </div>
-  <div class="card right-card" style='top: var(--rigth-card-top, 100px); left: var(--rigth-card-left, 160px);'>
+  <div class="card right-card" id="right-card-2" style='top: var(--rigth-card-top, 0%); left: var(--rigth-card-left, -10%); width: 60%;'>
     <div class="text-container" style='text-align: left; left: 0%; width: 100%; padding: 20px;'>
       <h2 class="text-with-line">
         <span class="colored-text">¿Por qué somos el tomate más <br> sabroso que no encontrarás <br> en cualquier lugar?</span>
@@ -196,8 +202,10 @@
 
     <a href="us" class="button-style">Más De Nootros</a>
   </div>
+  <div class="card left-card2" id="left-card-extra-2" style='top: 5%; left: 17%;'></div>
 </div>
 
+<div class='container' style='margin-top: 30px;'></div>
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
@@ -256,6 +264,80 @@ document.addEventListener('DOMContentLoaded', function () {
     adjustHeight('left-card-1', 'background-card-1');
     adjustHeight('left-card-2', 'background-card-2');
   });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  function calculateOverlapHeight(card1, card2) {
+    const card1Rect = card1.getBoundingClientRect();
+    const card2Rect = card2.getBoundingClientRect();
+
+    const card1Top = card1Rect.top;
+    const card1Bottom = card1Rect.bottom;
+    const card2Top = card2Rect.top;
+    const card2Bottom = card2Rect.bottom;
+
+    const overlapTop = Math.max(card1Top, card2Top);
+    const overlapBottom = Math.min(card1Bottom, card2Bottom);
+
+    const overlapHeight = Math.max(0, overlapBottom - overlapTop);
+    return overlapHeight;
+  }
+
+  function updateHeights() {
+    const leftCard = document.getElementById('left-card-1');
+    const leftCard2 = document.getElementById('left-card-extra-1');
+    const rightCard = document.getElementById('right-card-1');
+
+    const overlapHeight = calculateOverlapHeight(leftCard, rightCard);
+
+    const rightCardHeight = rightCard.offsetHeight;
+    const leftHeight = rightCardHeight - overlapHeight;
+
+    leftCard2.style.height = `${leftHeight}px`;
+  }
+
+  // Llama a updateHeights al cargar la página
+  updateHeights();
+
+  // Llama a updateHeights cada vez que la ventana cambia de tamaño
+  window.addEventListener('resize', updateHeights);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  function calculateOverlapHeight(card1, card2) {
+    const card1Rect = card1.getBoundingClientRect();
+    const card2Rect = card2.getBoundingClientRect();
+
+    const card1Top = card1Rect.top;
+    const card1Bottom = card1Rect.bottom;
+    const card2Top = card2Rect.top;
+    const card2Bottom = card2Rect.bottom;
+
+    const overlapTop = Math.max(card1Top, card2Top);
+    const overlapBottom = Math.min(card1Bottom, card2Bottom);
+
+    const overlapHeight = Math.max(0, overlapBottom - overlapTop);
+    return overlapHeight;
+  }
+
+  function updateHeights() {
+    const leftCard = document.getElementById('left-card-2');
+    const leftCard2 = document.getElementById('left-card-extra-2');
+    const rightCard = document.getElementById('right-card-2');
+
+    const overlapHeight = calculateOverlapHeight(leftCard, rightCard);
+
+    const rightCardHeight = rightCard.offsetHeight;
+    const leftHeight = rightCardHeight - overlapHeight;
+
+    leftCard2.style.height = `${leftHeight}px`;
+  }
+
+  // Llama a updateHeights al cargar la página
+  updateHeights();
+
+  // Llama a updateHeights cada vez que la ventana cambia de tamaño
+  window.addEventListener('resize', updateHeights);
 });
 
 </script>
