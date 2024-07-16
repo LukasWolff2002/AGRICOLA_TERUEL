@@ -68,16 +68,22 @@
   </div>
 </div>
 
+<div class="columnas_4_contenedor">
+  <div class="column-empty">
+    <a href="/catalogo" class="button-style">Ver Catálogo Completo</a>
+  </div>
+</div>
+
 <div class="slides-container">
-  <div class="background_card" style='top: var(--card-top, 30px); left: var(--card-left, 885px); width: var(--card-width, 25%); height: var(--card-height, 85%);'></div> 
-  <div class="card left-card" style='top: var(--left-card-top, 20px); left: var(--left-card-left, 300px);'>
+  <div class="card background-card" id="background-card-1"></div> 
+  <div class="card left-card" id="left-card-1">
     <%= image_tag @slides_1.archivo.url, alt: @slides_1.name, class: "background-image" %>
   </div>
-  <div class="card right-card" style='top: var(--right-card-top, 130px); left: var(--right-card-left, 300px);'>
-    <div class="text-container" style='text-align: left; left: 0%;'>
-      <div class="text-with-line" >
+  <div class="card right-card">
+    <div class="text-container">
+      <h2 class="text-with-line">
         <span class="colored-text">Un Secreto Que <br>Muy Pocos Saben</span>
-      </div>
+      </h2>
     </div>
     <p>Nuestros tomates respetan procesos de inocuidad y de baja utilización de pesticidas. Sólo así cuidamos el área donde está la mayor cantidad de nutrientes: La piel. ¿Lo sabías?</p>
     <ul>
@@ -85,13 +91,7 @@
       <li>Rico en Potasio</li>
       <li>Contiene Licopeno</li>
     </ul>
-
-    
-    <!-- Botón para abrir el modal de Hablemos -->
     <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#talkModal">Hablemos</button>
-
-    <div id="contenedor-modal" style="position: relative; z-index: 1050;"></div>
-    <!-- Modal Hablemos -->
     <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -110,12 +110,10 @@
         </div>
       </div>
     </div>
-    
-
-
-    <button type="button" class="open-modal button-style">Más Información</button>
+    <a href="beneficios_tomate" class="button-style">Más Información</a>
   </div>
 </div>
+
 
 <div class="text-container">
   <div class="text-with-line">
@@ -153,21 +151,20 @@
 </div>
 
 <div class="slides-container">
-  <div class="background_card" style='top: var(--card-top, 45px); left: var(--card-left, 720px); width: var(--card-width, 40%); height: var(--card-height, 60%);'></div> 
-  <div class="card left-card" style='top: var(--left-card-top, 60px); left: var(--left-card-left, 250px); width: 40%;'>
+  <div class="card background-card" id="background-card-2" style='top: var(--card-top, 8%); left: var(--card-left, 48.5%); width: 40%;'></div> 
+  <div class="card left-card" id="left-card-2" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%); width: 40%;'>
     <%= image_tag @slides_2.archivo.url, alt: @slides_2.name, class: "background-image" %>
   </div>
   <div class="card right-card" style='top: var(--rigth-card-top, 100px); left: var(--rigth-card-left, 160px);'>
-    <div class="text-container" style='text-align: left; left: 0%;'>
-      <div class="text-with-line" >
-        <span class="colored-text">¿Por qué somos el tomate más <br> sabroso
-        que no encontrarás <br> en cualquier lugar?</span>
-      </div>
+    <div class="text-container" style='text-align: left; left: 0%; width: 100%; padding: 20px;'>
+      <h2 class="text-with-line">
+        <span class="colored-text">¿Por qué somos el tomate más <br> sabroso que no encontrarás <br> en cualquier lugar?</span>
+      </h2>
     </div>
     <ul>
       <li>Inocuidad y sustentabilidad en nuestros procesos productivos</li>
       <li>Tomates llenos de sabor, variedad y aroma que no dañan tu cuerpo</li>
-      <li>Tomates Limpios y firmes. Nada de residuos</li>
+      <li>Tomates limpios y firmes. Nada de residuos</li>
       <li>Producimos con un Manejo Integrado de Plagas (MIP) para cuidar tu salud.</li>
       <li>Evita riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
       <li>Tenemos certificaciones GlobalGap, FSMA, GRASP.</li>
@@ -197,10 +194,10 @@
       </div>
     </div>
 
-   
-    <button type="button" class="open-modal button-style">Más Información</button>
+    <a href="us" class="button-style">Más De Nootros</a>
   </div>
 </div>
+
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">
@@ -241,6 +238,26 @@ document.addEventListener('DOMContentLoaded', function () {
     myInput.focus();
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  function adjustHeight(leftCardId, backgroundCardId) {
+    const leftCard = document.getElementById(leftCardId);
+    const backgroundCard = document.getElementById(backgroundCardId);
+    if (leftCard && backgroundCard) {
+      const height = leftCard.offsetHeight;
+      backgroundCard.style.height = `${height}px`;
+    }
+  }
+
+  adjustHeight('left-card-1', 'background-card-1');
+  adjustHeight('left-card-2', 'background-card-2');
+
+  window.addEventListener('resize', () => {
+    adjustHeight('left-card-1', 'background-card-1');
+    adjustHeight('left-card-2', 'background-card-2');
+  });
+});
+
 </script>
 
 

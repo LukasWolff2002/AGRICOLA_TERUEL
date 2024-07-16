@@ -1,17 +1,17 @@
-<%= form_with model: @comment, local: true do |form| %>
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, required: true %>
+<%= form_with model: @comment, local: true, html: { class: "comment-form" } do |form| %>
+  <div class="form-group">
+    <%= form.label :Nombre, class: "form-label" %>
+    <%= form.text_field :name, class: "form-control", required: true %>
   </div>
-  <div class="field">
-    <%= form.label :mail %>
-    <%= form.email_field :mail, required: true %>
+  <div class="form-group">
+    <%= form.label :Mail , class: "form-label" %>
+    <%= form.email_field :mail, class: "form-control", required: true %>
   </div>
-  <div class="field">
-    <%= form.label :comment %>
-    <%= form.text_area :comment, required: true %>
+  <div class="form-group">
+    <%= form.label :Comment , class: "form-label" %>
+    <%= form.text_area :comment, class: "form-control", required: true %>
   </div>
-  <div class="actions">
+  <div class="form-actions">
     <%= form.submit "Publicar Comentario", class: "btn btn-primary" %>
   </div>
 <% end %>

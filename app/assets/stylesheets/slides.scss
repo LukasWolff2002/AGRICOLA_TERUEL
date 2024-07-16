@@ -1,23 +1,12 @@
-/* Estilos del contenedor que podría estar afectando la visibilidad del modal */
+/* Estilos base para desktop */
 .slides-container {
-  margin-top: 10px;
   position: relative;
-  width: 100%;  /* Asegura que ocupa el ancho del contenedor padre */
-  height: 600px;  /* Ajusta la altura automáticamente según el contenido */
-  max-height: 670px;  /* Puedes mantener esto si quieres limitar la altura máxima */
-  overflow: visible;  /* Cambiado para permitir visibilidad del modal */
+  width: 100vw;  /* Utilizar el ancho del viewport para responsividad */
+  height: 600px; /* Altura fija que puedes ajustar según necesidad */
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 0; /* Asegúrate de que es menor que el z-index de modal */
-}
-
-.background_card {
-  position: absolute;
-  background-color: rgb(9, 54, 1);  /* Color verde */
-  border-radius: 8px;
-  z-index: 1;  /* Asegura que esté detrás de todos los otros contenidos */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra ligera para efecto de profundidad */
+  overflow: visible;
 }
 
 .card {
@@ -25,28 +14,66 @@
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0px 0px rgba(0,0,0,0.2);
-  overflow: visible; /* Cambiado a visible para permitir que el modal se muestre */
-  z-index: 2;  /* Asegúrate de que está por debajo del modal */
+  overflow: visible;
+  transition: all 0.3s ease-in-out; /* Transición suave para todos los cambios */
 }
 
 .card.left-card {
-  top: 20px;
-  left: 300px;
+  top: var(--left-card-top, 20px);
+  left: var(--left-card-left, 300px);
   width: 25%;
-  height: auto;
-  overflow: visible;
-  z-index: 3;  /* Incrementado para que esté por encima del background_card pero debajo del modal */
+  z-index: 2;
 }
 
 .card.right-card {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  top: var(--right-card-top, 130px);
+  left: var(--right-card-left, 300px);
   width: 40%;
-  height: auto;
-  padding: 20px;
-  overflow: visible;
-  z-index: 1050;  /* Asegúrate de que esto coloca la tarjeta sobre otros elementos si es necesario */
+  z-index: 2;
+}
+
+.card.background-card {
+  position: absolute;
+  width: 25%;
+  background-color: rgb(9, 54, 1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+}
+
+/* Media Queries para Tablet */
+@media (max-width: 768px) {
+  .card.background-card {
+    width: 40%; 
+    left: calc(60% - 20px);
+    height: 75%;
+  }
+
+  .card.left-card, .card.right-card {
+    left: 50%;  
+    transform: translateX(-50%);
+    width: 80%; 
+  }
+}
+
+/* Media Queries para Móvil */
+@media (max-width: 480px) {
+  .slides-container {
+    height: 400px; /* Altura reducida para pantallas más pequeñas */
+  }
+
+  .card.left-card, .card.right-card {
+    top: var(--right-card-top, 200px);
+    left: 50%;  /* Centrado con transformación */
+    transform: translateX(-50%);
+    width: 100%; 
+  }
+
+  .card.background-card {
+    width: 70%; /* Más ancho en dispositivos móviles para mejor visualización */
+    left: 15%; /* Centrado ajustado */
+    height: 75%;
+  }
 }
 
 /* Estilos adicionales para otros elementos */
@@ -94,5 +121,3 @@ button:hover {
 .button-style:hover {
   background-color: #cc8400;
 }
-
-

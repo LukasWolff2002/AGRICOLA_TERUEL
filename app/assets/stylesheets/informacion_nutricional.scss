@@ -5,49 +5,53 @@
     gap: 20px; /* Espacio entre las columnas */
 }
 
-.description-container {
+.description-container, .nutrition-container {
     width: 48%;
     background: #fff;
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    border: 1px solid #ddd; /* color de borde más suave */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     padding: 20px;
     border-radius: 10px;
     margin: 10px;
     transition: box-shadow 0.3s ease-in-out;
 }
 
-.description-container:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-.nutrition-container {
-    width: 48%;
+.description-container:hover, .nutrition-container:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
 h1, h2 {
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 600; /* Título más definido */
 }
 
 p {
     font-size: 16px;
     line-height: 1.6;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Espacio aumentado para una mejor separación visual */
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #FAFAFA; /* Fondo ligero para la tabla */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil */
+    border-radius: 8px; /* Bordes redondeados para la tabla */
 }
 
 th, td {
     text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid #ccc;
+    padding: 12px; /* Espaciado interno aumentado */
+    border-bottom: 1px solid #ddd; /* Línea más suave */
+    color: #333; /* Texto más oscuro para mejor lectura */
 }
 
 th {
-    font-weight: bold;
+    background-color: #EFEFEF; /* Fondo diferente para cabecera */
+    font-weight: 500; /* Fuente semi-negrita */
+    text-transform: uppercase; /* Texto en mayúsculas para la cabecera */
+    letter-spacing: 0.05em; /* Espaciado de caracteres */
 }

@@ -24,4 +24,8 @@ class AgricolaTeruelController < ApplicationController
         @javier = Image.find_by(name: 'JAVIER_US')
     end
 
+    def beneficios_tomate
+         
+    end
+
 end

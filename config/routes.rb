@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   get '/home', to: 'agricola_teruel#home' 
   get '/us', to: 'agricola_teruel#us' 
-    
+  get '/beneficios_tomate', to: 'agricola_teruel#beneficios_tomate'
+  
   root 'agricola_teruel#home'
 
   resources :catalogo, only: [:index]
