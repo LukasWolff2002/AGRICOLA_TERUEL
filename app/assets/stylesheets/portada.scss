@@ -4,7 +4,7 @@
   overflow: hidden;
   background-color: #f0f0f0;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Alinea horizontalmente al principio con margen */
   align-items: center; /* Centra verticalmente */
   position: relative; /* Añade posición relativa para manejar posición absoluta de la imagen */
 }
@@ -12,29 +12,47 @@
 .portada-container img {
   width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
   height: auto; /* Altura automática para mantener la proporción */
-  /* Elimina los ajustes de posición para permitir control desde HTML */
 }
 
+.image-text {
+  position: absolute;
+  bottom: 50%; /* Centrado vertical */
+  left: 10%; /* Margen izquierdo */
+  transform: translate(0, 50%); /* Ajusta solo verticalmente para centrar */
+  color: white;
+  padding: 10px 20px;
+  text-align: left; /* Alinea el texto a la izquierda */
+  border-radius: 8px; /* Bordes redondeados */
+
+  max-width: 80%; /* Limita el ancho máximo del texto para evitar que se extienda demasiado en pantallas grandes */
+}
+
+
+.column-red-container {
+  justify-content: center; /* Centra horizontalmente dentro de .container */
+  align-items: center; /* Centra verticalmente dentro de .container */
+}
+
+.red-container {
+  max-width: 180px; /* Ajusta el tamaño máximo de la imagen */
+  height: auto; /* Altura automática para mantener la proporción */
+}
+
+/* Añade media queries para ajustar la posición del texto en tamaños de pantalla más pequeños */
+@media (max-width: 768px) {
   .image-text {
-    position: absolute;
-    bottom: 40%; /* Ajusta la distancia desde abajo */
-    left: 20%; /* Centra horizontalmente */
-    transform: translateX(-50%); /* Centra perfectamente horizontalmente */
-    color: white;
-    padding: 10px 20px;
+    left: 5%; /* Reducir el margen izquierdo en tablets */
+    padding: 5px 10px; /* Reducción del padding para pantallas pequeñas */
+    font-size: 14px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
-
-  .column-red-container{
-    justify-content: center; /* Centra horizontalmente dentro de .container */
-    align-items: center; /* Centra verticalmente dentro de .container */
 }
 
-
-  .red-container {
-    max-width: 180px; /* Ajusta el tamaño máximo de la imagen */
-    height: auto; /* Altura automática para mantener la proporción */
-
+@media (max-width: 480px) {
+  .image-text {
+    left: 5%; /* Mantener un margen consistente en dispositivos móviles */
+    font-size: 12px; /* Texto aún más pequeño para ajustarse mejor */
   }
+}
 
 
   

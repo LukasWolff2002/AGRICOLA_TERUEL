@@ -7,24 +7,26 @@
 <%= stylesheet_link_tag 'images_hover' %>
 
 <div class="portada-container">
-  <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, 20%);" %>
+  <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: -20px; left: 0px; transform: translate(0%, 20%);" %>
   <div class="image-text" style='font-size: 80px;'>
     Nosotros
   </div>
 </div>
 
+<div class='container' style='margin-top: 30px;'></div>
+
 <div class="slides-container">
-  <div class="background_card" style='top: var(--card-top, 110px); left: var(--card-left, 740px); width: var(--card-width, 45%); height: var(--card-height, 70%);'></div> 
-  <div class="card left-card" style='top: var(--left-card-top, 50px); left: var(--left-card-left, 300px); width: 45%;'>
+  <div class="card background-card" id="us-background-card-1" ></div> 
+  <div class="card left-card" id="us-left-card-1">
     <%= image_tag @slides_1.archivo.url, alt: @slides_1.name, class: "background-image" %>
   </div>
-  <div class="card right-card" style='top: var(--right-card-top, 100px); left: var(--right-card-left, 80px); width: 50%;'>
+  <div class="card right-card" id="us-right-card-1">
     <div class="text-container" style='text-align: left; left: 0%;'>
-      <div class="text-with-line" >
+      <div class="text-with-line" style='margin-left: 20px; margin-top: 20px;' >
         <span class="colored-text">Nuestra Historia</span>
       </div>
     </div>
-    <p>Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!</p>
+    <p style='margin: 20px;'>Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!</p>
     <ul>
       <li>Producimos con un Manejo Integrado de Plagas (MIP)</li>
       <li>Utilizamos técnicas de producción de baja cantidad de pesticidas, para garantizar productos limpios y de bajo residuo.</li>
@@ -32,7 +34,10 @@
       <li>Contamos con Certificaciones GlobalGap, FSMA, GRASP.</li>
     </ul>
   </div>
+  <div class="card extra-card" id="us-extra-card-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%);'></div>
 </div>
+
+<div class='container' style='margin-top: 30px;'></div>
 
 <div class="bandeja" style="background-image: url(<%= @bandeja_1.archivo.url %>);">
     <div class="content">
@@ -76,7 +81,63 @@
   </div>
 </div>
 
+<script>
 
+document.addEventListener('DOMContentLoaded', function () {
+  function adjustHeight(leftCardId, backgroundCardId) {
+    const leftCard = document.getElementById(leftCardId);
+    const backgroundCard = document.getElementById(backgroundCardId);
+    if (leftCard && backgroundCard) {
+      const height = leftCard.offsetHeight;
+      backgroundCard.style.height = `${height}px`;
+    }
+  }
+
+  adjustHeight('us-left-card-1', 'us-background-card-1');
+
+  window.addEventListener('resize', () => {
+    adjustHeight('us-left-card-1', 'us-background-card-1');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  function calculateOverlapHeight(card1, card2) {
+    var card1Rect = card1.getBoundingClientRect();
+    var card2Rect = card2.getBoundingClientRect();
+
+    var card1Top = card1Rect.top;
+    var card1Bottom = card1Rect.bottom;
+    var card2Top = card2Rect.top;
+    var card2Bottom = card2Rect.bottom;
+
+    var overlapTop = Math.max(card1Top, card2Top);
+    var overlapBottom = Math.min(card1Bottom, card2Bottom);
+
+    var overlapHeight = Math.max(0, overlapBottom - overlapTop);
+    return overlapHeight;
+  }
+
+  function updateHeights() {
+    var leftCard = document.getElementById('us-left-card-1');
+    var leftCard2 = document.getElementById('us-extra-card-1');
+    var rightCard = document.getElementById('us-right-card-1');
+
+    var overlapHeight = calculateOverlapHeight(leftCard, rightCard);
+
+    var rightCardHeight = rightCard.offsetHeight;
+    var leftHeight = rightCardHeight - overlapHeight;
+
+    leftCard2.style.height = `${leftHeight}px`;
+  }
+
+  // Llama a updateHeights al cargar la página
+  updateHeights();
+
+  // Llama a updateHeights cada vez que la ventana cambia de tamaño
+  window.addEventListener('resize', updateHeights);
+});
+
+</script>
 
 
 
