@@ -38,3 +38,34 @@
     background-color: #cc8e00; /* Color más oscuro en hover para efecto visual */
 }
 
+/* Media Queries para Tablet */
+@media (max-width: 768px) {
+    .bandeja {
+        padding-left: 30px; /* Menor padding para tabletas */
+        height: auto; /* Altura auto para ajustarse al contenido */
+    }
+
+    .content h1 {
+        font-size: 20px; /* Tamaño de fuente reducido para tabletas */
+    }
+
+    .content p {
+        font-size: 14px; /* Tamaño de fuente reducido */
+        max-width: 80%; /* Más ancho para mejor ajuste en el espacio */
+    }
+}
+
+/* Media Queries para Móvil */
+@media (max-width: 480px) {
+    .bandeja {
+        padding-left: 20px; /* Ajuste de padding para móviles */
+    }
+
+    .content h1 {
+        font-size: 18px; /* Tamaño de fuente aún más pequeño para móviles */
+    }
+
+    .content p {
+        font-size: 12px; /* Tamaño de fuente más pequeño para mejorar la legibilidad en pantallas pequeñas */
+    }
+}

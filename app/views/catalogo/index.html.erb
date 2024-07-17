@@ -4,9 +4,9 @@
 <%= stylesheet_link_tag 'columns' %>
 <%= stylesheet_link_tag 'slides' %>
 
-<div class="portada-container">
+<div class="portada-container" id='catalogo-index'>
   <%= image_tag @catalogo_logo.archivo.url, alt: @catalogo_logo.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
-  <div class="image-text" style='font-size: 100px;'>
+  <div class="image-text">
     Catálogo
   </div>
 </div>

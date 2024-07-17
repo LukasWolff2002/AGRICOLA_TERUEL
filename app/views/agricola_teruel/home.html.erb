@@ -6,13 +6,37 @@
 <%= stylesheet_link_tag 'slides' %>
 
 
-<div class="portada-container">
+<div class="portada-container" id='home'>
   <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
-  <div class="image-text" style='background-color: rgba(229, 8, 8, 0.7); font-size: 32px;'>
-    Sabores Que No<br>
-    Dañan Tu Cuerpo
+
+  <div class="container-externo">
+    <button type="button" class="btn video-btn" data-bs-toggle="modal" data-bs-target="#video_modal" data-src="https://www.youtube.com/embed/VZw4m05yRwc?feature=oembed?playlist=VZw4m05yRwc&mute=0&autoplay=0&loop=no&controls=0&start=0&end=">
+      <i class="bi bi-play"></i>
+    </button>
+  </div>
+
+  <div class="image-text" style='background-color: rgba(229, 8, 8, 0.7);'>
+    Sabores Que No<br>Dañan Tu Cuerpo
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="video_modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Video</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9">
+            <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
+
 
 <div class="text-container">
   <div class="text-with-line">
@@ -324,6 +348,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Llama a updateHeights cada vez que la ventana cambia de tamaño
   window.addEventListener('resize', updateHeights);
+});
+
+//para el modal del boton play
+// Declare a variable to store the video source
+let videoSrc;
+
+// Agregar evento 'click' directamente a los botones puede no ser necesario si usas `shown.bs.modal`
+document.querySelectorAll('.video-btn').forEach(button => {
+  button.addEventListener('click', function() {
+    // Asegúrate de que obtienes correctamente el videoSrc del atributo data-src del botón
+    videoSrc = button.getAttribute('data-src');
+    console.log("Video source set to: ", videoSrc);
+  });
+});
+
+// Asegúrate de que los IDs usados existen en tu HTML
+document.getElementById('video_modal').addEventListener('shown.bs.modal', function() {
+  // Agrega seguridad para verificar que el elemento exista y el videoSrc no esté vacío
+  let videoElement = document.getElementById('video');
+  if (videoElement && videoSrc) {
+    videoElement.src = `${videoSrc}?autoplay=1&modestbranding=1&showinfo=0`;
+  }
+});
+
+document.getElementById('video_modal').addEventListener('hide.bs.modal', function() {
+  let videoElement = document.getElementById('video');
+  if (videoElement) {
+    videoElement.src = ""; // Esto detendrá efectivamente el video
+  }
 });
 
 </script>

@@ -2,11 +2,11 @@
   width: 100%;
   max-height: 500px;
   overflow: hidden;
-  background-color: #f0f0f0;
   display: flex;
-  justify-content: flex-start; /* Alinea horizontalmente al principio con margen */
-  align-items: center; /* Centra verticalmente */
-  position: relative; /* Añade posición relativa para manejar posición absoluta de la imagen */
+  justify-content: center; /* Centra los elementos horizontalmente */
+  align-items: center; /* Centra los elementos verticalmente */
+  position: relative;
+  background-color: #f0f0f0;
 }
 
 .portada-container img {
@@ -16,15 +16,30 @@
 
 .image-text {
   position: absolute;
-  bottom: 50%; /* Centrado vertical */
-  left: 10%; /* Margen izquierdo */
-  transform: translate(0, 50%); /* Ajusta solo verticalmente para centrar */
-  color: white;
+  left: 15%; /* Espacio desde el borde izquierdo del contenedor */
+  top: 50%; /* Ajuste vertical */
+  transform: translate(0%, -50%); /* Centrado perfecto */
   padding: 10px 20px;
-  text-align: left; /* Alinea el texto a la izquierda */
-  border-radius: 8px; /* Bordes redondeados */
+  color: white;
+  border-radius: 8px;
+  text-align: left;
+}
 
-  max-width: 80%; /* Limita el ancho máximo del texto para evitar que se extienda demasiado en pantallas grandes */
+.container-externo {
+  position: absolute;
+  top: 50%; /* Alineación vertical igual a image-text */
+  left: 8%; /* Espacio desde el borde izquierdo del contenedor */
+  transform: translateY(-50%); /* Alineación vertical centrada */
+  display: flex;
+  align-items: center; /* Alineación vertical de los ítems */
+  color: white;
+  background-color: transparent; /* Fondo transparente o según diseño */
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.bi-play {
+  font-size: 80px; /* Tamaño del ícono */
 }
 
 
@@ -38,19 +53,118 @@
   height: auto; /* Altura automática para mantener la proporción */
 }
 
+/* Estilo base para el cuerpo y margen para visualización */
+body {
+  margin: 2rem;
+}
+
+/* Ajustes para el diálogo del modal, asegurando una presentación adecuada y centrada */
+.modal-dialog {
+  max-width: 800px; /* Máximo ancho del modal para mantener su contenido visible y legible */
+  margin: 30px auto; /* Centra el modal vertical y horizontalmente con un margen adecuado */
+}
+
+/* Configuración del cuerpo del modal para integrar el contenido correctamente */
+.modal-body {
+  position: relative; /* Posicionamiento relativo para elementos internos absolutos como el botón de cierre */
+  padding: 0; /* Elimina el padding para control total sobre el contenido interno */
+}
+
+/* Ajustes para el botón de cierre para asegurar su visibilidad y accesibilidad */
+.btn-close {
+  position: absolute; /* Posicionamiento absoluto para colocarlo correctamente */
+  right: -30px; /* Coloca a la derecha fuera del contenido para evitar solapamientos */
+  top: 0; /* Alinea al top del modal */
+  z-index: 1050; /* Asegura que esté sobre todos los demás elementos del modal */
+  background: #fff; /* Fondo blanco para mejorar la visibilidad sobre fondos oscuros */
+  border-radius: 50%; /* Borde redondo para mejorar la estética */
+  width: 32px; /* Ancho fijo para mantener la forma */
+  height: 32px; /* Altura fija para mantener la forma */
+  display: flex; /* Utiliza flex para centrar el ícono dentro del botón */
+  align-items: center; /* Centra verticalmente el ícono */
+  justify-content: center; /* Centra horizontalmente el ícono */
+}
+
+/* Mejora visual para el hover y focus del botón de cierre */
+.btn-close:hover,
+.btn-close:focus {
+  background: #e0e0e0; /* Cambia el fondo al hacer hover para indicar interactividad */
+  outline: none; /* Elimina el outline al hacer focus para evitar distracciones visuales */
+}
+
+
 /* Añade media queries para ajustar la posición del texto en tamaños de pantalla más pequeños */
+
+@media (max-width: 1024px) {
+  .container-externo {
+    left: 5%; /* Reducir el margen izquierdo en tablets */
+  }
+}
+
+@media (min-width: 769px) {
+  #catalogo-index {
+    font-size: 100px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+
+  #home {
+    font-size: 40px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+
+  #tomate-beef{
+    font-size: 55px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+}
 @media (max-width: 768px) {
   .image-text {
-    left: 5%; /* Reducir el margen izquierdo en tablets */
+    left: 17%;
     padding: 5px 10px; /* Reducción del padding para pantallas pequeñas */
-    font-size: 14px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+
+ .bi-play {
+    font-size: 60px; /* Tamaño del ícono */
+  }
+
+  .portada-container {
+    max-height: 400px; /* Reducir la altura del contenedor en tablets */
+  }
+
+  #catalogo-index {
+    font-size: 70px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+
+  #home {
+    font-size: 25px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+
+  #tomate-beef{
+    font-size: 40px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
 }
 
 @media (max-width: 480px) {
   .image-text {
-    left: 5%; /* Mantener un margen consistente en dispositivos móviles */
-    font-size: 12px; /* Texto aún más pequeño para ajustarse mejor */
+    left: 15%; /* Mantener un margen consistente en dispositivos móviles */
+    padding: 5px 10px; /* Reducción del padding para pantallas pequeñas */
+  }
+
+  .bi-play {
+    font-size: 40px; /* Tamaño del ícono */
+  }
+
+  .portada-container {
+    max-height: 300px; /* Reducir la altura del contenedor en tablets */
+  }
+
+  #catalogo-index {
+    font-size: 50px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+
+  #home {
+    font-size: 20px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+
+  #tomate-beef{
+    font-size: 30px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
 }
 

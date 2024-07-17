@@ -1,5 +1,6 @@
 .product-container {
     display: flex;
+    flex-direction: row; /* Dirección horizontal por defecto */
     justify-content: space-between;
     align-items: center;
     margin: 20px;
@@ -10,7 +11,7 @@
 
 .product-image img {
     width: 100%;
-    max-width: 600px; /* Adjust based on your layout */
+    max-width: 600px; /* Ajusta basado en tu diseño */
     height: auto;
     object-fit: cover;
 }
@@ -35,3 +36,47 @@
     padding: 5px 0;
     color: #666;
 }
+
+/* Media Queries para adaptarse a tabletas */
+@media (max-width: 768px) {
+    .product-container {
+        flex-direction: column; /* Cambia a vertical */
+        align-items: center; /* Centra los elementos horizontalmente */
+    }
+
+    .product-image {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .product-image img {
+        max-width: 70%; /* Ocupa hasta el 70% del ancho disponible */
+    }
+
+    .product-details h3 {
+        font-size: 18px; /* Reducción del tamaño del texto */
+    }
+}
+
+
+/* Media Queries para adaptarse a teléfonos móviles */
+@media (max-width: 480px) {
+    .product-container {
+        margin: 10px;
+        padding: 10px; /* Reducción del margen y del padding */
+    }
+
+    .product-image img {
+        width: 0%;
+    }
+
+    .product-info {
+        padding: 10px; /* Menor padding */
+    }
+
+    .product-details h3 {
+        font-size: 16px; /* Tamaño de texto aún menor para móviles */
+    }
+}
+
