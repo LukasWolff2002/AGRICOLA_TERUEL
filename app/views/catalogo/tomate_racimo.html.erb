@@ -13,23 +13,19 @@
 
 <div class="product-container">
     <div class="product-image">
-        <%= image_tag @variedad_2.archivo.url, alt: @variedad_2.name, class: "red-container" %>
+        <%= image_tag 'catalogo/VARIEDAD_2.jpg', class: "red-container" %>
     </div>
     <div class="product-info">
-        <div class="text-container" style='left: 0%; margin-top: -12%;'>
-            <div class="text-with-line">
-                <span class="colored-text">Tomate Racimo</span>
-            </div>
-        </div>
-        <p>¿Necesitamos tamaño? ¿O un sabor intenso? Prueba nuestros Beefs inocuos, sabrosos y contundentes.</p>
+        <h2>Tomate Racimo</h2>
+        <p>Conservamos todas las propiedades del tomate a través de una presentación más natural.</p>
         <div class="product-details">
             <h3>Características</h3>
             <ul>
-                <li>Gran Color, Firme, Rico, Vibrante Y Carnoso.</li>
+                <li>Piel Suave Y Jugosa, Textura Perfecta Para Acompañar Otras Preparaciones</li>
             </ul>
             <h3>Ideales Para</h3>
             <ul>
-                <li>Hamburguesas, Sándwiches, Salsa De Tomates</li>
+                <li>Sopas, Jugos, Salsas, Mermeladas Y Ensaladas. Horneados, A La Parrilla O Crudos.</li>
             </ul>
             <h3>Disponible</h3>
             <ul>
@@ -41,7 +37,7 @@
             </ul>
             <h3>Grados Brix</h3>
             <ul>
-                <li>4,5 a 5 Grados Brix</li>
+                <li>5 a 5,5 Grados Brix</li>
             </ul>
         </div>
     </div>
@@ -59,12 +55,10 @@
 <div class="content-container">
     <div class="description-container">
         <h1>Palabras de nuestro catador de tomates</h1>
-        <p>Tomates grandes y carnosos que quedan perfectos cortados en rodajas en un sándwich o picados en una salsa fresca. Este tomate versátil va a cualquier parte. ¿Te gusta la salsa? Este lo logras obtener con este tipo de tomate y un cultivo fresco-sano.</p>
-        <p>Ideal para la preparación de la hamburguesa. Este tipo es ideal para salsa de tomate y te sorprenderá a la parrilla como un sustituto de la hamburguesa en rodajas gruesas. Los tomates rojos de ternera son el tomate triturador ideal con mucho jugo y son una base encantadora para salsas frías y salsas.</p>
-        <p>Nuestros tomates beef son grandes y de pulpa roja son el centro del plato, perfectos y excelentes para rellenar, asar a la parrilla o servidos en rodajas para hamburguesas y sándwiches. Los tomates beef grandes y jugosos son conocidos por su textura y sabores tradicionales a tomate.</p>
-        <p>Córtalo en cuadros para obtener salsas sanas y con mucho sabor o como una sabrosa adición a sus platos favoritos: calidad asegurada, saludable y deliciosa.</p>
-        <p>Córtalo en cuadros para obtener salsas sanas y con mucho sabor o como una sabrosa adición a sus platos favoritos: calidad asegurada, saludable y deliciosa.</p>
-        <p>Elígelas de color rojo o rosa, sin magulladuras ni excesiva suavidad. Conservar en la encimera de la cocina a temperatura ambiente y consumir con un color rojo brillante. Evite poner los tomates en temperaturas frías refrigeradas, ya que esto reducirá el sabor.</p>
+        <p>Estos deberían llamarse Sopa de tomate en la vid. 15 minutos y tendrás la mejor sopa de tomate que jamás hayas probado. Pero no, no te detendrás ahí. Querrá probar estos tomates rojos en salsas, mermeladas y ensaladas, horneados, a la parrilla o crudos. ¡Las posibilidades son infinitas!</p>
+        <p>Perfecto como una adición saludable y colorida a cualquier ensalada o plato principal, nuestros tomates cultivados en invernadero brindan un sabor que solo la maduración de la vid puede brindar. Elije entre variedades rojas, naranjas o amarillas, todas con menor acidez y sabor más suave.</p>
+        <p>Madurados con el raquis y llenos de sabor, estos tomates perfectamente redondos ofrecen la sensación de frescos de la planta en su cocina.</p>
+        <p>Los tomates recolectados mientras aún están en rama tienen ese sabor «fresco del jardín», ya que pueden continuar extrayendo humedad y nutrientes del tallo varios días después de haber sido recolectados. Con su piel suave y jugosa, agregan un sabor, textura y color perfectos a todo, desde tortillas hasta bruschetta. Estos tomates vienen en una variedad de sabores y colores, desde rojo hasta naranja e incluso amarillo. ¡Solo un olor le dirá que nuestros tomates en la vid son tan frescos como vienen!</p>
     </div>
     <div class="nutrition-container">
         <h2>Información Nutricional</h2>
@@ -99,5 +93,29 @@
             </tr>
         </table>
     </div>
+</div>
+
+<div class="columnas_4_contenedor">
+  <div class="column-empty" style="width: 40%;">
+    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center;">COTIZAR</button>
+    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <%= render 'comments/new', comment: @comment %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

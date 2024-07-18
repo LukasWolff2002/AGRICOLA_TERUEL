@@ -5,28 +5,23 @@ class CatalogoController < ApplicationController
     end
 
     def tomate_granel
-        @variedad_1 = Image.find_by(name: 'VARIEDAD_1')
- 
+        @comment = Comment.new
     end
 
     def tomate_racimo
-       
-        @variedad_2 = Image.find_by(name: 'VARIEDAD_2')
-
+        @comment = Comment.new
     end
 
     def tomate_beef
-      
-        @variedad_3 = Image.find_by(name: 'VARIEDAD_3')
-
+        @comment = Comment.new
     end
 
     def tomate_cherry
-       
+        @comment = Comment.new
     end
 
     def tomate_saladete
-      
+        @comment = Comment.new
     end
 
 end

@@ -12,11 +12,11 @@
 
 <div class="product-container">
     <div class="product-image">
-        <%= image_tag @variedad_1.archivo.url, alt: @variedad_1.name, class: "red-container" %>
+        <%= image_tag 'catalogo/VARIEDAD_1.jpg', class: "red-container" %>
     </div>
     <div class="product-info">
         <h2>Tomate Granel</h2>
-        <p>El mejor acompañante de la comida chilena</p>
+        <p>EL MEJOR ACOMPAÑANTE DE LA COCINA CHILENA</p>
         <div class="product-details">
             <h3>Características</h3>
             <ul>
@@ -32,7 +32,7 @@
             </ul>
             <h3>Formatos Disponibles</h3>
             <ul>
-                <li>Caja De 17 Kilos Color Rojo <br> Malla De 1 Kilo Color Rojo</li>
+                <li>Caja De 17 Kilos Color Rojo<br>Malla De 1 Kilo Color Rojo</li>
             </ul>
             <h3>Grados Brix</h3>
             <ul>
@@ -94,4 +94,28 @@
             </tr>
         </table>
     </div>
+</div>
+
+<div class="columnas_4_contenedor">
+  <div class="column-empty" style="width: 40%;">
+    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center;">COTIZAR</button>
+    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <%= render 'comments/new', comment: @comment %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

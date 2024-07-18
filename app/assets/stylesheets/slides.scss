@@ -94,6 +94,14 @@ button:hover {
   background-color: #cc8400;
 }
 
+.modal {
+  z-index: 1050; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+.modal-backdrop {
+  z-index: 1040; /* Asegura que el backdrop esté por encima de otros elementos */
+}
+
 @media (min-width: 1441px) {
   /* Ajustes para pantallas mayores a 1024 px */
   #home-left-card-1 {

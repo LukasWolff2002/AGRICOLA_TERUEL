@@ -2,6 +2,7 @@
 <%= stylesheet_link_tag 'product' %>
 <%= stylesheet_link_tag 'informacion_nutricional' %>
 <%= stylesheet_link_tag 'bandeja' %>
+<%= stylesheet_link_tag 'columns' %>
 
 <div class="portada-container" id='tomate-beef'>
   <%= image_tag 'catalogo/CATALOGO_LOGO_2.jpg', class: "portada-position", style: "position: relative; top: 0px; left: 0px; transform: translate(0%, -4%);" %>
@@ -12,7 +13,7 @@
 
 <div class="product-container">
     <div class="product-image">
-        <%= image_tag @variedad_3.archivo.url, alt: @variedad_3.name, class: "red-container" %>
+        <%= image_tag 'catalogo/VARIEDAD_3.jpg', class: "red-container" %>
     </div>
     <div class="product-info">
         <h2>Tomate Beef</h2>
@@ -95,5 +96,29 @@
             </tr>
         </table>
     </div>
+</div>
+
+<div class="columnas_4_contenedor">
+  <div class="column-empty" style="width: 40%;">
+    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center;">COTIZAR</button>
+    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <%= render 'comments/new', comment: @comment %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

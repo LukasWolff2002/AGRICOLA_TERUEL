@@ -6,9 +6,42 @@
 <div class="portada-container" id='tomate-beef'>
   <%= image_tag 'catalogo/CATALOGO_LOGO_2.jpg', class: "portada-position", style: "position: relative; top: 0px; left: 0px; transform: translate(0%, -4%);" %>
   <div class="image-text">
-    El Mejor <br> Compañero De <br> Una Burger
+    El Clásico Crujiente
   </div>
 </div>
+
+<div class="product-container">
+    <div class="product-image">
+        <%= image_tag 'catalogo/VARIEDAD_4.jpg', class: "red-container" %>
+    </div>
+    <div class="product-info">
+        <h2>Tomate Cherry</h2>
+        <p>DELEITA TU PALADAR CON EL ESPECIAL «CRUNCH» DE NUESTROS CHERRY.</p>
+        <div class="product-details">
+            <h3>Características</h3>
+            <ul>
+                <li>Crujientes, Jugosos Y Un Inconfundible Sabor Dulce</li>
+            </ul>
+            <h3>Ideales Para</h3>
+            <ul>
+                <li>Ensaladas, Salsas, Colación, Acompañamiento De Pastas</li>
+            </ul>
+            <h3>Disponible</h3>
+            <ul>
+                <li>Todo El Año</li>
+            </ul>
+            <h3>Formatos Disponibles</h3>
+            <ul>
+                <li>Caja De 250 Gramos Granel Color Rojo, Caja De 250 Gramos Granel Color Amarillo, Caja De 250 Gramos Granel Colores Mix, Caja De 300 Gramos Granel Color Rojo, Caja De 300 Gramos Granel Colores Mix, Caja De 500 Gramos Granel Color Rojo, Caja De 500 Gramos Granel Colores Mix, Caja De 5 Kilos Granel Colores Mix , Caja De 15 Kilos Granel Color Rojo, Caja De 15 Kilos Granel Color Amarillo, Caja De 15 Kilos Granel Colores Mix</li>
+            </ul>
+            <h3>Grados Brix</h3>
+            <ul>
+                <li>8 a 9 Grados Brix</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
 <div class="bandeja">
     <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1', class: "bandeja-img" %>
@@ -17,4 +50,71 @@
         <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
         <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
     </div>
+</div>
+
+<div class="content-container">
+    <div class="description-container">
+        <h1>Palabras de nuestro catador de tomates</h1>
+        <p>El Tomate Cherry es un tomate impresionantemente versátil: puedes comerlo crudo, cocido, a la parrilla, en salsa, seco, en ensaladas o como colación. ¡Es un compañero ideal para el almuerzo! Una ensalada y un pilar de la cocina, los tomates cherry rojos de Agrícola Teruel son pequeñas delicias en capas. Siempre explosivo, puedes saborear y sentir el sabor que te lleva de lo sutilmente dulce, a lo turgente y ácido, a una explosión de caramelos naturales.</p>
+        <p>¡Dulce! ¡Dulce! ¡Dulce! El tomate cherry hace que niños y adultos estén de acuerdo en que este es el tomate para picar # 1. Geniales para una ensalada, pasta o solos, ¡estos pequeños tomates dulces son inmejorables!</p>
+        <p>Los tomates uva rojo son excelentes para un refrigerio rápido y saludable. Son deliciosos cuando se agregan a ensaladas y platos de pasta, y asarlos en el horno resalta aún más su sabor. Es un pequeño vegetal con mucho poder. Ya sean tomates uva rojos, anaranjados o amarillos, cada uno da un crujiente satisfactorio con el primer bocado y una explosión de sabor jugoso en el interior.</p>
+        <p>Este es el tomate ideal para ensaladas, aperitivos y más. Sus clientes buscan tomates cherry para completar sus platos, y este es un artículo básico para exhibiciones de tomates y barras de ensaladas.</p>
+    </div>
+    <div class="nutrition-container">
+        <h2>Información Nutricional</h2>
+        <table>
+            <tr>
+                <th>Tamaño de porción:</th>
+                <td>1 Tomate 160 g</td>
+            </tr>
+            <tr>
+                <td>Energía (kcal)</td>
+                <td>18 / 29</td>
+            </tr>
+            <tr>
+                <td>Proteínas (g)</td>
+                <td>0.88 / 1.4</td>
+            </tr>
+            <tr>
+                <td>Grasas Totales (g)</td>
+                <td>0.2 / 0.32</td>
+            </tr>
+            <tr>
+                <td>Hidratos de Carbono disponibles (g)</td>
+                <td>3.89 / 6.2</td>
+            </tr>
+            <tr>
+                <td>Azúcares Totales (g)</td>
+                <td>2.63 / 4.2</td>
+            </tr>
+            <tr>
+                <td>Sodio (mg)</td>
+                <td>5 / 8</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="columnas_4_contenedor">
+  <div class="column-empty" style="width: 40%;">
+    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center;">COTIZAR</button>
+    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <%= render 'comments/new', comment: @comment %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

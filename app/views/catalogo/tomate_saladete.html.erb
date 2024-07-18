@@ -6,8 +6,40 @@
 <div class="portada-container" id='tomate-beef'>
   <%= image_tag 'catalogo/CATALOGO_LOGO_2.jpg', class: "portada-position", style: "position: relative; top: 0px; left: 0px; transform: translate(0%, -4%);" %>
   <div class="image-text">
-    El Mejor <br> Compañero De <br> Una Burger
+    El Favorito Para <br> Salsas
   </div>
+</div>
+
+<div class="product-container">
+    <div class="product-image">
+        <%= image_tag 'catalogo/VARIEDAD_5.jpg', class: "red-container" %>
+    </div>
+    <div class="product-info">
+        <h2>Tomate Saladette</h2>
+        <p>Firme y esbelto. especial para pastas y salsas, pero también para acompañar tus ensaladas.</p>
+        <div class="product-details">
+            <h3>Características</h3>
+            <ul>
+                <li>Con Pocas Semillas Y Carne Firme Y Densa</li>
+            </ul>
+            <h3>Ideales Para</h3>
+            <ul>
+                <li>Salsas, Conversas, Recetas Cocidas Y Crudas</li>
+            </ul>
+            <h3>Disponible</h3>
+            <ul>
+                <li>Octubre A Diciembre / Marzo A Junio</li>
+            </ul>
+            <h3>Formatos Disponibles</h3>
+            <ul>
+                <li>Caja De 15 Kilos Granel Color Rojo</li>
+            </ul>
+            <h3>Grados Brix</h3>
+            <ul>
+                <li>5 a 6 Grados Brix</li>
+            </ul>
+        </div>
+    </div>
 </div>
 
 <div class="bandeja">
@@ -18,3 +50,73 @@
         <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
     </div>
 </div>
+
+<div class="content-container">
+    <div class="description-container">
+        <h1>Palabras de nuestro catador de tomates</h1>
+        <p>Un tomate estilo ciruela italiano que es fantástico para salsas y conservas. Los tomates salad o pera son una variedad alargada en forma de huevo, a veces también conocida como tomate ciruela.</p>
+        <p>Con pocas semillas y carne firme, densa y carnosa, los salad tienen menos contenido de agua y más pulpa que otros tomates, lo que los convierte en una excelente variedad que se utiliza en varias recetas, tanto cocidas como crudas.</p>
+        <p>Los tomates Roma de buena calidad serán firmes, de piel suave y de color entre rosado y rojo. A medida que el producto madura, el color cambiará a un color rojo brillante. Mantenga el tomate en la encimera de la cocina a temperatura ambiente hasta que esté listo para usar. Evite almacenar en el refrigerador, ya que las temperaturas frías pueden afectar negativamente el perfil de sabor de los tomates.</p>
+        <p>Bajo contenido de agua, alto nivel de azúcar y textura carnosa.</p>
+        <p>Los tomates salad tienen una pulpa densa, carnosa, con bajo contenido de humedad y pocas semillas, lo que los hace ideales para salsas de tomate, platos horneados y ensaladas.</p>
+
+    </div>
+    <div class="nutrition-container">
+        <h2>Información Nutricional</h2>
+        <table>
+            <tr>
+                <th>Tamaño de porción:</th>
+                <td>1 Tomate 160 g</td>
+            </tr>
+            <tr>
+                <td>Energía (kcal)</td>
+                <td>18 / 29</td>
+            </tr>
+            <tr>
+                <td>Proteínas (g)</td>
+                <td>0.88 / 1.4</td>
+            </tr>
+            <tr>
+                <td>Grasas Totales (g)</td>
+                <td>0.2 / 0.32</td>
+            </tr>
+            <tr>
+                <td>Hidratos de Carbono disponibles (g)</td>
+                <td>3.89 / 6.2</td>
+            </tr>
+            <tr>
+                <td>Azúcares Totales (g)</td>
+                <td>2.63 / 4.2</td>
+            </tr>
+            <tr>
+                <td>Sodio (mg)</td>
+                <td>5 / 8</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="columnas_4_contenedor">
+  <div class="column-empty" style="width: 40%;">
+    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center;">COTIZAR</button>
+    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <%= render 'comments/new', comment: @comment %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
