@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   get '/home', to: 'agricola_teruel#home' 
   get '/us', to: 'agricola_teruel#us' 
   get '/beneficios_tomate', to: 'agricola_teruel#beneficios_tomate'
+  get '/innovacion_y_desarrollo', to: 'agricola_teruel#innovacion_y_desarrollo'
+  get '/contacto', to: 'agricola_teruel#contacto'
   
   root 'agricola_teruel#home'
 
@@ -22,5 +24,6 @@ Rails.application.routes.draw do
   get '/catalogo/tomate_racimo', to: 'catalogo#tomate_racimo' 
   get '/catalogo/tomate_beef', to: 'catalogo#tomate_beef' 
   get '/catalogo/tomate_cherry', to: 'catalogo#tomate_cherry' 
+  get '/catalogo/tomate_saladete', to: 'catalogo#tomate_saladete' 
 
 end

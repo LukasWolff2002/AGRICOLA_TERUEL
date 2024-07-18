@@ -7,11 +7,11 @@
 
 
 <div class="portada-container" id='home'>
-  <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
+  <%= image_tag 'home/MANOS_TOMATES.jpg', class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
 
   <div class="container-externo">
     <button type="button" class="btn video-btn" data-bs-toggle="modal" data-bs-target="#video_modal" data-src="https://www.youtube.com/embed/VZw4m05yRwc?feature=oembed?playlist=VZw4m05yRwc&mute=0&autoplay=0&loop=no&controls=0&start=0&end=">
-      <i class="bi bi-play"></i>
+      <i class="bi bi-play" style='color: whyte;'></i>
     </button>
   </div>
 
@@ -53,7 +53,7 @@
 <div class="columnas_4_contenedor">
   <div class="column">
     <div class="column-red-container">
-      <%= image_tag @variedad_1.archivo.url, alt: @variedad_1.name, class: "red-container" %>
+      <%= image_tag 'catalogo/VARIEDAD_1.jpg', class: "red-container" %>
     </div>
     <span class="column-text">Tomate Granel</span>
     <div class="column-paragraph">
@@ -63,7 +63,7 @@
   </div>
   <div class="column">
     <div class="column-red-container">
-      <%= image_tag @variedad_2.archivo.url, alt: @variedad_2.name, class: "red-container" %>
+      <%= image_tag 'catalogo/VARIEDAD_2.jpg', class: "red-container" %>
     </div>
     <span class="column-text">Tomate Racimo</span>
     <div class="column-paragraph">
@@ -73,7 +73,7 @@
   </div>
   <div class="column">
     <div class="column-red-container">
-      <%= image_tag @variedad_3.archivo.url, alt: @variedad_3.name, class: "red-container" %>
+      <%= image_tag 'catalogo/VARIEDAD_3.jpg', class: "red-container" %>
     </div>
     <span class="column-text">Tomate Beef</span>
     <div class="column-paragraph">
@@ -83,7 +83,7 @@
   </div>
   <div class="column">
     <div class="column-red-container">
-      <%= image_tag @variedad_4.archivo.url, alt: @variedad_4.name, class: "red-container" %>
+      <%= image_tag 'catalogo/VARIEDAD_4.jpg', class: "red-container" %>
     </div>
     <span class="column-text">Tomate Cherry</span>
     <div class="column-paragraph">
@@ -104,7 +104,7 @@
 <div class="slides-container">
   <div class="card background-card" id="home-background-card-1"></div> 
   <div class="card left-card" id="home-left-card-1">
-    <%= image_tag @slides_1.archivo.url, alt: @slides_1.name, class: "background-image" %>
+    <%= image_tag 'home/SLIDES_1.jpg', class: "background-image"%>
   </div>
   <div class="card right-card" id="home-right-card-1">
     <div class="text-container">
@@ -114,9 +114,9 @@
     </div>
     <p style='margin: 20px;'>Nuestros tomates respetan procesos de inocuidad y de baja utilización de pesticidas. Sólo así cuidamos el área donde está la mayor cantidad de nutrientes: La piel. ¿Lo sabías?</p>
     <ul>
-      <li>Altos en Vitamina C</li>
-      <li>Rico en Potasio</li>
-      <li>Contiene Licopeno</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Altos en Vitamina C</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Rico en Potasio</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Contiene Licopeno</li>
     </ul>
     <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#talkModal">Hablemos</button>
     <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
@@ -155,25 +155,26 @@
 <div class="columnas_4_contenedor">
   <div class="column">
     <div class="column-red-container">
-      <%= link_to(image_tag(@red_1.archivo.url, alt: @red_1.name, class: "red-container"), 'https://www.instagram.com/p/C7_uxrKRzwZ/') %>
+      <%= link_to(image_tag('home/RED_1.jpg', class: "red-container"), 'https://www.instagram.com/p/C7_uxrKRzwZ/') %>
+
     </div>
     <span class="column-text">Un Tomate Verde</span>
   </div>
   <div class="column">
     <div class="column-red-container">
-      <%= link_to(image_tag(@red_2.archivo.url, alt: @red_2.name, class: "red-container"), 'https://www.instagram.com/p/C8rwKVTRh2I/') %>
+      <%= link_to(image_tag('home/RED_2.jpg', class: "red-container"), 'https://www.instagram.com/p/C8rwKVTRh2I/') %>
     </div>
     <span class="column-text">Nuestros Cherry</span>
   </div>
   <div class="column">
     <div class="column-red-container">
-      <%= link_to(image_tag(@red_3.archivo.url, alt: @red_3.name, class: "red-container"), 'https://www.instagram.com/p/C5QhJSNrGTa/') %>
+      <%= link_to(image_tag('home/RED_3.jpg', class: "red-container"), 'https://www.instagram.com/p/C5QhJSNrGTa/') %>
     </div>
     <span class="column-text">Carlo Cocina</span>
   </div>
   <div class="column">
     <div class="column-red-container">
-      <%= link_to(image_tag(@red_4.archivo.url, alt: @red_4.name, class: "red-container"), 'https://www.instagram.com/p/C0rD88mO_th/') %>
+      <%= link_to(image_tag('home/RED_4.jpg', class: "red-container"), 'https://www.instagram.com/p/C0rD88mO_th/') %>
     </div>
     <span class="column-text">Cocina</span>
   </div>
@@ -190,7 +191,7 @@
 <div class="slides-container">
   <div class="card background-card" id="home-background-card-2"></div> 
   <div class="card left-card" id="home-left-card-2">
-    <%= image_tag @slides_2.archivo.url, alt: @slides_2.name, class: "background-image" %>
+    <%= image_tag 'home/SLIDES_2.jpg', class: "background-image"%>
   </div>
   <div class="card right-card" id="home-right-card-2">
     <div class="text-container" style='text-align: left; left: 0%; width: 100%; padding: 20px;'>
@@ -199,12 +200,12 @@
       </h2>
     </div>
     <ul>
-      <li>Inocuidad y sustentabilidad en nuestros procesos productivos</li>
-      <li>Tomates llenos de sabor, variedad y aroma que no dañan tu cuerpo</li>
-      <li>Tomates limpios y firmes. Nada de residuos</li>
-      <li>Producimos con un Manejo Integrado de Plagas (MIP) para cuidar tu salud.</li>
-      <li>Evita riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
-      <li>Tenemos certificaciones GlobalGap, FSMA, GRASP.</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Inocuidad y sustentabilidad en nuestros procesos productivos</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Tomates llenos de sabor, variedad y aroma que no dañan tu cuerpo</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Tomates limpios y firmes. Nada de residuos</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Producimos con un Manejo Integrado de Plagas (MIP) para cuidar tu salud.</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Evita riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Tenemos certificaciones GlobalGap, FSMA, GRASP.</li>
     </ul>
 
     <!-- Button trigger modal -->
@@ -272,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-document.addEventListener('DOMContentLoaded', function() {
+function ajustar_extra_1 (){
   function calculateOverlapHeight(card1, card2) {
     var card1Rect = card1.getBoundingClientRect();
     var card2Rect = card2.getBoundingClientRect();
@@ -307,7 +308,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Llama a updateHeights cada vez que la ventana cambia de tamaño
   window.addEventListener('resize', updateHeights);
-});
+}
+document.addEventListener('DOMContentLoaded', ajustar_extra_1);
+document.addEventListener('load', ajustar_extra_1);
 
 document.addEventListener('DOMContentLoaded', function() {
   function calculateOverlapHeight(card1, card2) {

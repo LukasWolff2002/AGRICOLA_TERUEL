@@ -11,3 +11,4 @@
 //= link images_hover.css
 //= link product.css
 //= link informacion_nutricional.css
+ //= link footer.css

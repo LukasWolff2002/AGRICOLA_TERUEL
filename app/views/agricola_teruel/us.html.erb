@@ -7,7 +7,7 @@
 <%= stylesheet_link_tag 'images_hover' %>
 
 <div class="portada-container">
-  <%= image_tag @portada.archivo.url, alt: @portada.name, class: "portada-position", style: "position: relative; top: -20px; left: 0px; transform: translate(0%, 20%);" %>
+  <%= image_tag 'us/PORTADA_US.jpg', class: "portada-position", style: "position: relative; top: -20px; left: 0px; transform: translate(0%, 20%);" %>
   <div class="image-text" style='font-size: 80px;'>
     Nosotros
   </div>
@@ -18,7 +18,7 @@
 <div class="slides-container">
   <div class="card background-card" id="us-background-card-1" ></div> 
   <div class="card left-card" id="us-left-card-1">
-    <%= image_tag @slides_1.archivo.url, alt: @slides_1.name, class: "background-image" %>
+    <%= image_tag 'us/SLIDES_1_US.jpg', class: "background-image" %>
   </div>
   <div class="card right-card" id="us-right-card-1">
     <div class="text-container" style='text-align: left; left: 0%;'>
@@ -28,10 +28,10 @@
     </div>
     <p style='margin: 20px;'>Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!</p>
     <ul>
-      <li>Producimos con un Manejo Integrado de Plagas (MIP)</li>
-      <li>Utilizamos técnicas de producción de baja cantidad de pesticidas, para garantizar productos limpios y de bajo residuo.</li>
-      <li>Nuestro proceso productivo permite obtener un producto de calidad que disminuya riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
-      <li>Contamos con Certificaciones GlobalGap, FSMA, GRASP.</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Producimos con un Manejo Integrado de Plagas (MIP)</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Utilizamos técnicas de producción de baja cantidad de pesticidas, para garantizar productos limpios y de bajo residuo.</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Nuestro proceso productivo permite obtener un producto de calidad que disminuya riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
+      <li><i class="bi bi-check-lg" style='color: green;'></i> Contamos con Certificaciones GlobalGap, FSMA, GRASP.</li>
     </ul>
   </div>
   <div class="card extra-card" id="us-extra-card-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%);'></div>
@@ -39,14 +39,13 @@
 
 <div class='container' style='margin-top: 30px;'></div>
 
-<div class="bandeja" style="background-image: url(<%= @bandeja_1.archivo.url %>);">
+<div class="bandeja">
+    <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1 US' %>
     <div class="content">
         <h1>Llena de sabor tu día a día con productos que no dañan tu cuerpo.</h1>
         <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sostenibilidad de cada tomate para acompañar tu paladar y salud!</p>
-        <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
     </div>
 </div>
-
 
 <div class="text-container">
   <div class="text-with-line">
@@ -62,7 +61,7 @@
   <div class="row align-items-start">
     <div class="col">
       <div class="image-container">
-        <%= image_tag @diego.archivo.url, alt: "Diego Ortiz", class: "hover-image" %>
+        <%= image_tag 'us/DIEGO_US.jpg', alt: "Diego Ortiz", class: "hover-image" %>
         <div class="fixed-text">
           <div class="name">Diego Ortiz</div>
           <div class="title">Gerente General</div>
@@ -71,7 +70,7 @@
     </div>
     <div class="col">
       <div class="image-container">
-        <%= image_tag @javier.archivo.url, alt: "Javier Martínez", class: "hover-image" %>
+        <%= image_tag 'us/JAVIER.jpg', alt: "Javier Martínez", class: "hover-image" %>
         <div class="fixed-text">
           <div class="name">Javier Devia</div>
           <div class="description">Gerente Técnico - Director</div>
