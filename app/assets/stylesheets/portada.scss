@@ -110,6 +110,15 @@ body {
     font-size: 40px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
 
+  #us {
+    font-size: 80px;
+  }
+
+  #image-text-us{
+    left: 15%; /* Espacio desde el borde izquierdo del contenedor */
+    top: 55%;
+  }
+
   #tomate-beef{
     font-size: 55px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
@@ -136,6 +145,15 @@ body {
     font-size: 25px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
 
+  #us {
+    font-size: 80px;
+  }
+
+  #image-text-us{
+    left: 5%; /* Espacio desde el borde izquierdo del contenedor */
+    top: 60%;
+  }
+
   #tomate-beef{
     font-size: 40px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
@@ -143,7 +161,7 @@ body {
 
 @media (max-width: 480px) {
   .image-text {
-    left: 15%; /* Mantener un margen consistente en dispositivos móviles */
+    left: 20%; /* Mantener un margen consistente en dispositivos móviles */
     padding: 5px 10px; /* Reducción del padding para pantallas pequeñas */
   }
 
@@ -163,9 +181,20 @@ body {
     font-size: 20px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
 
+  #us {
+    font-size: 50px;
+  }
+
+  #image-text-us{
+    left: 5%; /* Espacio desde el borde izquierdo del contenedor */
+    top: 60%;
+  }
+
   #tomate-beef{
     font-size: 30px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
+
+
 }
 
 
