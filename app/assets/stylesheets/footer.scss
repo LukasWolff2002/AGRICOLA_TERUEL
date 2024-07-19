@@ -1,50 +1,43 @@
 footer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px 0; /* Agrega padding para mejor espaciado */
+}
+
+.footer-logo {
+  flex: 1 100%; /* Hace que el logo tenga la anchura completa en móviles */
+  text-align: center; /* Centra el logo */
+  margin-bottom: 20px; /* Espaciado después del logo */
+}
+
+.footer-logo img {
+  width: 100%; /* Hace que la imagen se ajuste al contenedor */
+  max-width: 160px; /* Máximo tamaño de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+}
+
+@media (min-width: 768px) {
+  footer {
+      justify-content: space-between; /* Distribuye el espacio entre los elementos del footer */
   }
-  
-  footer .col {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
+
   .footer-logo {
-    text-align: center;
+      flex: 0 1 auto; /* El logo no toma toda la fila */
+      text-align: left; /* Alinea el logo a la izquierda en vistas más grandes */
   }
-  
-  .footer-logo .footer-image {
-    max-width: 150%; /* Ajusta el tamaño de la imagen aquí */
-    margin-left: -10%;
-    margin-top: -40%;
-    height: auto;
+
+  .footer-logo img {
+      max-width: 250px; /* Aumenta el tamaño máximo de la imagen en pantallas más grandes */
   }
-  
-  @media (max-width: 768px) {
-    footer {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    footer .col {
-      width: 100%;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-  
-    .footer-logo {
-      order: 1; /* Cambia el orden de la columna si es necesario */
-    }
-  
-    .footer-logo .footer-image {
-      margin: 0 auto; /* Centra la imagen horizontalmente */
-    }
+}
+
+@media (max-width: 768px) {
+  .footer-logo {
+      order: -1; /* Coloca el logo al principio en móviles si necesario */
   }
-  
-  @media (min-width: 769px) {
-    .footer-logo {
-      order: 0; /* Cambia el orden de la columna si es necesario */
-    }
+
+  .footer-logo img {
+      max-width: 220px; /* Reduce el tamaño de la imagen en móviles */
   }
-  
+}

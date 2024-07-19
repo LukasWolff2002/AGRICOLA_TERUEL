@@ -56,11 +56,11 @@ th {
     letter-spacing: 0.05em;
 }
 
-/* Media Queries para mejorar la responsividad */
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column;
         gap: 10px;
+        align-items: center;
     }
 
     .description-container, .nutrition-container {
@@ -83,5 +83,10 @@ th {
 
     p, th, td {
         font-size: 14px; /* Reduce el tamaño de fuente para adaptarse a pantallas más pequeñas */
+        text-align: center; /* Asegura que todo el texto esté centrado */
+    }
+
+    h1, h2 {
+        font-size: 18px; /* Ajusta el tamaño del título para la legibilidad */
     }
 }
