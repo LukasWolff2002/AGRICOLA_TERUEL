@@ -83,25 +83,7 @@
 </div>
 
 <script>
-
-document.addEventListener('DOMContentLoaded', function () {
-  function adjustHeight(leftCardId, backgroundCardId) {
-    const leftCard = document.getElementById(leftCardId);
-    const backgroundCard = document.getElementById(backgroundCardId);
-    if (leftCard && backgroundCard) {
-      const height = leftCard.offsetHeight;
-      backgroundCard.style.height = `${height}px`;
-    }
-  }
-
-  adjustHeight('us-left-card-1', 'us-background-card-1');
-
-  window.addEventListener('resize', () => {
-    adjustHeight('us-left-card-1', 'us-background-card-1');
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
+function ajustar_extra_1 (){
   function calculateOverlapHeight(card1, card2) {
     var card1Rect = card1.getBoundingClientRect();
     var card2Rect = card2.getBoundingClientRect();
@@ -136,7 +118,41 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Llama a updateHeights cada vez que la ventana cambia de tamaño
   window.addEventListener('resize', updateHeights);
+}
+document.addEventListener('DOMContentLoaded', function () {
+  function adjustHeight(leftCardId, backgroundCardId) {
+    const leftCard = document.getElementById(leftCardId);
+    const backgroundCard = document.getElementById(backgroundCardId);
+    if (leftCard && backgroundCard) {
+      const height = leftCard.offsetHeight;
+      backgroundCard.style.height = `${height}px`;
+    }
+  }
+
+  adjustHeight('us-left-card-1', 'us-background-card-1');
+
+  window.addEventListener('resize', () => {
+    adjustHeight('us-left-card-1', 'us-background-card-1');
+  });
 });
+
+
+//window.onload = function() {
+
+    // Después recarga la página
+    //setTimeout(function() {
+       // window.location.reload();
+   //}, 2000); // Recarga la página después de 2 segundos
+//};
+
+//ESTO ARREGLA QUE NO SE VEA TRASLAPADO AVECES
+document.addEventListener('DOMContentLoaded', ajustar_extra_1);
+window.addEventListener('load', ajustar_extra_1);
+// HAY QUE EJECUTAR AMBAS FUNCIONES PARA QUE FUNCIONE BIEN
+
+
+
+
 
 </script>
 

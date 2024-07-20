@@ -311,9 +311,9 @@ function ajustar_extra_1 (){
   window.addEventListener('resize', updateHeights);
 }
 document.addEventListener('DOMContentLoaded', ajustar_extra_1);
-document.addEventListener('load', ajustar_extra_1);
+window.addEventListener('load', ajustar_extra_1);
 
-document.addEventListener('DOMContentLoaded', function() {
+function ajustar_extra_2 (){
   function calculateOverlapHeight(card1, card2) {
     var card1Rect = card1.getBoundingClientRect();
     var card2Rect = card2.getBoundingClientRect();
@@ -352,7 +352,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Llama a updateHeights cada vez que la ventana cambia de tamaño
   window.addEventListener('resize', updateHeights);
-});
+}
+
+document.addEventListener('DOMContentLoaded', ajustar_extra_2);
+window.addEventListener('load', ajustar_extra_2);
 
 //para el modal del boton play
 // Declare a variable to store the video source
