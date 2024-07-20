@@ -1,1 +1,19 @@
-<h1>Pronto mas información</h1>
+
+<%= stylesheet_link_tag 'text_with_line' %>
+<%= stylesheet_link_tag 'product' %>
+
+
+<div class="product-container">
+    <div class="product-image" id='image-contacto'>
+        <%= image_tag 'CONTACTO.jpg', class: "red-container" %>
+    </div>
+    <div class="product-info">
+        <div class="text-container" style='left: 0%;'>
+            <div class="text-with-line">
+                <span class="colored-text">¡Hablemos!</span>
+            </div>
+        </div>
+        <p>Si tienes alguna duda o pregunta con nuestros servicios, puedes comunicarte directamente con nosotros o completar el formulario, y nos pondremos en contacto contigo en breve.</p>
+        <%= render 'comments/new', comment: @comment %>
+    </div>
+</div>
