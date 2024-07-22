@@ -110,6 +110,13 @@ body {
     font-size: 40px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
 
+  #imagen-home{
+    position: relative;
+    top: 20px; 
+    left: 0px; 
+    transform: translate(0%, -4%);
+  }
+
   #us {
     font-size: 80px;
   }
@@ -164,6 +171,14 @@ body {
   #home {
     font-size: 25px; /* Reduce el tamaño del texto para evitar desbordamiento */
   }
+
+  #imagen-home{
+    position: relative;
+    top: 20px; 
+    left: 0px; 
+    transform: translate(0%, -4%);
+  }
+
 
   #us {
     font-size: 80px;
@@ -220,6 +235,17 @@ body {
 
   #home {
     font-size: 20px; /* Reduce el tamaño del texto para evitar desbordamiento */
+  }
+
+  #imagen-home{
+    position: relative;
+    top: 20px; 
+    left: 0px; 
+    transform: translate(0%, -4%);
+  }
+
+  #texto-home{
+    top: 70%;
   }
 
   #us {
