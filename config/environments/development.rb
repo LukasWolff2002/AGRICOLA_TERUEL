@@ -37,9 +37,25 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
+  # Configuración para mostrar errores en desarrollo.
   config.action_mailer.perform_caching = false
+
+  # Configuración del servidor de correo
+  config.action_mailer.smtp_settings = {
+    address: "smtp.gmail.com",
+    port: 587,
+    user_name: Rails.application.credentials.dig(:gmail, :username),
+    password: Rails.application.credentials.dig(:gmail, :password),
+    authentication: "plain",
+    enable_starttls_auto: true
+  }
+
+
+
+  # Establecer la URL base para los enlaces en correos
+  config.action_mailer.default_url_options = { host: "localhost", port: 3000 }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

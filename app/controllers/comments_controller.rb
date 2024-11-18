@@ -11,6 +11,8 @@ class CommentsController < ApplicationController
     def create
       @comment = Comment.new(comment_params)
       if @comment.save
+        # Enviar correo
+        CommentMailer.new_comment_notification(@comment).deliver_now
         redirect_to root_path, notice: 'Comment was successfully created.'
       else
         render :new, status: :unprocessable_entity
