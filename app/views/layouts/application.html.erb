@@ -4,7 +4,8 @@
     <%= stylesheet_link_tag 'footer' %>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrícola Teruel: Productora De Rojos Y Nutritivos Tomates</title>
+    <title>Agrícola Teruel</title>
+    <%= favicon_link_tag 'favicon.ico', rel: 'icon', type: 'image/x-icon' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
@@ -29,27 +30,72 @@
 </head>
 <body>
    
-   <nav class="navbar navbar-expand navbar-light bg-light" style='background-color: white;'>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-              <li class="nav-item active">
-                  <%= link_to(image_tag('LOGO.jpg', width: "100"), "home") %>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/home">Agricola Teruel</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/us">Nosotros</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="/catalogo">Catálogo</a>
-              </li>
-          </ul>
-      </div>
-  </nav>
+  <nav class="navbar navbar-expand-lg" style="background-color: #ffffff; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+  <div class="container-fluid">
+    <!-- Logo con margen a la izquierda -->
+    <%= link_to(image_tag('LOGO.jpg', width: "100", class: "rounded-circle ms-3"), "home", class: "navbar-brand me-auto") %>
+
+    <!-- Botón de hamburguesa para pantallas pequeñas -->
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      style="border: none;"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú -->
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a
+            class="nav-link font-weight-bold px-3"
+            href="/home"
+            style="color: rgb(51, 142, 11); font-size: clamp(1rem, 2vw, 1.5rem);"
+          >
+            Agricola Teruel
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link font-weight-bold px-3"
+            href="/us"
+            style="color: rgb(51, 142, 11); font-size: clamp(1rem, 2vw, 1.5rem);"
+          >
+            Nosotros
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link font-weight-bold px-3"
+            href="/catalogo"
+            style="color: rgb(51, 142, 11); font-size: clamp(1rem, 2vw, 1.5rem);"
+          >
+            Catálogo
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link font-weight-bold px-3"
+            href="/donde_encontrarnos"
+            style="color: rgb(51, 142, 11); font-size: clamp(1rem, 2vw, 1.5rem);"
+          >
+            Donde encontrarnos
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
 
 
     <%= yield %>
@@ -61,49 +107,52 @@
 
     
     <div class="container">
-      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
-        <div class="col mb-3 footer-logo">
-          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-          </a>
-          <%= link_to(image_tag('LOGO.jpg', class: "footer-image"), "home") %>
-        </div>
+  <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+    <div class="col mb-3 footer-logo d-flex align-items-start">
+      <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <%= link_to(image_tag('LOGO.jpg', class: "footer-image", style: "margin-top: -15%;"), "home") %>
 
-        <div class="col mb-3">
-        </div>
-
-        <div class="col mb-3">
-          <h5>Agrícola</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/home" class="nav-link p-0 text-body-secondary">Inicio</a></li>
-            <li class="nav-item mb-2"><a href="/us" class="nav-link p-0 text-body-secondary">Nosotros</a></li>
-            <li class="nav-item mb-2"><a href="/catalogo" class="nav-link p-0 text-body-secondary">Catálogo</a></li>
-            <li class="nav-item mb-2"><a href="/innovacion_y_desarrollo" class="nav-link p-0 text-body-secondary">Innovación y Desarrollo</a></li>
-            <li class="nav-item mb-2"><a href="/contacto" class="nav-link p-0 text-body-secondary">Contacto</a></li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h5>Tomates</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a href="/catalogo/tomate_beef" class="nav-link p-0 text-body-secondary">Beef</a></li>
-            <li class="nav-item mb-2"><a href="/catalogo/tomate_cherry" class="nav-link p-0 text-body-secondary">Cherry</a></li>
-            <li class="nav-item mb-2"><a href="/catalogo/tomate_granel" class="nav-link p-0 text-body-secondary">Granel</a></li>
-            <li class="nav-item mb-2"><a href="/catalogo/tomate_racimo" class="nav-link p-0 text-body-secondary">Racimo</a></li>
-            <li class="nav-item mb-2"><a href="/catalogo/tomate_saladete" class="nav-link p-0 text-body-secondary">Saladette</a></li>
-          </ul>
-        </div>
-
-        <div class="col mb-3">
-          <h5>Contacto</h5>
-          <ul class="nav flex-column">
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary"><i class="bi bi-telephone"></i> +569 4022 0230</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary"><i class="bi bi-envelope"></i> contacto@agricolateruel.cl</a></li>
-            <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary"><i class="bi bi-geo-alt"></i> Parcela 5, Lo Mardones, Quillota. Chile.</a></li>
-          </ul>
-        </div>
-      </footer>
     </div>
+
+    <div class="col mb-3">
+    </div>
+
+    <div class="col mb-3">
+      <h5>Agrícola</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="/home" class="nav-link p-0 text-body-secondary">Inicio</a></li>
+        <li class="nav-item mb-2"><a href="/us" class="nav-link p-0 text-body-secondary">Nosotros</a></li>
+        <li class="nav-item mb-2"><a href="/catalogo" class="nav-link p-0 text-body-secondary">Catálogo</a></li>
+        <li class="nav-item mb-2"><a href="/innovacion_y_desarrollo" class="nav-link p-0 text-body-secondary">Innovación y Desarrollo</a></li>
+        <li class="nav-item mb-2"><a href="/contacto" class="nav-link p-0 text-body-secondary">Contacto</a></li>
+        <li class="nav-item mb-2"><a href="/donde_encontrarnos" class="nav-link p-0 text-body-secondary">Encuentranos</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Tomates</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a href="/catalogo/tomate_beef" class="nav-link p-0 text-body-secondary">Beef</a></li>
+        <li class="nav-item mb-2"><a href="/catalogo/tomate_cherry" class="nav-link p-0 text-body-secondary">Cherry</a></li>
+        <li class="nav-item mb-2"><a href="/catalogo/tomate_granel" class="nav-link p-0 text-body-secondary">Granel</a></li>
+        <li class="nav-item mb-2"><a href="/catalogo/tomate_racimo" class="nav-link p-0 text-body-secondary">Racimo</a></li>
+        <li class="nav-item mb-2"><a href="/catalogo/tomate_saladete" class="nav-link p-0 text-body-secondary">Saladette</a></li>
+      </ul>
+    </div>
+
+    <div class="col mb-3">
+      <h5>Contacto</h5>
+      <ul class="nav flex-column">
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary"><i class="bi bi-telephone"></i> +569 4022 0230</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary"><i class="bi bi-envelope"></i> contacto@agricolateruel.cl</a></li>
+        <li class="nav-item mb-2"><a class="nav-link p-0 text-body-secondary"><i class="bi bi-geo-alt"></i> Parcela 5, Lo Mardones, Quillota. Chile.</a></li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
 
 
 

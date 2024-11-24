@@ -26,4 +26,6 @@ Rails.application.routes.draw do
   get '/catalogo/tomate_cherry', to: 'catalogo#tomate_cherry' 
   get '/catalogo/tomate_saladete', to: 'catalogo#tomate_saladete' 
 
+  get '/donde_encontrarnos', to: 'find_us#encuentranos'
+
 end

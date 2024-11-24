@@ -1,0 +1,51 @@
+
+<%= stylesheet_link_tag 'portada' %>
+<%= stylesheet_link_tag 'text_with_line' %>
+<%= stylesheet_link_tag 'paragraph' %>
+<%= stylesheet_link_tag 'columns' %>
+<%= stylesheet_link_tag 'slides' %>
+
+<div class="portada-container" id='home'>
+  <div class='portada-position', id='imagen-home'>
+    <%= image_tag 'find_us/JUMBO_1.jpg' %>
+  </div>
+  <div class="image-text", id='texto-home', style='background-color: rgb(51, 142, 11);'>
+    Donde encontrarnos
+  </div>
+</div>
+
+<div class='container' style='margin-top: 30px;'></div>
+
+<div class="row mb-2">
+  <!-- Primera tarjeta con margen izquierdo ajustado -->
+  <div class="col-md-6" style="padding-left: 20px;">
+    <div class="card flex-md-row mb-4 box-shadow overflow-hidden" style="position: relative;">
+      <div class="card-body d-flex flex-column align-items-start">
+        <strong class="d-inline-block mb-2 text-primary">World</strong>
+        <h3 class="mb-0">
+          <a class="text-dark" href="#">Featured post</a>
+        </h3>
+        <div class="mb-1 text-muted">Nov 12</div>
+        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+        <a href="#">Continue reading</a>
+      </div>
+      <%= image_tag 'find_us/GRANEL.jpg', class: 'img-fluid', style: 'height: 200px; width: 40%; object-fit: cover; transform: scale(1.1); transition: transform 0.3s;' %>
+    </div>
+  </div>
+  
+  <!-- Segunda tarjeta con margen derecho ajustado -->
+  <div class="col-md-6" style="padding-right: 20px;">
+    <div class="card flex-md-row mb-4 box-shadow overflow-hidden" style="position: relative;">
+      <div class="card-body d-flex flex-column align-items-start">
+        <strong class="d-inline-block mb-2 text-success">Design</strong>
+        <h3 class="mb-0">
+          <a class="text-dark" href="#">Post title</a>
+        </h3>
+        <div class="mb-1 text-muted">Nov 11</div>
+        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+        <a href="#">Continue reading</a>
+      </div>
+      <%= image_tag 'home/SLIDES_1.jpg', class: 'img-fluid', style: 'height: 200px; width: 100%; object-fit: cover; transform: scale(1.1); transition: transform 0.3s;' %>
+    </div>
+  </div>
+</div>
