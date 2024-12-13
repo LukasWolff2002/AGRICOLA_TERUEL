@@ -3,6 +3,7 @@
     width: 350px; /* Ajusta al tamaño que necesites */
     height: 520px; /* Ajusta al tamaño que necesites */
     overflow: hidden;
+    border-radius: 10px; /* Bordes redondeados */
   }
 
   .col {
@@ -68,8 +69,4 @@
     margin-right: 0px; /* Ajusta según necesites */
   }
 
-  .row {
-    display: flex;
-    gap: 30px; /* Espacio entre columnas */
-  }
   

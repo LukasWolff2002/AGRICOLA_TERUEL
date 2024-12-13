@@ -5,7 +5,9 @@ class AgricolaTeruelController < ApplicationController
     end
 
     def us
+    end
 
+    def guide
     end
 
     def beneficios_tomate

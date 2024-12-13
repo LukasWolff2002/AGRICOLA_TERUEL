@@ -1,0 +1,141 @@
+
+/* Small screens (phones, max-width: 768px) */
+@media (max-width: 768px) {
+
+    .jumbotron {
+        height: 300px; /* Ajusta el alto */
+      }
+
+    .logo-container {
+      position: absolute;
+      top: -2rem;
+      left: 20px;
+      z-index: 3;
+    }
+  
+    .logo {
+      width: 5rem;
+      top: 0rem;
+      left: 10%;
+    }
+  
+    .title {
+      font-size: 0.8rem;
+      margin-top: 0rem;
+    }
+  
+    .subtitle {
+      margin-top: 0rem;
+      font-size: 0.8rem;
+    }
+  
+    .btn-register {
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+    }
+  }
+  
+  /* Medium screens (tablets, min-width: 768px and max-width: 992px) */
+  @media (min-width: 768px) and (max-width: 992px) {
+
+    .jumbotron {
+        height: 300px; /* Ajusta el alto */
+      }
+
+    .logo-container {
+      position: absolute;
+      top: -2rem;
+      left: 20px;
+      z-index: 3;
+    }
+  
+    .logo {
+      width: 8rem;
+      top: -2rem;
+      left: 15%;
+    }
+  
+    .title {
+      font-size: 3rem;
+      margin-top: 5rem;
+    }
+  
+    .subtitle {
+      font-size: 1.25rem;
+    }
+  
+    .btn-register {
+      font-size: 1.1rem;
+      padding: 0.7rem 1.3rem;
+    }
+  }
+  
+  /* Large screens (desktops, min-width: 992px and max-width: 1200px) */
+  @media (min-width: 992px) and (max-width: 1200px) {
+
+    .jumbotron {
+        height: 300px; /* Ajusta el alto */
+      }
+  
+    .logo-container {
+      position: absolute;
+      top: -2rem;
+      left: 20px;
+      z-index: 3;
+    }
+  
+    .logo {
+      width: 10rem;
+      top: -3rem;
+      left: 20%;
+    }
+  
+    .title {
+      font-size: 4rem;
+      margin-top: 6rem;
+    }
+  
+    .subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .btn-register {
+      font-size: 1.2rem;
+      padding: 0.8rem 1.5rem;
+    }
+  }
+  
+  /* Extra large screens (large desktops, min-width: 1200px) */
+  @media (min-width: 1200px) {
+
+    .jumbotron {
+        height: 30rem; /* Ajusta el alto */
+      }
+  
+  
+    .logo-container {
+      position: absolute;
+      top: -12rem;
+      left: -3rem;
+      z-index: 3;
+    }
+  
+    .logo {
+      width: 30rem;
+      top: -10rem;
+    }
+  
+    .title {
+      font-size: 4rem;
+      margin-top: 22rem;
+    }
+  
+    .subtitle {
+      font-size: 1.75rem;
+    }
+  
+    .btn-register {
+      font-size: 1.3rem;
+      padding: 0.9rem 1.7rem;
+    }
+  }

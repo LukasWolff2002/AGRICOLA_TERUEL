@@ -49,3 +49,138 @@
     </div>
   </div>
 </div>
+
+<style>
+  /* Contenedor principal */
+  .video-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px; /* Espacio entre el texto y el video */
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden verticalmente en pantallas pequeñas */
+  }
+
+  /* Contenedor del texto */
+  .text-container {
+    flex: 1; /* Toma espacio proporcional para el texto */
+    min-width: 300px; /* Asegura que el texto tenga un ancho mínimo */
+  }
+
+  .video-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333; /* Color del texto */
+  }
+
+  /* Contenedor del video */
+  .video-wrapper {
+    flex: 2; /* Toma más espacio que el texto */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 300px; /* Asegura un tamaño mínimo del video */
+  }
+
+  video {
+    width: 1200px; /* Ancho por defecto para pantallas grandes */
+    height: auto; /* Ajusta la altura automáticamente para mantener proporciones */
+    border: 2px solid #ccc; /* Opcional: agrega un borde */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+  }
+
+  /* Media Queries */
+  @media (min-width: 1401px) {
+    video {
+      width: 400px; /* Ancho fijo para pantallas muy grandes */
+    }
+  }
+
+  @media (max-width: 1400px) {
+    video {
+      width: 300px; /* Ajusta el tamaño máximo del video para pantallas grandes */
+    }
+  }
+
+  @media (max-width: 1200px) {
+    video {
+      width: 300px; /* Ancho fijo para pantallas medianas */
+    }
+  }
+
+  @media (max-width: 992px) {
+    .video-container {
+      flex-direction: column; /* Los elementos se apilan verticalmente */
+    }
+    video {
+      width: 300px; /* Ancho fijo para pantallas más pequeñas */
+    }
+  }
+
+  @media (max-width: 768px) {
+    video {
+      width: 100%; /* Ocupa todo el ancho del contenedor */
+    }
+    .video-text {
+      font-size: 16px; /* Reduce el tamaño del texto en pantallas más pequeñas */
+    }
+  }
+
+  @media (max-width: 576px) {
+    video {
+      width: 100%; /* Video ocupa todo el ancho */
+      height: auto; /* Mantiene proporciones */
+    }
+    .video-text {
+      font-size: 14px; /* Texto más pequeño para pantallas muy pequeñas */
+    }
+  }
+</style>
+
+<div class="video-container">
+  <div class="text-container">
+    <p class="video-text">
+      Este es el texto que acompaña al video. Puedes personalizarlo según lo que necesites.
+    </p>
+  </div>
+
+  <div class="video-wrapper">
+    <video id="video-jumbo" controls autoplay muted preload="auto">
+      <source src="<%= asset_path('video_jumbo.mp4') %>" type="video/mp4">
+      Tu navegador no soporta la reproducción de video.
+    </video>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const video = document.getElementById("video-jumbo");
+
+    // Usa IntersectionObserver para detectar cuándo el video entra en la vista
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            video.play().catch(error => {
+              console.warn("El navegador ha bloqueado la reproducción automática. Requiere interacción del usuario.", error);
+            });
+          } else {
+            video.pause();
+          }
+        });
+      },
+      {
+        threshold: 0.5, // El video debe estar al menos un 50% visible para reproducirse
+      }
+    );
+
+    observer.observe(video);
+
+    // Detecta clic en el video para habilitar el sonido
+    video.addEventListener("click", () => {
+      if (video.muted) {
+        video.muted = false;
+      }
+    });
+  });
+</script>

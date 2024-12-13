@@ -7,7 +7,7 @@
 
 .description-container, .nutrition-container {
     width: 48%;
-    background: #fff;
+    background: var(--quarter-color);
     border: 1px solid #ddd;
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     padding: 20px;
@@ -37,7 +37,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-    background-color: #FAFAFA;
+    background-color: var(--tertiary-color);
     box-shadow: 0 2px 4px rgba(0,0,0,0.05);
     border-radius: 8px;
 }
@@ -50,7 +50,7 @@ th, td {
 }
 
 th {
-    background-color: #EFEFEF;
+    background-color: var(--tertiary-color);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.05em;

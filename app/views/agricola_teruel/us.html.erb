@@ -6,12 +6,104 @@
 <%= stylesheet_link_tag 'bandeja' %>
 <%= stylesheet_link_tag 'images_hover' %>
 
-<div class="portada-container" id='us'>
-  <%= image_tag 'us/PORTADA_US.jpg', class: "portada-position", style: "position: relative; top: -20px; left: 0px; transform: translate(0%, 20%);" %>
-  <div class="image-text" id='image-text-us'>
-    Nosotros
+
+
+<div class="contenedor">
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="var(--sex-color)" fill-opacity="1" d="M0,192L40,170.7C80,149,160,107,240,117.3C320,128,400,192,480,202.7C560,213,640,171,720,138.7C800,107,880,85,960,74.7C1040,64,1120,64,1200,74.7C1280,85,1360,107,1400,117.3L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+  </svg>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor-principal">
+    <!-- Imagen centrada -->
+    <img class="imagen-centrada" src="<%= asset_path('us/PORTADA.png') %>" alt="Imagen centrada">
   </div>
 </div>
+
+<style>
+/* Contenedor principal que envuelve todo */
+.contenedor {
+  position: relative; /* Para manejar posiciones absolutas dentro */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 25rem; /* Altura fija del contenedor */
+  overflow: hidden; /* Asegura que no haya desbordes */
+}
+
+/* Sección superior de color */
+.seccion-superior {
+  background-color: var(--secondary-color); /* Color de la parte superior */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 1rem; /* Altura fija de la sección superior */
+  position: absolute;
+  top: 0; /* Posición inicial */
+  left: 0;
+  z-index: 1; /* Aparece por encima del contenedor principal */
+  animation: subir-seccion 1.5s ease-out forwards; /* Animación para subir */
+}
+
+/* Línea serpenteante */
+.separador-serpenteante {
+  position: absolute;
+  top: 10rem; /* Ubica la línea justo debajo de la sección superior */
+  width: 100%; /* Ocupa todo el ancho */
+  height: auto; /* Ajusta automáticamente su altura */
+  z-index: 2; /* Aparece sobre el contenedor principal pero junto con la sección superior */
+  animation: subir-seccion 1.5s ease-out forwards; /* Animación para que suba junto con la sección */
+}
+
+.color-serpenteante {
+  fill: var(--secondary-color); /* Color de la línea serpenteante */
+}
+
+/* Contenedor principal */
+.contenedor-principal {
+  background-color: var(--tertiary-color); /* Color del contenedor principal */
+  padding: 2rem; /* Espaciado interno */
+  position: relative; /* Flujo normal dentro del contenedor */
+  z-index: 1; /* Aparece debajo de la sección superior */
+  margin-top: 14rem; /* Espacio para que quede debajo de la línea serpenteante */
+  height: auto;
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+}
+
+/* Imagen centrada */
+.imagen-centrada {
+  max-width: 40%; /* Ajusta el ancho máximo de la imagen */
+  height: auto; /* Mantiene la proporción de la imagen */
+  margin-bottom: 1rem; /* Espaciado debajo de la imagen */
+  margin-left: 40rem;
+  object-fit: contain; /* Evita la distorsión de la imagen */
+  position: relative; /* Para permitir la animación */
+  z-index: 0; /* Asegura que esté sobre la sección superior */
+  animation: bajar-imagen 1.5s ease-out forwards; /* Animación para bajar la imagen */
+}
+
+/* Animación para subir la sección superior y la línea serpenteante */
+@keyframes subir-seccion {
+  from {
+    transform: translateY(-4rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(1rem); /* Sección sube 7rem */
+  }
+}
+
+/* Animación para bajar la imagen */
+@keyframes bajar-imagen {
+  from {
+    transform: translateY(1rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-14rem); /* Imagen baja 11rem */
+  }
+}
+</style>
+
+
 
 <div class='container' style='margin-top: 30px;'></div>
 
@@ -23,10 +115,10 @@
   <div class="card right-card" id="us-right-card-1">
     <div class="text-container" style='text-align: left; left: 0%;'>
       <div class="text-with-line" style='margin-left: 20px; margin-top: 20px;' >
-        <span class="colored-text">Nuestra Historia</span>
+        <span class="colored-text font-georgia-normal">Nuestra Historia</span>
       </div>
     </div>
-    <p style='margin: 20px;'>Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!</p>
+    <p class="font-avenir-normal" style='margin: 20px;'>Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!</p>
     <ul>
       <li><i class="bi bi-check-lg" style='color: green;'></i> Producimos con un Manejo Integrado de Plagas (MIP)</li>
       <li><i class="bi bi-check-lg" style='color: green;'></i> Utilizamos técnicas de producción de baja cantidad de pesticidas, para garantizar productos limpios y de bajo residuo.</li>
@@ -34,7 +126,7 @@
       <li><i class="bi bi-check-lg" style='color: green;'></i> Contamos con Certificaciones GlobalGap, FSMA, GRASP.</li>
     </ul>
   </div>
-  <div class="card extra-card" id="us-extra-card-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%);'></div>
+  <div class="card extra-card" id="us-extra-card-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%); background-color: var(--tertiary-color);'></div>
 </div>
 
 <div class='container' style='margin-top: 30px;'></div>
@@ -42,8 +134,8 @@
 <div class="bandeja">
     <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1 US' %>
     <div class="content">
-        <h1>Llena de sabor tu día a día con productos que no dañan tu cuerpo.</h1>
-        <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sostenibilidad de cada tomate para acompañar tu paladar y salud!</p>
+        <h1 class="font-georgia-normal">Llena de sabor tu día a día con productos que no dañan tu cuerpo.</h1>
+        <p class="font-avenir-normal">Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sostenibilidad de cada tomate para acompañar tu paladar y salud!</p>
     </div>
 </div>
 
@@ -51,12 +143,12 @@
 
 <div class="text-container">
   <div class="text-with-line">
-    <span class="colored-text">Nuestro Equipo</span>
+    <span class="colored-text font-georgia-normal">Nuestro Equipo</span>
   </div>
 </div>
 
 <div class="container">
-  <p>Recogemos lo que sembranos, y en nuestro caso, sembramos y cultivamos amor,<br> paciencia y consciencia por productos limpios para tu familia y mesa.</p>
+  <p class="font-avenir-normal">Recogemos lo que sembranos, y en nuestro caso, sembramos y cultivamos amor,<br> paciencia y consciencia por productos limpios para tu familia y mesa.</p>
 </div>
 
 <div class="container">
@@ -65,8 +157,8 @@
       <div class="image-container">
         <%= image_tag 'us/DIEGO_US.jpg', alt: "Diego Ortiz", class: "hover-image" %>
         <div class="fixed-text">
-          <div class="name">Diego Ortiz</div>
-          <div class="title">Gerente General</div>
+          <div class="name font-georgia-normal">Diego Ortiz</div>
+          <div class="description">Gerente General</div>
         </div>
       </div>
     </div>
@@ -74,13 +166,15 @@
       <div class="image-container">
         <%= image_tag 'us/JAVIER.jpg', alt: "Javier Martínez", class: "hover-image" %>
         <div class="fixed-text">
-          <div class="name">Javier Devia</div>
+          <div class="name font-georgia-normal">Javier Devia</div>
           <div class="description">Gerente Técnico - Director</div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+
 
 <script>
 function ajustar_extra_1 (){

@@ -1,0 +1,59 @@
+<%= stylesheet_link_tag 'configuracion_base' %>
+
+
+<div style="padding: 20px; font-family: 'Georgia', serif;">
+  <h1 class="text-primary">Style Guide</h1>
+  <p>Explora los estilos definidos en tu archivo CSS a continuación.</p>
+
+  <section>
+    <h2 class="text-secondary">Colores</h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+      <div style="background-color: var(--primary-color); padding: 20px; color: var(--white-color); width: 150px; text-align: center;">
+        Primario
+      </div>
+      <div style="background-color: var(--secondary-color); padding: 20px; color: var(--white-color); width: 150px; text-align: center;">
+        Secundario
+      </div>
+      <div class="bg-tertiary" style="padding: 20px; color: var(--secondary-color); width: 150px; text-align: center;">
+        Terciario
+      </div>
+      <div style="background-color: var(--quarter-color); padding: 20px; color: var(--secondary-color); width: 150px; text-align: center;">
+        Cuaternario
+      </div>
+      <div style="background-color: var(--fifth-color); padding: 20px; color: var(--white-color); width: 150px; text-align: center;">
+        Quinto
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="text-tertiary">Tipografía</h2>
+    <p class="font-georgia-condensed">Texto con estilo "Georgia Condensed".</p>
+    <p class="font-georgia-condensed-wide">Texto con estilo "Georgia Condensed Wide".</p>
+    <p class="font-georgia-condensed-small-caps">Texto con estilo "GEORGIA Condensed Small Caps".</p>
+
+    <h3>Encabezado H3</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    <h4>Encabezado H4</h4>
+    <p>Donec euismod, nisi eu feugiat malesuada, risus libero vehicula arcu, at dictum elit erat in ligula.</p>
+
+    <blockquote style="border-left: 4px solid var(--secondary-color); padding-left: 10px; color: var(--secondary-color);">
+      Este es un bloque de cita para mostrar cómo luce el texto destacado.
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>Botones</h2>
+    <div style="display: flex; gap: 10px;">
+      <button class="bg-primary" style="padding: 10px 20px; color: var(--white-color); border: none; border-radius: 5px;">
+        Primario
+      </button>
+      <button class="bg-secondary" style="padding: 10px 20px; color: var(--white-color); border: none; border-radius: 5px;">
+        Secundario
+      </button>
+      <button class="bg-tertiary" style="padding: 10px 20px; color: var(--secondary-color); border: none; border-radius: 5px;">
+        Terciario
+      </button>
+    </div>
+  </section>
+</div>

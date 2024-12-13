@@ -1,0 +1,35 @@
+
+/* Estilos para la jumbotron */
+.jumbotron {
+    background-image: url('/assets/background.jpg'); /* Cambia 'background.jpg' por el nombre de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir toda el área */
+    background-position: center; /* Centra la imagen */
+    color: var(--text-color); /* Usa el color de texto definido */
+    padding: 3rem 2rem; /* Espaciado interno */
+    border-radius: 0rem; /* Bordes redondeados */
+  }
+  
+  /* Texto grande para encabezados */
+  .display-4 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--white-color);
+  }
+  
+  /* Texto para subtítulos */
+  .lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--secondary-color);
+  }
+  
+  /* Ajuste de texto blanco */
+  .text-white {
+    color: var(--primary-color);
+  }
+  
+  /* Fondo oscuro */
+  .bg-dark {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con transparencia */
+  }
+  

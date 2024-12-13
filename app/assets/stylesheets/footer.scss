@@ -1,43 +1,53 @@
+/* Estilos del Footer */
 footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px 0; /* Agrega padding para mejor espaciado */
+  background-color: var(--quarter-color); /* Color de fondo del footer */
+  color: var(--primary-color); /* Color del texto */
+  padding: 20px 0; /* Espaciado interno */
+  margin-top: 40px; /* Separación del contenido previo */
+  width: 100%; /* Ocupa todo el ancho */
+  position: relative; /* Permite posicionamiento relativo para el layout */
+  left: 0;
 }
 
-.footer-logo {
-  flex: 1 100%; /* Hace que el logo tenga la anchura completa en móviles */
-  text-align: center; /* Centra el logo */
-  margin-bottom: 20px; /* Espaciado después del logo */
+.footer-title {
+  font-size: 1.2rem; /* Tamaño del título */
+  font-weight: bold; /* Negrita */
+  margin-bottom: 10px; /* Espaciado inferior */
+  text-align: center; /* Centra los títulos */
 }
 
-.footer-logo img {
-  width: 100%; /* Hace que la imagen se ajuste al contenedor */
-  max-width: 160px; /* Máximo tamaño de la imagen */
-  height: auto; /* Mantiene la proporción de la imagen */
+.footer-text {
+  font-size: 1rem; /* Tamaño del texto */
+  margin: 5px 0; /* Margen vertical */
+  text-align: center; /* Centra el texto del footer */
 }
 
-@media (min-width: 768px) {
-  footer {
-      justify-content: space-between; /* Distribuye el espacio entre los elementos del footer */
-  }
+.footer-link {
+  color: var(--primary-color); /* Enlaces con color primario */
+  text-decoration: underline; /* Subrayado */
+  transition: color 0.3s ease; /* Efecto de transición */
+}
 
-  .footer-logo {
-      flex: 0 1 auto; /* El logo no toma toda la fila */
-      text-align: left; /* Alinea el logo a la izquierda en vistas más grandes */
-  }
+.footer-link:hover {
+  color: var(--primary-color); /* Cambia el color al pasar el cursor */
+}
 
-  .footer-logo img {
-      max-width: 250px; /* Aumenta el tamaño máximo de la imagen en pantallas más grandes */
-  }
+.footer-icon {
+  font-size: 1.5rem; /* Tamaño del ícono */
+  margin-right: 10px; /* Espaciado derecho */
+  color: var(--primary-color); /* Asegura que el ícono también use el color primario */
 }
 
 @media (max-width: 768px) {
-  .footer-logo {
-      order: -1; /* Coloca el logo al principio en móviles si necesario */
+  .footer-title {
+    font-size: 1rem; /* Reduce el tamaño del título en pantallas pequeñas */
   }
 
-  .footer-logo img {
-      max-width: 220px; /* Reduce el tamaño de la imagen en móviles */
+  .footer-text {
+    font-size: 0.9rem; /* Reduce el tamaño del texto */
+  }
+
+  .footer-icon {
+    font-size: 1.2rem; /* Ajusta el tamaño del ícono */
   }
 }

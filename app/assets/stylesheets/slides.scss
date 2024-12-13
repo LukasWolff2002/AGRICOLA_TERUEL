@@ -28,14 +28,14 @@
 
 .card.right-card {
   position: absolute;
-  background-color: #f8fff6;
+  background-color: var(--quarter-color);
   border: 1px solid  #666;
   z-index: 3;
 }
 
 .card.background-card {
   position: absolute;
-  background-color: rgb(9, 54, 1);
+  background-color: var(--fifth-color);
   border-radius: 8px;
   border: none !important;  /* Explicitamente eliminar cualquier borde con importancia */
   outline: none !important;  /* Eliminar cualquier contorno de enfoque con importancia */
@@ -84,14 +84,14 @@ button:hover {
   width: 80%;
   cursor: pointer;
   border: none;
-  background-color: #FFA500;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
   text-decoration: none;
 }
 
 .button-style:hover {
-  background-color: #cc8400;
+  background-color: var(--secondary-color);
 }
 
 .modal {

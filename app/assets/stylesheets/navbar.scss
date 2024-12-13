@@ -1,0 +1,195 @@
+/* Estilos base del navbar */
+.navbar {
+    background-color: var(--primary-color); /* Utiliza la variable CSS */
+    height: 80px; /* Altura predeterminada */
+    display: flex;
+    justify-content: center; /* Centra el contenido del navbar */
+    align-items: center;
+    position: relative;
+    z-index: 20;
+}
+
+/* Estilo del óvalo */
+.navbar::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; /* Extiende el óvalo hacia abajo */
+    left: 50%; /* Posiciona horizontalmente al centro */
+    transform: translateX(-50%); /* Ajusta la posición horizontal */
+    width: 170px; /* Ajustado para centrado más preciso */
+    height: 80px; /* Altura del óvalo */
+    background-color: var(--primary-color); /* Mismo color que el navbar */
+    border-radius: 0 0 76px 76px; /* Bordes inferiores redondeados */
+    z-index: 1; /* Queda detrás del contenido del navbar */
+}
+
+/* Imagen centrada en el óvalo */
+.navbar-oval-image {
+    position: absolute;
+    bottom: -40px; /* Ajusta para posicionar la imagen dentro del óvalo */
+    left: 50%; /* Centra horizontalmente */
+    transform: translateX(-50%); /* Asegura centrado perfecto */
+    z-index: 3; /* Asegura que la imagen esté por encima del óvalo */
+}
+
+.navbar-oval-image img {
+    width: 130px; /* Tamaño de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    object-fit: cover; /* Ajusta la imagen sin distorsión */
+}
+
+/* Estilos de los textos */
+.navbar-texts {
+    display: flex;
+    gap: 15px; /* Espaciado entre los textos */
+    z-index: 3; /* Asegura que los textos estén por encima del óvalo */
+}
+
+/* Posicionamiento de los textos hacia el logo */
+.navbar-texts.left {
+    position: absolute;
+    right: 50%; /* Se posiciona relativo al centro */
+    transform: translateX(-180px); /* Ajusta la distancia desde el logo central */
+    top: 50%; /* Alinea los textos verticalmente con el navbar */
+    transform: translate(-180px, -50%); /* Ajusta distancia horizontal y centra verticalmente */
+}
+
+.navbar-texts.right {
+    position: absolute;
+    left: 50%; /* Se posiciona relativo al centro */
+    transform: translateX(180px); /* Ajusta la distancia desde el logo central */
+    top: 50%; /* Alinea los textos verticalmente con el navbar */
+    transform: translate(180px, -50%); /* Ajusta distancia horizontal y centra verticalmente */
+}
+
+/* Estilo de los enlaces */
+.navbar-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+    color: #ddd; /* Cambia el color al pasar el mouse */
+}
+
+/* ========================= */
+/* Media Queries para Diseño Responsivo */
+/* ========================= */
+
+/* Estilo para pantallas grandes (1024px o más) */
+@media (min-width: 1024px) {
+    .navbar {
+        height: 90px; /* Altura más grande */
+    }
+
+    .navbar-oval-image img {
+        width: 140px; /* Imagen más grande */
+    }
+
+    .navbar-link {
+        font-size: 18px; /* Fuente más grande */
+    }
+
+    .navbar-texts {
+        gap: 20px; /* Más espacio entre los textos */
+    }
+}
+
+/* Estilo para pantallas medianas (entre 768px y 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .navbar {
+        height: 80px; /* Altura predeterminada */
+    }
+
+    .navbar-oval-image img {
+        width: 120px; /* Imagen ligeramente más pequeña */
+    }
+
+    .navbar-link {
+        font-size: 16px; /* Fuente predeterminada */
+    }
+
+    .navbar-texts {
+        gap: 15px; /* Espaciado estándar */
+    }
+
+    .navbar-texts.left {
+        transform: translate(-100px); /* Ajusta la distancia horizontal */
+    }
+
+    .navbar-texts.right {
+        transform: translate(100px); /* Ajusta la distancia horizontal */
+    }
+}
+
+/* Estilo para pantallas pequeñas (menores a 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        height: 40px; /* Reduce la altura */
+    }
+
+    .navbar::after {
+        width: 70px;/* Óvalo más pequeño */
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .navbar-oval-image img {
+        width: 50px; /* Imagen más pequeña */
+        margin-bottom: 20px; /* Ajusta la posición vertical */
+    }
+
+    .navbar-link {
+        font-size: 12px; /* Fuente más pequeña */
+    }
+
+    .navbar-texts {
+        gap: 5px; /* Menos espacio entre textos */
+    }
+
+    .navbar-texts.left {
+        transform: translate(-70px); /* Ajusta la distancia horizontal */
+    }
+
+    .navbar-texts.right {
+        transform: translate(70px); /* Ajusta la distancia horizontal */
+    }
+}
+
+
+/* Estilo para pantallas pequeñas (menores a 768px) */
+@media (max-width: 480px) {
+    .navbar {
+        height: 40px; /* Reduce la altura */
+    }
+
+    .navbar::after {
+        width: 70px;/* Óvalo más pequeño */
+        height: 30px;
+        margin-bottom: 20px;
+    }
+
+    .navbar-oval-image img {
+        width: 50px; /* Imagen más pequeña */
+        margin-bottom: 20px; /* Ajusta la posición vertical */
+    }
+
+    .navbar-link {
+        font-size: 9px; /* Fuente más pequeña */
+    }
+
+    .navbar-texts {
+        gap: 5px; /* Menos espacio entre textos */
+    }
+
+    .navbar-texts.left {
+        transform: translate(-40px); /* Ajusta la distancia horizontal */
+    }
+
+    .navbar-texts.right {
+        transform: translate(40px); /* Ajusta la distancia horizontal */
+    }
+}

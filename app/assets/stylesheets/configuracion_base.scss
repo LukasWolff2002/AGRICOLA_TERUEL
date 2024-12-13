@@ -1,0 +1,83 @@
+/* Archivo: custom.css */
+
+/* Definición de variables de colores */
+:root {
+    --primary-color: rgba(162, 31, 29, 1);  /* Rojo brillante */
+    --secondary-color: rgba(235, 77, 64, 1);/* Marrón oscuro */
+    --tertiary-color: rgb(237, 229, 213); /* Beige */
+    --quarter-color: rgb(251, 242, 219); /* Gris claro */
+    --fifth-color: rgb(13, 68, 3); /* Verde */
+    --sex-color: rgb(69, 139, 52); /* Verde oscuro */
+    --white-color: #fff; /* Blanco */
+  }
+  
+  /* Tipografía global */
+  body {
+    font-family: 'Georgia', serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  .font-avenir-normal {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 500; /* Peso regular */
+    letter-spacing: normal; /* Espaciado normal entre letras */
+  }
+
+  /* Variantes de tipografía */
+  .font-georgia-normal {
+    font-family: 'Georgia', serif;
+    font-weight: 1000;
+    letter-spacing: normal;
+  }
+  
+  /* Variantes de tipografía */
+  .font-georgia-condensed {
+    font-family: 'Georgia', serif;
+    font-weight: 1000;
+    font-style: italic;
+    letter-spacing: normal;
+  }
+  
+  .font-georgia-condensed-wide {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    letter-spacing: 0.35rem; /* Espaciado amplio */
+  }
+  
+  /* DIN Condensed con versalitas */
+  .font-georgia-condensed-small-caps {
+    font-family: 'Georgia Condensed', sans-serif;
+    font-weight: bold;
+    font-variant: small-caps; /* Versalitas */
+    letter-spacing: 0.35rem; /* Espaciado normal */
+  }
+  
+  /* Clases de utilidad para colores */
+  .text-primary {
+    color: var(--primary-color);
+  }
+  
+  .text-secondary {
+    color: var(--secondary-color);
+  }
+  
+  .text-tertiary {
+    color: var(--tertiary-color);
+  }
+  
+  .bg-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .bg-secondary {
+    background-color: var(--secondary-color);
+  }
+  
+  .bg-tertiary {
+    background-color: var(--tertiary-color);
+  }
+  

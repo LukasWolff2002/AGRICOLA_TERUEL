@@ -12,8 +12,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: var(--quarter-color);
+  border: 0px solid #ccc;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   border-radius: 8px;
   padding: 20px;
@@ -43,7 +43,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--tertiary-color);
   border-radius: 8px;
   padding: 20px;
   overflow: hidden;
@@ -74,7 +74,7 @@
 }
 
 .column-text {
-  color: green;
+  color: var(--fifth-color);
   font-size: 25px;
   margin-top: 15px; /* Espacio después de la imagen */
 }
@@ -92,11 +92,11 @@
   border-radius: 5px;
   cursor: pointer;
   border: none;
-  background-color: #FFA500;
+  background-color: var(--secondary-color);
   color: white;
   text-decoration: none; /* Importante para que no parezca un enlace */
 }
 
 .button-style:hover {
-  background-color: #cc8400;
+  background-color: var(--secondary-color);
 }
