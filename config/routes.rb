@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   get '/catalogo/tomate_beef', to: 'catalogo#tomate_beef' 
   get '/catalogo/tomate_cherry', to: 'catalogo#tomate_cherry' 
   get '/catalogo/tomate_saladete', to: 'catalogo#tomate_saladete' 
+  get '/catalogo/tomate_cherry_verde', to: 'catalogo#tomate_cherry_verde' 
+  get '/catalogo/tomate_cherry_naranjo', to: 'catalogo#tomate_cherry_naranjo' 
 
   get '/donde_encontrarnos', to: 'find_us#encuentranos'
 

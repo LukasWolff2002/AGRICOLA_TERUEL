@@ -1,122 +1,34 @@
-<%= stylesheet_link_tag 'portada' %>
-<%= stylesheet_link_tag 'product' %>
-<%= stylesheet_link_tag 'informacion_nutricional' %>
-<%= stylesheet_link_tag 'bandeja' %>
-<%= stylesheet_link_tag 'columns' %>
+<!-- tomate_granel.html.erb -->
+<%= render 'catalogo/vista_base',
+  # PORTADA
+  portada_image: 'catalogo/CATALOGO_LOGO_2.jpg',
+  portada_id:    'tomate-granel',
+  portada_text:  "Clásico de <br>  Clásicos",
 
-<div class="portada-container">
-  <%= image_tag 'catalogo/CATALOGO_LOGO_2.jpg', class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
-  <div class="image-text" id='tomate-granel'>
-    Clásico de <br>  Clásicos
-  </div>
-</div>
+  # PRODUCTO
+  product_image:        'catalogo/VARIEDAD_1.jpg',
+  product_title:        'Tomate Granel',
+  product_description:  'El mejor acompañante de la cocina chilena',
+  product_features:     ['Color Rojo Intenso Y Centro Carnoso'],
+  product_uses:         ['Ensaladas, Hamburguesas'],
+  product_availability: ['Septiembre A Enero / Marzo A Junio'],
+  product_formats:      ['Caja De 17 Kilos Color Rojo<br>Malla De 1 Kilo Color Rojo'],
+  product_brix:         ['4,5 a 5 Grados Brix'],
 
-<div class="product-container">
-    <div class="product-image">
-        <%= image_tag 'catalogo/VARIEDAD_1.jpg', class: "red-container" %>
-    </div>
-    <div class="product-info">
-        <h2>Tomate Granel</h2>
-        <p>El mejor acompañante de la cocina chilena</p>
-        <div class="product-details">
-            <h3>Características</h3>
-            <ul>
-                <li>Color Rojo Intenso Y Centro Carnoso</li>
-            </ul>
-            <h3>Ideales Para</h3>
-            <ul>
-                <li>Ensaladas, Hamburguesas</li>
-            </ul>
-            <h3>Disponible</h3>
-            <ul>
-                <li>Septiembre A Enero / Marzo A Junio</li>
-            </ul>
-            <h3>Formatos Disponibles</h3>
-            <ul>
-                <li>Caja De 17 Kilos Color Rojo<br>Malla De 1 Kilo Color Rojo</li>
-            </ul>
-            <h3>Grados Brix</h3>
-            <ul>
-                <li>4,5 a 5 Grados Brix</li>
-            </ul>
-        </div>
-    </div>
-</div>
+  # DESCRIPCIÓN
+  description_title: 'Palabras de nuestro catador de tomates',
+  description_paragraphs: [
+    "Un clásico por una razón. Nuestros tomates redondos son maduros, rojos, firmes y, sobre todo, deliciosos. Sabor de cosecha propia, color rojo intenso, centro carnoso sólido con paredes celulares más fuertes, lo que hace que nuestros tomates sean perfectos para cortar en rodajas. Recogido en la cima de la frescura, cada vez."
+  ],
 
-<div class="bandeja">
-    <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1', class: "bandeja-img" %>
-    <div class="content">
-        <h1>Así de rico puedes cocinar con estos <br>tomates</h1>
-        <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
-        <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
-    </div>
-</div>
-
-
-<div class="content-container">
-    <div class="description-container">
-        <h1>Palabras de nuestro catador de tomates</h1>
-        <p>Un clásico por una razón. Nuestros tomates redondos son maduros, rojos, firmes y, sobre todo, deliciosos. Sabor de cosecha propia, color rojo intenso, centro carnoso sólido con paredes celulares más fuertes, lo que hace que nuestros tomates sean perfectos para cortar en rodajas. Recogido en la cima de la frescura, cada vez.</p>
-    </div>
-    <div class="nutrition-container">
-        <h2>Información Nutricional</h2>
-        <table>
-            <tr>
-                <th>Tamaño de porción:</th>
-                <td>1 Tomate 160 g</td>
-            </tr>
-            <tr>
-                <th></th>
-                <td>100gr / 1 porción</td>
-            </tr>
-            <tr>
-                <td>Energía (kcal)</td>
-                <td>18 / 29</td>
-            </tr>
-            <tr>
-                <td>Proteínas (g)</td>
-                <td>0.88 / 1.4</td>
-            </tr>
-            <tr>
-                <td>Grasas Totales (g)</td>
-                <td>0.2 / 0.32</td>
-            </tr>
-            <tr>
-                <td>Hidratos de Carbono disponibles (g)</td>
-                <td>3.89 / 6.2</td>
-            </tr>
-            <tr>
-                <td>Azúcares Totales (g)</td>
-                <td>2.63 / 4.2</td>
-            </tr>
-            <tr>
-                <td>Sodio (mg)</td>
-                <td>5 / 8</td>
-            </tr>
-        </table>
-    </div>
-</div>
-
-<div class="columnas_4_contenedor">
-  <div class="column-empty" style="width: 40%;">
-    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center; background-color: var(--primary-color)">Cotizar</button>
-    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <%= render 'comments/new', comment: @comment %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  # NUTRICIÓN
+  # (Si tu parcial contempla una sola fila de "Tamaño de porción", puedes concatenar el detalle adicional
+  # en la misma variable. De lo contrario, podrías requerir variables extra o modificar la tabla del parcial.)
+  nutrition_serving_size: '1 Tomate 160 g (100gr / 1 porción)',
+  nutrition_calories:     '18 / 29',
+  nutrition_proteins:     '0.88 / 1.4',
+  nutrition_fats:         '0.2 / 0.32',
+  nutrition_carbs:        '3.89 / 6.2',
+  nutrition_sugars:       '2.63 / 4.2',
+  nutrition_sodium:       '5 / 8'
+%>

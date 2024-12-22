@@ -1,16 +1,18 @@
-<!-- app/views/catalogo/_vista_base.html.erb -->
+<!-- app/views/shared/_vista_base.html.erb -->
 
-<%= stylesheet_link_tag 'portada', 'product', 'informacion_nutricional', 'bandeja', 'columns' %>
-<% if additional_stylesheets.present? %>
-  <%= stylesheet_link_tag additional_stylesheets %>
-<% end %>
+<%= stylesheet_link_tag 'portada' %>
+<%= stylesheet_link_tag 'product' %>
+<%= stylesheet_link_tag 'informacion_nutricional' %>
+<%= stylesheet_link_tag 'bandeja' %>
+<%= stylesheet_link_tag 'columns' %>
 
 <!-- PORTADA -->
 <div class="portada-container">
   <% if portada_image.present? %>
     <%= image_tag portada_image, 
                   class: "portada-position", 
-                  style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
+                  style: "position: relative; top: 0px; left: 0px; transform: translate(0%, -4%);" %>
+  
   <% end %>
 
   <div class="image-text" id="<%= portada_id %>">
@@ -18,26 +20,28 @@
   </div>
 </div>
 
-<!-- PRODUCTO -->
+
+<!-- PRODUCT -->
 <div class="product-container">
   <div class="product-image">
-    <% if product_image.present? %>
-      <%= image_tag product_image, class: "red-container" %>
-    <% end %>
+    <%= image_tag product_image, class: "red-container" if product_image.present? %>
   </div>
+
   <div class="product-info">
+    <!-- Título del producto -->
     <% if product_title.present? %>
       <h2><%= product_title %></h2>
     <% else %>
       <h2>Pronto actualizaremos esta sección</h2>
     <% end %>
-    
+
+    <!-- Descripción principal -->
     <% if product_description.present? %>
       <p><%= product_description %></p>
     <% else %>
       <p>Pronto actualizaremos esta sección</p>
     <% end %>
-    
+
     <div class="product-details">
       <!-- CARACTERÍSTICAS -->
       <h3>Características</h3>
@@ -50,7 +54,7 @@
       <% else %>
         <p>Pronto actualizaremos esta sección</p>
       <% end %>
-      
+
       <!-- IDEALES PARA -->
       <h3>Ideales Para</h3>
       <% if product_uses.present? && product_uses.any? %>
@@ -62,7 +66,7 @@
       <% else %>
         <p>Pronto actualizaremos esta sección</p>
       <% end %>
-      
+
       <!-- DISPONIBLE -->
       <h3>Disponible</h3>
       <% if product_availability.present? && product_availability.any? %>
@@ -74,19 +78,19 @@
       <% else %>
         <p>Pronto actualizaremos esta sección</p>
       <% end %>
-      
+
       <!-- FORMATOS DISPONIBLES -->
       <h3>Formatos Disponibles</h3>
       <% if product_formats.present? && product_formats.any? %>
         <ul>
           <% product_formats.each do |format| %>
-            <li><%= format.html_safe %></li>
+            <li><%= format %></li>
           <% end %>
         </ul>
       <% else %>
         <p>Pronto actualizaremos esta sección</p>
       <% end %>
-      
+
       <!-- GRADOS BRIX -->
       <h3>Grados Brix</h3>
       <% if product_brix.present? && product_brix.any? %>
@@ -106,9 +110,9 @@
 <div class="bandeja">
   <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1', class: "bandeja-img" %>
   <div class="content">
-    <h1>Así de rico puedes cocinar con estos <br>tomates</h1>
-    <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
-    <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
+      <h1>Así de rico puedes cocinar con estos <br>tomates</h1>
+      <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
+      <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
   </div>
 </div>
 
@@ -120,7 +124,7 @@
     <% else %>
       <h1>Pronto actualizaremos esta sección</h1>
     <% end %>
-    
+
     <% if description_paragraphs.present? && description_paragraphs.any? %>
       <% description_paragraphs.each do |paragraph| %>
         <p><%= paragraph %></p>
@@ -129,10 +133,10 @@
       <p>Pronto actualizaremos esta sección</p>
     <% end %>
   </div>
-  
+
   <div class="nutrition-container">
     <h2>Información Nutricional</h2>
-    
+
     <% if nutrition_serving_size.present? ||
           nutrition_calories.present? ||
           nutrition_proteins.present? ||
@@ -158,7 +162,7 @@
           <td><%= nutrition_fats.presence || "Pronto..." %></td>
         </tr>
         <tr>
-          <td>Hidratos de Carbono disponibles (g)</td>
+          <td>Hidratos de Carbono (g)</td>
           <td><%= nutrition_carbs.presence || "Pronto..." %></td>
         </tr>
         <tr>
@@ -179,8 +183,10 @@
 <!-- BOTÓN COTIZAR / MODAL -->
 <div class="columnas_4_contenedor">
   <div class="column-empty" style="width: 40%;">
-    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center; background-color: var(--primary-color)">Cotizar</button>
-    
+    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center; background-color: var(--primary-color)">
+      Cotizar
+    </button>
+
     <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">

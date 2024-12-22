@@ -1,124 +1,37 @@
-<%= stylesheet_link_tag 'portada' %>
-<%= stylesheet_link_tag 'product' %>
-<%= stylesheet_link_tag 'informacion_nutricional' %>
-<%= stylesheet_link_tag 'bandeja' %>
-<%= stylesheet_link_tag 'columns' %>
+<!-- tomate_beef.html.erb -->
+<%= render 'catalogo/vista_base',
+  # PORTADA
+  portada_image:        'catalogo/CATALOGO_LOGO_2.jpg',
+  portada_id:           'tomate-beef',
+  portada_text:         "El Mejor <br> Compañero De <br> Una Burger",
 
-<div class="portada-container">
-  <%= image_tag 'catalogo/CATALOGO_LOGO_2.jpg', class: "portada-position", style: "position: relative; top: 0px; left: 0px; transform: translate(0%, -4%);" %>
-  <div class="image-text" id='tomate-beef'>
-    El Mejor <br> Compañero De <br> Una Burger
-  </div>
-</div>
+  # PRODUCTO
+  product_image:        'catalogo/VARIEDAD_3.jpg',
+  product_title:        'Tomate Beef',
+  product_description:  '¿Necesitamos tamaño? ¿O un sabor intenso? Prueba nuestros Beefs inocuos, sabrosos y contundentes.',
+  product_features:     ['Gran Color, Firme, Rico, Vibrante Y Carnoso.'],
+  product_uses:         ['Hamburguesas, Sándwiches, Salsa De Tomates'],
+  product_availability: ['Septiembre A Enero / Marzo A Junio'],
+  product_formats:      ['Caja de 7 kilos Granel Color Rojo'],
+  product_brix:         ['4,5 a 5 Grados Brix'],
 
-<div class="product-container">
-    <div class="product-image">
-        <%= image_tag 'catalogo/VARIEDAD_3.jpg', class: "red-container" %>
-    </div>
-    <div class="product-info">
-        <h2>Tomate Beef</h2>
-        <p>¿Necesitamos tamaño? ¿O un sabor intenso? Prueba nuestros Beefs inocuos, sabrosos y contundentes.</p>
-        <div class="product-details">
-            <h3>Características</h3>
-            <ul>
-                <li>Gran Color, Firme, Rico, Vibrante Y Carnoso.</li>
-            </ul>
-            <h3>Ideales Para</h3>
-            <ul>
-                <li>Hamburguesas, Sándwiches, Salsa De Tomates</li>
-            </ul>
-            <h3>Disponible</h3>
-            <ul>
-                <li>Septiembre A Enero / Marzo A Junio</li>
-            </ul>
-            <h3>Formatos Disponibles</h3>
-            <ul>
-                <li>Caja de 7 kilos Granel Color Rojo</li>
-            </ul>
-            <h3>Grados Brix</h3>
-            <ul>
-                <li>4,5 a 5 Grados Brix</li>
-            </ul>
-        </div>
-    </div>
-</div>
+  # DESCRIPCIÓN
+  description_title: 'Palabras de nuestro catador de tomates',
+  description_paragraphs: [
+    "Tomates grandes y carnosos que quedan perfectos cortados en rodajas en un sándwich o picados en una salsa fresca. Este tomate versátil va a cualquier parte. ¿Te gusta la salsa? Este lo logras obtener con este tipo de tomate y un cultivo fresco-sano.",
+    "Ideal para la preparación de la hamburguesa. Este tipo es ideal para salsa de tomate y te sorprenderá a la parrilla como un sustituto de la hamburguesa en rodajas gruesas. Los tomates rojos de ternera son el tomate triturador ideal con mucho jugo y son una base encantadora para salsas frías y salsas.",
+    "Nuestros tomates beef son grandes y de pulpa roja, perfectos y excelentes para rellenar, asar a la parrilla o servidos en rodajas para hamburguesas y sándwiches. Los tomates beef grandes y jugosos son conocidos por su textura y sabores tradicionales a tomate.",
+    "Córtalo en cuadros para obtener salsas sanas y con mucho sabor o como una sabrosa adición a sus platos favoritos: calidad asegurada, saludable y deliciosa.",
+    "Córtalo en cuadros para obtener salsas sanas y con mucho sabor o como una sabrosa adición a sus platos favoritos: calidad asegurada, saludable y deliciosa.",
+    "Elígelas de color rojo o rosa, sin magulladuras ni excesiva suavidad. Conservar en la encimera de la cocina a temperatura ambiente y consumir con un color rojo brillante. Evite poner los tomates en temperaturas frías refrigeradas, ya que esto reducirá el sabor."
+  ],
 
-<div class="bandeja">
-    <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1', class: "bandeja-img" %>
-    <div class="content">
-        <h1>Así de rico puedes cocinar con estos <br>tomates</h1>
-        <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
-        <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
-    </div>
-</div>
-
-
-<div class="content-container">
-    <div class="description-container">
-        <h1>Palabras de nuestro catador de tomates</h1>
-        <p>Tomates grandes y carnosos que quedan perfectos cortados en rodajas en un sándwich o picados en una salsa fresca. Este tomate versátil va a cualquier parte. ¿Te gusta la salsa? Este lo logras obtener con este tipo de tomate y un cultivo fresco-sano.</p>
-        <p>Ideal para la preparación de la hamburguesa. Este tipo es ideal para salsa de tomate y te sorprenderá a la parrilla como un sustituto de la hamburguesa en rodajas gruesas. Los tomates rojos de ternera son el tomate triturador ideal con mucho jugo y son una base encantadora para salsas frías y salsas.</p>
-        <p>Nuestros tomates beef son grandes y de pulpa roja son el centro del plato, perfectos y excelentes para rellenar, asar a la parrilla o servidos en rodajas para hamburguesas y sándwiches. Los tomates beef grandes y jugosos son conocidos por su textura y sabores tradicionales a tomate.</p>
-        <p>Córtalo en cuadros para obtener salsas sanas y con mucho sabor o como una sabrosa adición a sus platos favoritos: calidad asegurada, saludable y deliciosa.</p>
-        <p>Córtalo en cuadros para obtener salsas sanas y con mucho sabor o como una sabrosa adición a sus platos favoritos: calidad asegurada, saludable y deliciosa.</p>
-        <p>Elígelas de color rojo o rosa, sin magulladuras ni excesiva suavidad. Conservar en la encimera de la cocina a temperatura ambiente y consumir con un color rojo brillante. Evite poner los tomates en temperaturas frías refrigeradas, ya que esto reducirá el sabor.</p>
-    </div>
-    <div class="nutrition-container">
-        <h2>Información Nutricional</h2>
-        <table>
-            <tr>
-                <th>Tamaño de porción:</th>
-                <td>1 Tomate 160 g</td>
-            </tr>
-            <tr>
-                <td>Energía (kcal)</td>
-                <td>18 / 29</td>
-            </tr>
-            <tr>
-                <td>Proteínas (g)</td>
-                <td>0.88 / 1.4</td>
-            </tr>
-            <tr>
-                <td>Grasas Totales (g)</td>
-                <td>0.2 / 0.32</td>
-            </tr>
-            <tr>
-                <td>Hidratos de Carbono disponibles (g)</td>
-                <td>3.89 / 6.2</td>
-            </tr>
-            <tr>
-                <td>Azúcares Totales (g)</td>
-                <td>2.63 / 4.2</td>
-            </tr>
-            <tr>
-                <td>Sodio (mg)</td>
-                <td>5 / 8</td>
-            </tr>
-        </table>
-    </div>
-</div>
-
-<div class="columnas_4_contenedor">
-  <div class="column-empty" style="width: 40%;">
-    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center; background-color: var(--primary-color)">Cotizar</button>
-    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <%= render 'comments/new', comment: @comment %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+  # NUTRICIÓN
+  nutrition_serving_size: '1 Tomate 160 g',
+  nutrition_calories:     '18 / 29',
+  nutrition_proteins:     '0.88 / 1.4',
+  nutrition_fats:         '0.2 / 0.32',
+  nutrition_carbs:        '3.89 / 6.2',
+  nutrition_sugars:       '2.63 / 4.2',
+  nutrition_sodium:       '5 / 8'
+%>

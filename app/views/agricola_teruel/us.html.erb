@@ -101,43 +101,276 @@
     transform: translateY(-14rem); /* Imagen baja 11rem */
   }
 }
+
+
+</style>
+
+
+<!-- Contenedor de Texto -->
+<div class="contenedor-texto-full">
+    <div class="contenedor-texto">
+      <p>
+        Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!
+      </p>
+      <ul class="lista-beneficios">
+      <li><i class="bi bi-check-lg icono-lista"></i> Producimos con un Manejo Integrado de Plagas (MIP)</li>
+      <li><i class="bi bi-check-lg icono-lista"></i> Utilizamos técnicas de producción de baja cantidad de pesticidas, para garantizar productos limpios y de bajo residuo.</li>
+      <li><i class="bi bi-check-lg icono-lista"></i> Nuestro proceso productivo permite obtener un producto de calidad que disminuya riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
+      <li><i class="bi bi-check-lg icono-lista"></i> Contamos con Certificaciones GlobalGap, FSMA, GRASP.</li>
+    </ul>
+    
+    </div>
+    
+    
+  </div>
+
+
+
+<style>
+/* Estilos para el contenedor de texto */
+    .contenedor-texto-full {
+  background-color: var(--sex-color); /* Fondo utilizando la variable CSS */
+  padding: 2rem; /* Espaciado interno */
+  width: 100%; /* Ocupa todo el ancho de la pantalla */
+  box-sizing: border-box; /* Incluye el padding en el ancho total */
+  font-family: Arial, sans-serif; /* Fuente */
+  color: var(--white-color); /* Color del texto */
+}
+
+    /* Párrafos dentro del contenedor */
+    .contenedor-texto {
+      margin-left: 10rem; /* Margen izquierdo */
+
+    }
+
+    .p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--white-color); /* Color del texto */
+    
+    }
+
+    /* Lista de beneficios */
+    .lista-beneficios {
+      list-style: none; /* Elimina los puntos predeterminados */
+      padding: 0; /* Elimina el padding predeterminado */
+    }
+
+    .lista-beneficios li {
+      display: flex; /* Utiliza Flexbox para alinear icono y texto */
+      align-items: center; /* Centra verticalmente los elementos */
+      margin-bottom: 0.75rem; /* Espacio debajo de cada ítem */
+      font-size: 1rem; /* Tamaño de fuente */
+      color: #fff; /* Color del texto en la lista */
+    }
+
+    /* Estilos para los iconos de la lista */
+    .icono-lista {
+      color: green; /* Color del icono */
+      margin-right: 0.5rem; /* Espacio entre el icono y el texto */
+      flex-shrink: 0; /* Evita que el icono se encoja */
+      font-size: 1.2rem; /* Tamaño del icono */
+    }
+
+    
+
 </style>
 
 
 
-<div class='container' style='margin-top: 30px;'></div>
 
-<div class="slides-container">
-  <div class="card background-card" id="us-background-card-1" ></div> 
-  <div class="card left-card" id="us-left-card-1">
-    <%= image_tag 'us/SLIDES_1_US.jpg', class: "background-image" %>
-  </div>
-  <div class="card right-card" id="us-right-card-1">
-    <div class="text-container" style='text-align: left; left: 0%;'>
-      <div class="text-with-line" style='margin-left: 20px; margin-top: 20px;' >
-        <span class="colored-text font-georgia-normal">Nuestra Historia</span>
-      </div>
-    </div>
-    <p class="font-avenir-normal" style='margin: 20px;'>Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!</p>
-    <ul>
-      <li><i class="bi bi-check-lg" style='color: green;'></i> Producimos con un Manejo Integrado de Plagas (MIP)</li>
-      <li><i class="bi bi-check-lg" style='color: green;'></i> Utilizamos técnicas de producción de baja cantidad de pesticidas, para garantizar productos limpios y de bajo residuo.</li>
-      <li><i class="bi bi-check-lg" style='color: green;'></i> Nuestro proceso productivo permite obtener un producto de calidad que disminuya riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
-      <li><i class="bi bi-check-lg" style='color: green;'></i> Contamos con Certificaciones GlobalGap, FSMA, GRASP.</li>
-    </ul>
-  </div>
-  <div class="card extra-card" id="us-extra-card-1" style='top: var(--left-card-top, 5%); left: var(--left-card-left, 17%); background-color: var(--tertiary-color);'></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="contenedor-3">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-3"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-3" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
 </div>
 
-<div class='container' style='margin-top: 30px;'></div>
+<style>
 
-<div class="bandeja">
-    <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1 US' %>
-    <div class="content">
-        <h1 class="font-georgia-normal">Llena de sabor tu día a día con productos que no dañan tu cuerpo.</h1>
-        <p class="font-avenir-normal">Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sostenibilidad de cada tomate para acompañar tu paladar y salud!</p>
-    </div>
-</div>
+/* Contenedor principal que envuelve todo */
+.contenedor-3 {
+  position: relative; /* Para manejar posiciones absolutas dentro */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 5rem; /* Altura fija del contenedor */
+  overflow: hidden; /* Asegura que no haya desbordes */
+}
+
+/* Sección superior de color */
+.seccion-superior-3 {
+  background-color: var(--secondary-color); /* Color de la parte superior */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 0rem; /* Altura fija de la sección superior */
+  position: absolute;
+  top: 0; /* Posición inicial */
+  left: 0;
+  z-index: 1; /* Aparece por encima del contenedor principal */
+}
+
+/* Línea serpenteante */
+.separador-serpenteante-3 {
+  position: absolute;
+  top:-8.5rem; /* Ubica la línea justo debajo de la sección superior */
+  width: 100%; /* Ocupa todo el ancho */
+  height: auto; /* Ajusta automáticamente su altura */
+  z-index: 2; /* Aparece sobre el contenedor principal pero junto con la sección superior */
+}
+
+.color-serpenteante-3 {
+  fill: var(--sex-color); /* Color de la línea serpenteante */
+}
+
+/* Contenedor principal */
+.contenedor-principal-3 {
+  background-color: var(--tertiary-color); /* Color del contenedor principal */
+  padding: 2rem; /* Espaciado interno */
+  position: relative; /* Flujo normal dentro del contenedor */
+  z-index: 1; /* Aparece debajo de la sección superior */
+  margin-top: 14rem; /* Espacio para que quede debajo de la línea serpenteante */
+  height: auto;
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+}
+
+@media (min-width: 1024px) {
+  /* Contenedor principal */
+  .contenedor-principal-3 {
+    padding: 2rem; /* Espaciado interno estándar */
+    margin-top: 5rem; /* Margen superior estándar */
+  }
+  
+  /* Ajustes para la sección superior */
+  .seccion-superior-3 {
+    height: 0rem; /* Mantener altura original */
+  }
+  
+  /* Ajustes para la línea serpenteante */
+  .separador-serpenteante-3 {
+    top: -8rem; /* Posición original */
+  }
+  
+  /* Contenedor principal flex-direction */
+  .contenedor-principal-3 {
+    flex-direction: column; /* Mantener dirección vertical */
+    align-items: center; /* Centrar elementos */
+    justify-content: center; /* Centrar verticalmente */
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+/* Contenedor principal */
+  .contenedor-principal-3 {
+    padding: 2rem; /* Espaciado interno estándar */
+    margin-top: 5rem; /* Margen superior estándar */
+  }
+  
+  /* Ajustes para la sección superior */
+  .seccion-superior-3 {
+    height: 0rem; /* Mantener altura original */
+  }
+  
+  /* Ajustes para la línea serpenteante */
+  .separador-serpenteante-3 {
+    top: -5rem; /* Posición original */
+  }
+  
+  /* Contenedor principal flex-direction */
+  .contenedor-principal-3 {
+    flex-direction: column; /* Mantener dirección vertical */
+    align-items: center; /* Centrar elementos */
+    justify-content: center; /* Centrar verticalmente */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Contenedor principal */
+  .contenedor-principal-3 {
+    padding: 2rem; /* Espaciado interno estándar */
+    margin-top: 5rem; /* Margen superior estándar */
+  }
+  
+  /* Ajustes para la sección superior */
+  .seccion-superior-3 {
+    height: 0rem; /* Mantener altura original */
+  }
+  
+  /* Ajustes para la línea serpenteante */
+  .separador-serpenteante-3 {
+    top: -3rem; /* Posición original */
+  }
+  
+  /* Contenedor principal flex-direction */
+  .contenedor-principal-3 {
+    flex-direction: column; /* Mantener dirección vertical */
+    align-items: center; /* Centrar elementos */
+    justify-content: center; /* Centrar verticalmente */
+  }
+}
+
+
+@media (max-width: 480px) {
+  /* Contenedor principal */
+  .contenedor-principal-3 {
+    padding: 2rem; /* Espaciado interno estándar */
+    margin-top: 5rem; /* Margen superior estándar */
+  }
+  
+  /* Ajustes para la sección superior */
+  .seccion-superior-3 {
+    height: 0rem; /* Mantener altura original */
+  }
+  
+  /* Ajustes para la línea serpenteante */
+  .separador-serpenteante-3 {
+    top: -1rem; /* Posición original */
+  }
+  
+  /* Contenedor principal flex-direction */
+  .contenedor-principal-3 {
+    flex-direction: column; /* Mantener dirección vertical */
+    align-items: center; /* Centrar elementos */
+    justify-content: center; /* Centrar verticalmente */
+  }
+
+}
+
+</style>
+
+
+
+
+
+
+
 
 <div class='container' style='margin-top: 30px;'></div>
 

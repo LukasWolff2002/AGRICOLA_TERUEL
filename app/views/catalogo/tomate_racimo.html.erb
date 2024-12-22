@@ -1,122 +1,35 @@
-<%= stylesheet_link_tag 'portada' %>
-<%= stylesheet_link_tag 'product' %>
-<%= stylesheet_link_tag 'informacion_nutricional' %>
-<%= stylesheet_link_tag 'bandeja' %>
-<%= stylesheet_link_tag 'text_with_line' %>
-<%= stylesheet_link_tag 'columns' %>
-
-<div class="portada-container" >
-  <%= image_tag 'catalogo/CATALOGO_LOGO_2.jpg', class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
-  <div class="image-text" id='tomate-racimo'>
-    Versátil Como El <br> Solo
-  </div>
-</div>
-
-<div class="product-container">
-    <div class="product-image">
-        <%= image_tag 'catalogo/VARIEDAD_2.jpg', class: "red-container" %>
-    </div>
-    <div class="product-info">
-        <h2>Tomate Racimo</h2>
-        <p>Conservamos todas las propiedades del tomate a través de una presentación más natural.</p>
-        <div class="product-details">
-            <h3>Características</h3>
-            <ul>
-                <li>Piel Suave Y Jugosa, Textura Perfecta Para Acompañar Otras Preparaciones</li>
-            </ul>
-            <h3>Ideales Para</h3>
-            <ul>
-                <li>Sopas, Jugos, Salsas, Mermeladas Y Ensaladas. Horneados, A La Parrilla O Crudos.</li>
-            </ul>
-            <h3>Disponible</h3>
-            <ul>
-                <li>Septiembre A Enero / Marzo A Junio</li>
-            </ul>
-            <h3>Formatos Disponibles</h3>
-            <ul>
-                <li>Caja de 7 kilos Granel Color Rojo</li>
-            </ul>
-            <h3>Grados Brix</h3>
-            <ul>
-                <li>5 a 5,5 Grados Brix</li>
-            </ul>
-        </div>
-    </div>
-</div>
-
-<div class="bandeja">
-    <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1', class: "bandeja-img" %>
-    <div class="content">
-        <h1>Así de rico puedes cocinar con estos <br>tomates</h1>
-        <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
-        <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
-    </div>
-</div>
-
-<div class="content-container">
-    <div class="description-container">
-        <h1>Palabras de nuestro catador de tomates</h1>
-        <p>Estos deberían llamarse Sopa de tomate en la vid. 15 minutos y tendrás la mejor sopa de tomate que jamás hayas probado. Pero no, no te detendrás ahí. Querrá probar estos tomates rojos en salsas, mermeladas y ensaladas, horneados, a la parrilla o crudos. ¡Las posibilidades son infinitas!</p>
-        <p>Perfecto como una adición saludable y colorida a cualquier ensalada o plato principal, nuestros tomates cultivados en invernadero brindan un sabor que solo la maduración de la vid puede brindar. Elije entre variedades rojas, naranjas o amarillas, todas con menor acidez y sabor más suave.</p>
-        <p>Madurados con el raquis y llenos de sabor, estos tomates perfectamente redondos ofrecen la sensación de frescos de la planta en su cocina.</p>
-        <p>Los tomates recolectados mientras aún están en rama tienen ese sabor «fresco del jardín», ya que pueden continuar extrayendo humedad y nutrientes del tallo varios días después de haber sido recolectados. Con su piel suave y jugosa, agregan un sabor, textura y color perfectos a todo, desde tortillas hasta bruschetta. Estos tomates vienen en una variedad de sabores y colores, desde rojo hasta naranja e incluso amarillo. ¡Solo un olor le dirá que nuestros tomates en la vid son tan frescos como vienen!</p>
-    </div>
-    <div class="nutrition-container">
-        <h2>Información Nutricional</h2>
-        <table>
-            <tr>
-                <th>Tamaño de porción:</th>
-                <td>1 Tomate 160 g</td>
-            </tr>
-            <tr>
-                <td>Energía (kcal)</td>
-                <td>18 / 29</td>
-            </tr>
-            <tr>
-                <td>Proteínas (g)</td>
-                <td>0.88 / 1.4</td>
-            </tr>
-            <tr>
-                <td>Grasas Totales (g)</td>
-                <td>0.2 / 0.32</td>
-            </tr>
-            <tr>
-                <td>Hidratos de Carbono disponibles (g)</td>
-                <td>3.89 / 6.2</td>
-            </tr>
-            <tr>
-                <td>Azúcares Totales (g)</td>
-                <td>2.63 / 4.2</td>
-            </tr>
-            <tr>
-                <td>Sodio (mg)</td>
-                <td>5 / 8</td>
-            </tr>
-        </table>
-    </div>
-</div>
-
-<div class="columnas_4_contenedor">
-  <div class="column-empty" style="width: 40%;">
-    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center; background-color: var(--primary-color)">Cotizar</button>
-    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <%= render 'comments/new', comment: @comment %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
+<!-- tomate_racimo.html.erb -->
+<%= render 'catalogo/vista_base',
+  # PORTADA
+  portada_image:        'catalogo/CATALOGO_LOGO_2.jpg',
+  portada_id:           'tomate-racimo',
+  portada_text:         "Versátil Como El <br> Solo",
+  
+  # PRODUCTO
+  product_image:        'catalogo/VARIEDAD_2.jpg',
+  product_title:        'Tomate Racimo',
+  product_description:  'Conservamos todas las propiedades del tomate a través de una presentación más natural.',
+  product_features:     ['Piel Suave Y Jugosa, Textura Perfecta Para Acompañar Otras Preparaciones'],
+  product_uses:         ['Sopas, Jugos, Salsas, Mermeladas Y Ensaladas. Horneados, A La Parrilla O Crudos.'],
+  product_availability: ['Septiembre A Enero / Marzo A Junio'],
+  product_formats:      ['Caja de 7 kilos Granel Color Rojo'],
+  product_brix:         ['5 a 5,5 Grados Brix'],
+  
+  # DESCRIPCIÓN
+  description_title: 'Palabras de nuestro catador de tomates',
+  description_paragraphs: [
+    "Estos deberían llamarse Sopa de tomate en la vid. 15 minutos y tendrás la mejor sopa de tomate que jamás hayas probado. Pero no, no te detendrás ahí. Querrá probar estos tomates rojos en salsas, mermeladas y ensaladas, horneados, a la parrilla o crudos. ¡Las posibilidades son infinitas!",
+    "Perfecto como una adición saludable y colorida a cualquier ensalada o plato principal, nuestros tomates cultivados en invernadero brindan un sabor que solo la maduración de la vid puede brindar. Elije entre variedades rojas, naranjas o amarillas, todas con menor acidez y sabor más suave.",
+    "Madurados con el raquis y llenos de sabor, estos tomates perfectamente redondos ofrecen la sensación de frescos de la planta en su cocina.",
+    "Los tomates recolectados mientras aún están en rama tienen ese sabor «fresco del jardín», ya que pueden continuar extrayendo humedad y nutrientes del tallo varios días después de haber sido recolectados. Con su piel suave y jugosa, agregan un sabor, textura y color perfectos a todo, desde tortillas hasta bruschetta. Estos tomates vienen en una variedad de sabores y colores, desde rojo hasta naranja e incluso amarillo. ¡Solo un olor le dirá que nuestros tomates en la vid son tan frescos como vienen!"
+  ],
+  
+  # NUTRICIÓN
+  nutrition_serving_size: '1 Tomate 160 g',
+  nutrition_calories:     '18 / 29',
+  nutrition_proteins:     '0.88 / 1.4',
+  nutrition_fats:         '0.2 / 0.32',
+  nutrition_carbs:        '3.89 / 6.2',
+  nutrition_sugars:       '2.63 / 4.2',
+  nutrition_sodium:       '5 / 8'
+%>
