@@ -102,7 +102,157 @@
   }
 }
 
+@media (min-width: 1024px) {
+    .contenedor {
+    height: 25rem; /* Aumenta la altura */
+  }
 
+  .contenedor-principal {
+    margin-top: 16rem; /* Mayor espacio bajo la línea */
+  }
+
+  .imagen-centrada {
+    max-width: 40rem; /* Imagen más grande */
+  }
+
+  .separador-serpenteante {
+    top: 12rem; /* Ajusta la posición de la línea */
+  }
+
+  @keyframes subir-seccion {
+  from {
+    transform: translateY(0.5rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-1rem); /* Sección sube 5rem */
+  }
+}
+
+  /* Animación para bajar la imagen */
+@keyframes bajar-imagen {
+  from {
+    transform: translateY(0rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-16rem); /* Imagen baja 5rem */
+  }
+}
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .contenedor {
+    height: 18rem; /* Aumenta la altura */
+  }
+
+  .contenedor-principal {
+    margin-top: 16rem; /* Mayor espacio bajo la línea */
+  }
+
+  .imagen-centrada {
+    max-width: 25rem; /* Imagen más grande */
+    margin-left: 30rem;
+  }
+
+  .separador-serpenteante {
+    top: 12rem; /* Ajusta la posición de la línea */
+  }
+
+  @keyframes subir-seccion {
+  from {
+    transform: translateY(0.5rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-4rem); /* Sección sube 5rem */
+  }
+}
+
+  /* Animación para bajar la imagen */
+@keyframes bajar-imagen {
+  from {
+    transform: translateY(0rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-16rem); /* Imagen baja 5rem */
+  }
+}
+}
+
+@media (max-width: 768px) {
+   .contenedor {
+    height: 17rem; /* Aumenta la altura */
+  }
+
+  .contenedor-principal {
+    margin-top: 16rem; /* Mayor espacio bajo la línea */
+  }
+
+  .imagen-centrada {
+    max-width: 18rem; /* Imagen más grande */
+    margin-left: 20rem;
+  }
+
+  .separador-serpenteante {
+    top: 12rem; /* Ajusta la posición de la línea */
+  }
+
+  @keyframes subir-seccion {
+  from {
+    transform: translateY(0.5rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-1.6rem); /* Sección sube 5rem */
+  }
+}
+
+  /* Animación para bajar la imagen */
+@keyframes bajar-imagen {
+  from {
+    transform: translateY(0rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-16rem); /* Imagen baja 5rem */
+  }
+}
+}
+
+@media (max-width: 480px) {
+   .contenedor {
+    height: 13rem; /* Aumenta la altura */
+  }
+
+  .contenedor-principal {
+    margin-top: 16rem; /* Mayor espacio bajo la línea */
+  }
+
+  .imagen-centrada {
+    max-width: 18rem; /* Imagen más grande */
+    margin-left: 15rem;
+  }
+
+  .separador-serpenteante {
+    top: 12rem; /* Ajusta la posición de la línea */
+  }
+
+  @keyframes subir-seccion {
+  from {
+    transform: translateY(0.5rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-3rem); /* Sección sube 5rem */
+  }
+}
+
+  /* Animación para bajar la imagen */
+@keyframes bajar-imagen {
+  from {
+    transform: translateY(0rem); /* Posición inicial */
+  }
+  to {
+    transform: translateY(-16rem); /* Imagen baja 5rem */
+  }
+}
+
+}
 </style>
 
 
@@ -129,17 +279,18 @@
 <style>
 /* Estilos para el contenedor de texto */
     .contenedor-texto-full {
-  background-color: var(--sex-color); /* Fondo utilizando la variable CSS */
-  padding: 2rem; /* Espaciado interno */
-  width: 100%; /* Ocupa todo el ancho de la pantalla */
-  box-sizing: border-box; /* Incluye el padding en el ancho total */
-  font-family: Arial, sans-serif; /* Fuente */
-  color: var(--white-color); /* Color del texto */
-}
+      background-color: var(--sex-color); /* Fondo utilizando la variable CSS */
+      padding: 2rem; /* Espaciado interno */
+      width: 100%; /* Ocupa todo el ancho de la pantalla */
+      box-sizing: border-box; /* Incluye el padding en el ancho total */
+      font-family: Arial, sans-serif; /* Fuente */
+      color: var(--white-color); /* Color del texto */
+    }
 
     /* Párrafos dentro del contenedor */
     .contenedor-texto {
-      margin-left: 10rem; /* Margen izquierdo */
+      width: 80%;
+      margin-left: 10%; /* Margen izquierdo */
 
     }
 
@@ -171,6 +322,7 @@
       flex-shrink: 0; /* Evita que el icono se encoja */
       font-size: 1.2rem; /* Tamaño del icono */
     }
+
 
     
 
