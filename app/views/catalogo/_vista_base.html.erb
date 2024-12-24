@@ -1,104 +1,44 @@
 <!-- app/views/shared/_vista_base.html.erb -->
-
-<%= stylesheet_link_tag 'portada' %>
+<%= stylesheet_link_tag 'configuracion_base' %>
+<%= stylesheet_link_tag 'home/portada_nueva' %>
 <%= stylesheet_link_tag 'product' %>
 <%= stylesheet_link_tag 'informacion_nutricional' %>
 <%= stylesheet_link_tag 'bandeja' %>
 <%= stylesheet_link_tag 'columns' %>
+<%= stylesheet_link_tag 'text_with_line' %>
+<%= stylesheet_link_tag 'paragraph' %>
+<%= stylesheet_link_tag 'catalogo/serpenteante_inf' %>
 
-<!-- PORTADA -->
-<div class="portada-container">
-  <% if portada_image.present? %>
-    <%= image_tag portada_image, 
-                  class: "portada-position", 
-                  style: "position: relative; top: 0px; left: 0px; transform: translate(0%, -4%);" %>
+
+
+
+<div class="contenedor-2">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-2"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-2" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor-principal-2">
+    <!-- Imagen centrada -->
+    <% if portada_image.present? %>
+      <img class="imagen-centrada-2" src="<%= asset_path(portada_image) %>" alt="Imagen centrada">
   
-  <% end %>
-
-  <div class="image-text" id="<%= portada_id %>">
-    <%= portada_text.html_safe if portada_text.present? %>
-  </div>
-</div>
-
-
-<!-- PRODUCT -->
-<div class="product-container">
-  <div class="product-image">
-    <%= image_tag product_image, class: "red-container" if product_image.present? %>
-  </div>
-
-  <div class="product-info">
-    <!-- Título del producto -->
-    <% if product_title.present? %>
-      <h2><%= product_title %></h2>
-    <% else %>
-      <h2>Pronto actualizaremos esta sección</h2>
     <% end %>
+    
 
-    <!-- Descripción principal -->
-    <% if product_description.present? %>
-      <p><%= product_description %></p>
-    <% else %>
-      <p>Pronto actualizaremos esta sección</p>
-    <% end %>
-
-    <div class="product-details">
-      <!-- CARACTERÍSTICAS -->
-      <h3>Características</h3>
-      <% if product_features.present? && product_features.any? %>
-        <ul>
-          <% product_features.each do |feature| %>
-            <li><%= feature %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-
-      <!-- IDEALES PARA -->
-      <h3>Ideales Para</h3>
-      <% if product_uses.present? && product_uses.any? %>
-        <ul>
-          <% product_uses.each do |use| %>
-            <li><%= use %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-
-      <!-- DISPONIBLE -->
-      <h3>Disponible</h3>
-      <% if product_availability.present? && product_availability.any? %>
-        <ul>
-          <% product_availability.each do |avail| %>
-            <li><%= avail %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-
-      <!-- FORMATOS DISPONIBLES -->
-      <h3>Formatos Disponibles</h3>
-      <% if product_formats.present? && product_formats.any? %>
-        <ul>
-          <% product_formats.each do |format| %>
-            <li><%= format %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-
-      <!-- GRADOS BRIX -->
-      <h3>Grados Brix</h3>
-      <% if product_brix.present? && product_brix.any? %>
-        <ul>
-          <% product_brix.each do |brix_value| %>
-            <li><%= brix_value %></li>
-          <% end %>
-        </ul>
+    <!-- Contenedor para texto -->
+    <div class="contenedor-texto-2">
+      <h2>
+        <% if product_title.present? %>
+          <span class="titulo-texto-2 colored-text font-georgia-normal" style="color: white"><%= product_title %></span>
+        <% end %>
+      </h2>
+      <% if product_description.present? %>
+        <p class="descripcion-texto-2" style="color: white"><%= product_description %></p>
       <% else %>
         <p>Pronto actualizaremos esta sección</p>
       <% end %>
@@ -106,33 +46,429 @@
   </div>
 </div>
 
-<!-- BANDEJA -->
-<div class="bandeja">
-  <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1', class: "bandeja-img" %>
-  <div class="content">
-      <h1>Así de rico puedes cocinar con estos <br>tomates</h1>
-      <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
-      <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
-  </div>
+
+
+<style>
+/* ========================= */
+/* Estilos Generales del Contenedor */
+/* ========================= */
+.contenedor-2 {
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  background-color: var(--sex-color); /* Color de fondo */
+}
+
+/* Sección superior de color */
+.seccion-superior-2 {
+  background-color: var(--sex-color);
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Línea serpenteante */
+.separador-serpenteante-2 {
+  position: absolute;
+  top: -3rem; /* Posición inicial */
+  width: 100%;
+  height: auto;
+  z-index: 1;
+
+}
+
+.color-serpenteante-2 {
+  fill: var(--secondary-color);
+}
+
+/* Contenedor principal */
+.contenedor-principal-2 {
+  background-color: var(--sex-color);
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 14rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen centrada */
+.imagen-centrada-2 {
+  width: 25rem;
+  height: auto;
+  margin-top: -17rem;
+  margin-left: 40rem;
+  object-fit: contain;
+  position: relative;
+  z-index: 10;
+}
+
+/* Contenedor de texto */
+.contenedor-texto-2 {
+  position: absolute;
+  top: -1rem; /* Ajustable */
+  left: 10rem; /* Ajustable */
+  width: 60rem;
+  padding: 0rem;
+  z-index: 3; /* Por encima de la imagen */
+  text-align: left;
+}
+
+/* Título del texto */
+.titulo-texto-2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción del texto */
+.descripcion-texto-2 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  width: 30rem;
+}
+
+/* Contenedor de botones */
+.botones-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
+
+/* Botones (enlaces) */
+.boton-estilo {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.boton-estilo:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.boton-estilo:active {
+  background-color: var(--tertiary-color);
+  transform: scale(0.95);
+}
+
+/* ========================= */
+/* Media Queries para Responsividad */
+/* ========================= */
+
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="contenedor-inf">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-inf"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-inf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-inf" style="fill: var(--sex-color);" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
 </div>
 
-<!-- CONTENT & NUTRICIÓN -->
-<div class="content-container">
-  <div class="description-container">
-    <% if description_title.present? %>
-      <h1><%= description_title %></h1>
-    <% else %>
-      <h1>Pronto actualizaremos esta sección</h1>
-    <% end %>
 
-    <% if description_paragraphs.present? && description_paragraphs.any? %>
+
+
+
+
+
+<div class="text-container">
+  <div class="text-with-line">
+    <span class="colored-text font-georgia-normal">Palabras de nuestro catador</span>
+  </div>
+  <% if description_paragraphs.present? && description_paragraphs.any? %>
       <% description_paragraphs.each do |paragraph| %>
-        <p><%= paragraph %></p>
+        <p class="parrafo-texto-linea"><%= paragraph %></p>
       <% end %>
     <% else %>
       <p>Pronto actualizaremos esta sección</p>
     <% end %>
+</div>
+
+
+
+
+
+
+
+
+<div class="contenedor-4">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-4"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-4" style="fill: var(--tertiary-color);" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+
   </div>
+
+</div>
+
+
+
+<style>
+/* Contenedor principal que envuelve todo */
+.contenedor-4 {
+  position: relative;
+  width: 100%;
+  height: 7rem;
+  overflow: hidden;
+  background-color: var(--primary-color); /* Color de fondo */
+}
+
+/* Sección superior de color */
+.seccion-superior-4 {
+  background-color: var(--sex-color);
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Línea serpenteante */
+.separador-serpenteante-4 {
+  position: absolute;
+  top: -7rem;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+}
+
+.color-serpenteante-4 {
+  fill: var(--tertiary-color);
+}
+
+/* Contenedor principal */
+.contenedor-principal-4 {
+  background-color: var(--primary-color);
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 14rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen centrada */
+.imagen-centrada-4 {
+  width: 32rem;
+  height: auto;
+  margin-top: -30rem;
+  margin-left: 40rem;
+  object-fit: contain;
+  position: relative;
+  z-index: 0;
+}
+
+/* Contenedor de texto */
+.contenedor-texto-4 {
+  position: absolute;
+  top: -5rem; /* Posición inicial (ajustable) */
+  left: 10rem; /* Posición inicial (ajustable) */
+  width: 30rem; /* Dimensiones del contenedor */
+  padding: 0rem;
+  z-index: 3; /* Por encima de la imagen */
+  text-align: left; /* Centrar texto */
+}
+
+/* Título del texto */
+.titulo-texto-4 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción del texto */
+.descripcion-texto-4 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Contenedor de botones */
+.botones-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: left;
+  gap: 1rem; /* Espacio entre enlaces */
+}
+
+/* Botones (enlaces) */
+.boton-estilo {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none; /* Quitar subrayado */
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block; /* Asegurar que se comporte como un botón */
+}
+
+.boton-estilo:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
+.boton-estilo:active {
+  background-color: var(--tertiary-color);
+  transform: scale(0.95); /* Reducir ligeramente al hacer clic */
+}
+</style>
+
+
+
+
+<div class="contenedor-punteo">
+  <div class="contenedor-texto-punteo">
+    <h2>
+      <span class="titulo-texto-punteo colored-text font-georgia-normal">Ideales para</span>
+    </h2>
+  </div>
+  <ul class="lista-punteada">
+    <li><i class="bi bi-bookmark-heart-fill"></i></li>
+    <li><i class="bi bi-bookmark-heart-fill"></i></li>
+    <li><i class="bi bi-bookmark-heart-fill"></i></li>
+  </ul>
+</div>
+
+<style>
+  .contenedor-punteo {
+    /* POSICIÓN RELATIVA para anclar hijos con position: absolute */
+    position: relative;
+    background-color: var(--primary-color);
+    color: #fff;         /* Texto por defecto en blanco */
+    font-size: 3rem;     /* Tamaño de los íconos */
+    height: 17rem;       /* Ajusta la altura a tu preferencia */
+  }
+
+  .lista-punteada {
+    list-style: none;
+    /* Aquí eliminamos el margin-bottom negativo */
+    margin: 0; 
+    padding: 0;
+    display: flex;
+    gap: 6rem;
+    justify-content: center; 
+    align-items: center; 
+    height: 100%; /* Para centrar verticalmente dentro del contenedor */
+  }
+
+  .lista-punteada li i {
+    color: inherit; /* Hereda el color (#fff) del padre */
+  }
+
+  /* Contenedor de texto */
+  .contenedor-texto-punteo {
+    position: absolute;
+    top: 1rem;        
+    left: 10rem;      
+    z-index: 3;       
+    text-align: left;
+  }
+
+  /* Título del texto */
+  .titulo-texto-punteo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;  
+    margin-bottom: -4rem;
+  }
+</style>
+
+
+
+
+
+
+
+<div class="contenedor-inf">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-inf"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-inf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-inf" style="fill: var(--primary-color);" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- CONTENT & NUTRICIÓN -->
+<div class="content-container">
 
   <div class="nutrition-container">
     <h2>Información Nutricional</h2>

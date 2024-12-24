@@ -20,6 +20,12 @@
     <path class="color-serpenteante" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
   </svg>
 
+  <div class="contenedor-texto-portada">
+      <h2>
+        <span class="titulo-texto-portada colored-text font-georgia-normal" style="color: var(--primary-color)"></span>
+      </h2>
+  </div>
+
   <!-- Contenedor principal -->
   <div class="contenedor-principal">
     <!-- Imagen centrada -->
@@ -100,14 +106,22 @@
 }
 
 /* Contenedor de texto */
-.contenedor-texto-static-portada {
+.contenedor-texto-portada {
   position: absolute;
-  top: -5rem; /* Posición inicial (ajustable) */
-  left: 10rem; /* Posición inicial (ajustable) */
-  width: 30rem; /* Dimensiones del contenedor */
+  top: 9rem; /* Ajustable */
+  left: 10rem; /* Ajustable */
+  width: 60rem;
   padding: 0rem;
   z-index: 3; /* Por encima de la imagen */
-  text-align: left; /* Centrar texto */
+  text-align: left;
+}
+
+/* Título del texto */
+.titulo-texto-portada {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
 /* Título del texto */
@@ -306,13 +320,351 @@
 
 
 
+<div class="contenedor-6">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-6"></div>
 
-<div class="text-container">
-  <div class="text-with-line">
-    <span class="colored-text font-georgia-normal">Entrégale Vida<br>A Tu Mesa</span>
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-6"  d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor-principal-6" >
+
+    <img class="imagen-centrada-6" src="<%= asset_path('catalogo/cherry_2.png') %>" alt="Imagen centrada">
+
+    <!-- Contenedor para texto -->
+    <div class="contenedor-texto-6">
+      <h2 class="text-with-line" style='margin-top: 20px;'>
+        <span class="colored-text font-georgia-normal" style="color: white">Entrégale Vida<br>A Tu Mesa</span>
+      </h2>
+      <p class="descripcion-texto-6" style="color: white">Comparte con nosotros el placer de una alimentación<br>sana y entretenida con distintos formatos de productos</p>
+    </div>
   </div>
-  <p class="parrafo-texto-linea font-avenir-normal">Comparte con nosotros el placer de una alimentación<br>sana y entretenida con distintos formatos de productos</p>
 </div>
+
+<style>
+/* ========================= */
+/* Estilos Generales del Contenedor */
+/* ========================= */
+.contenedor-6 {
+  position: relative;
+  width: 100%;
+  height: 25rem;
+  overflow: hidden;
+  background-color: var(--sex-color); /* Color de fondo */
+}
+
+/* Sección superior de color */
+.seccion-superior-6 {
+  background-color: var(--sex-color);
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Línea serpenteante */
+.separador-serpenteante-6 {
+  position: absolute;
+  top: -7rem; /* Posición inicial */
+  width: 100%;
+  height: auto;
+  z-index: 2;
+
+}
+
+.color-serpenteante-6 {
+  fill: var(--tertiary-color);
+}
+
+/* Contenedor principal */
+.contenedor-principal-6 {
+  background-color: var(--sex-color);
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 14rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen centrada */
+.imagen-centrada-6 {
+  width: 32rem;
+  height: auto;
+  margin-top: -30rem;
+  margin-left: 40rem;
+  object-fit: contain;
+  position: relative;
+  z-index: 0;
+}
+
+/* Contenedor de texto */
+.contenedor-texto-6 {
+  position: absolute;
+  top: -5rem; /* Ajustable */
+  left: 10rem; /* Ajustable */
+  width: 30rem;
+  padding: 0rem;
+  z-index: 3; /* Por encima de la imagen */
+  text-align: left;
+}
+
+/* Título del texto */
+.titulo-texto-6 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción del texto */
+.descripcion-texto-6 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+/* Contenedor de botones */
+.botones-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
+
+/* Botones (enlaces) */
+.boton-estilo {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.boton-estilo:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.boton-estilo:active {
+  background-color: var(--tertiary-color);
+  transform: scale(0.95);
+}
+
+/* ========================= */
+/* Media Queries para Responsividad */
+/* ========================= */
+
+/* Pantallas Grandes (1024px o más) */
+@media (min-width: 1024px) {
+  .contenedor-6 {
+    height: 22rem; /* Altura más grande */
+  }
+
+  .separador-serpenteante-6 {
+    top: -5rem; /* Línea más arriba */
+  }
+
+  .imagen-centrada-6 {
+    width: 26rem;
+    margin-top: -20rem;
+    margin-left: 37rem;
+  }
+
+  .contenedor-texto-6 {
+    top: -7rem;
+    left: 10rem;
+    width: 35rem;
+  }
+
+  .titulo-texto-6 {
+    font-size: 2.5rem;
+  }
+
+  .descripcion-texto-6 {
+    font-size: 1.25rem;
+  }
+
+  .boton-estilo {
+    font-size: 1.2rem;
+    padding: 12px 24px;
+  }
+}
+
+/* Pantallas Medianas (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .contenedor-6 {
+    height: 24rem;
+  }
+
+  .separador-serpenteante-6 {
+    top: -4rem; /* Línea en posición intermedia */
+  }
+
+  .imagen-centrada-6 {
+    width: 22rem;
+    margin-top: -24rem;
+    margin-left: 30rem;
+  }
+
+  .contenedor-texto-6 {
+    top: -8rem;
+    left: 6rem;
+    width: 28rem;
+  }
+
+  .titulo-texto-6 {
+    font-size: 2rem;
+  }
+
+  .descripcion-texto-6 {
+    font-size: 1.1rem;
+  }
+
+  .boton-estilo {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Pantallas Pequeñas (Menores a 768px) */
+@media (max-width: 768px) {
+  .contenedor-6 {
+    height: 23rem;
+  }
+
+  .separador-serpenteante-6 {
+    top: -2rem; /* Línea más abajo */
+  }
+
+  .imagen-centrada-6 {
+    width: 15rem;
+    margin-top: -20rem;
+    margin-left: 19rem;
+  }
+
+  .contenedor-texto-6 {
+    top: -8rem;
+    left: 4rem;
+    width: 22rem;
+    text-align: left;
+  }
+
+  .titulo-texto-6 {
+    font-size: 1.8rem;
+  }
+
+  .descripcion-texto-6 {
+    font-size: 1rem;
+  }
+
+  .boton-estilo {
+    font-size: 0.8rem;
+    padding: 8px 16px;
+  }
+}
+
+/* Pantallas Muy Pequeñas (Menores a 480px) */
+@media (max-width: 480px) {
+  .contenedor-6 {
+    height: 22rem;
+  }
+
+  .separador-serpenteante-6 {
+    top: -2rem; /* Línea aún más abajo */
+  }
+
+  .imagen-centrada-6 {
+    width: 10rem;
+    margin-top: -20rem;
+    margin-left: 15rem;
+  }
+
+  .contenedor-texto-6 {
+    top: -12rem;
+    left: 2rem;
+    width: 12rem;
+    text-align: left;
+  }
+
+  .titulo-texto-6 {
+    font-size: 1rem;
+  }
+
+  .descripcion-texto-2{
+    font-size: 0.8rem;
+  }
+
+  .boton-estilo {
+    font-size: 0.5rem;
+    padding: 6px 12px;
+  }
+}
+
+</style>
+
+
+
+<div class="contenedor-3">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-3"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-3"  d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -351,14 +703,15 @@
       <a href="/catalogo/tomate_granel" class="button-style">Leer más</a>
     </div>
     <div class="carosel-item">
-      <span class="column-text font-georgia-normal" style="text-align: center">Tomate Cherry Rojo</span>
-      <img src="<%= asset_path('catalogo/cherry_rojo_redondo.png')%>"  />
+      <span class="column-text font-georgia-normal" style="text-align: center">Tomate Cherry</span>
+      <img src="<%= asset_path('catalogo/cherry.png')%>"  />
       <p class="carosel-text" style="text-align: center"></p>
       <a href="/catalogo/tomate_cherry" class="button-style">Leer más</a>
     </div>
   </div>
   <a class="carosel-control carosel-control-right glyphicon glyphicon-chevron-right" href="#"></a>
 </div>
+
 
 <div class="contenedor-2">
   <!-- Sección superior de color -->
@@ -1335,6 +1688,62 @@ $(document).ready(function () {
     $items.slice(1, 2).css('opacity', '1'); // Aumentar opacidad del central
     $items.slice(1, 2).css('transform', 'scale(1.2)'); // Aumentar escala del central
   }
-});
+  });
 
+  
+
+</script>
+
+<script>
+  $(document).ready(function () {
+    let autoCarouselInterval = null;
+    let autoCarouselTimeout = null;
+
+    // Función para iniciar el autoplay (cada 1.5s)
+    function startAutoCarousel() {
+      // Evita crear múltiples intervalos si uno ya está activo
+      if (!autoCarouselInterval) {
+        autoCarouselInterval = setInterval(function () {
+          // Simular clic en el botón derecho
+          $('.carosel-control-right').click();
+        }, 1500);
+      }
+    }
+
+    // Función para detener el autoplay
+    function stopAutoCarousel() {
+      if (autoCarouselInterval) {
+        clearInterval(autoCarouselInterval);
+        autoCarouselInterval = null;
+      }
+    }
+
+    // Función para pausar automáticamente durante 3s cuando el usuario hace clic
+    function pauseAutoCarousel() {
+      // Detener el autoplay
+      stopAutoCarousel();
+      // Limpiar cualquier timeout anterior para no crear varios
+      if (autoCarouselTimeout) {
+        clearTimeout(autoCarouselTimeout);
+      }
+      // Esperar 3s y reiniciar
+      autoCarouselTimeout = setTimeout(function () {
+        startAutoCarousel();
+      }, 3000);
+    }
+
+    // Iniciar carrusel al cargar
+    startAutoCarousel();
+
+    // Cada vez que el usuario hace clic en algún control, pausamos 3s
+    $('.carosel-control-left, .carosel-control-right').on('click', function () {
+      pauseAutoCarousel();
+    });
+
+    // -------------------------------
+    // Tu script original NO SE MODIFICA:
+    // -------------------------------
+    // Aquí estaría tu script que mueve .carosel-item de un lado a otro,
+    // actualizaClases, etc., el cual NO tocamos.
+  });
 </script>

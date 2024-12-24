@@ -1,0 +1,46 @@
+
+/* Contenedor principal que envuelve todo */
+.contenedor-inf {
+  position: relative; /* Para manejar posiciones absolutas dentro */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 5rem; /* Altura fija del contenedor */
+  overflow: hidden; /* Asegura que no haya desbordes */
+}
+
+/* Sección superior de color */
+.seccion-superior-inf {
+  background-color: var(--secondary-color); /* Color de la parte superior */
+  width: 100%; /* Ocupa todo el ancho */
+  height: 0rem; /* Altura fija de la sección superior */
+  position: absolute;
+  top: 0; /* Posición inicial */
+  left: 0;
+  z-index: 1; /* Aparece por encima del contenedor principal */
+}
+
+/* Línea serpenteante */
+.separador-serpenteante-inf {
+  position: absolute;
+  top:-8.5rem; /* Ubica la línea justo debajo de la sección superior */
+  width: 100%; /* Ocupa todo el ancho */
+  height: auto; /* Ajusta automáticamente su altura */
+  z-index: 2; /* Aparece sobre el contenedor principal pero junto con la sección superior */
+}
+
+.color-serpenteante-inf {
+  fill: var(--sex-color); /* Color de la línea serpenteante */
+}
+
+/* Contenedor principal */
+.contenedor-principal-inf {
+  background-color: var(--tertiary-color); /* Color del contenedor principal */
+  padding: 2rem; /* Espaciado interno */
+  position: relative; /* Flujo normal dentro del contenedor */
+  z-index: 1; /* Aparece debajo de la sección superior */
+  margin-top: 14rem; /* Espacio para que quede debajo de la línea serpenteante */
+  height: auto;
+  display: flex; /* Habilita Flexbox */
+  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
+  align-items: center; /* Centra horizontalmente los elementos */
+  justify-content: center; /* Centra verticalmente los elementos */
+}

@@ -1,203 +1,34 @@
-<!-- app/views/catalogo/_vista_base.html.erb -->
+<!-- tomate_granel.html.erb -->
+<%= render 'catalogo/vista_base',
+  # PORTADA
+  portada_image: 'catalogo/pera.png',
+  portada_id:    'tomate-saladete',
+  portada_text:  "Clásico de <br>  Clásicos",
 
-<%= stylesheet_link_tag 'portada', 'product', 'informacion_nutricional', 'bandeja', 'columns' %>
-<% if additional_stylesheets.present? %>
-  <%= stylesheet_link_tag additional_stylesheets %>
-<% end %>
+  # PRODUCTO
+  product_image:        'catalogo/VARIEDAD_1.jpg',
+  product_title:        'Tomate Granel',
+  product_description:  'Firme y esbelto. especial para pastas y salsas, pero también para acompañar tus ensaladas.',
 
-<!-- PORTADA -->
-<div class="portada-container">
-  <% if portada_image.present? %>
-    <%= image_tag portada_image, 
-                  class: "portada-position", 
-                  style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
-  <% end %>
 
-  <div class="image-text" id="<%= portada_id %>">
-    <%= portada_text.html_safe if portada_text.present? %>
-  </div>
-</div>
+  # DESCRIPCIÓN
+  description_title: 'Palabras de nuestro catador de tomates',
+  description_paragraphs: [
+    "Un tomate estilo ciruela italiano que es fantástico para salsas y conservas. Los tomates salad o pera son una variedad alargada en forma de huevo, a veces también conocida como tomate ciruela.",
+    "Con pocas semillas y carne firme, densa y carnosa, los salad tienen menos contenido de agua y más pulpa que otros tomates, lo que los convierte en una excelente variedad que se utiliza en varias recetas, tanto cocidas como crudas.",
+    "Los tomates Roma de buena calidad serán firmes, de piel suave y de color entre rosado y rojo. A medida que el producto madura, el color cambiará a un color rojo brillante. Mantenga el tomate en la encimera de la cocina a temperatura ambiente hasta que esté listo para usar. Evite almacenar en el refrigerador, ya que las temperaturas frías pueden afectar negativamente el perfil de sabor de los tomates.",
+    "Bajo contenido de agua, alto nivel de azúcar y textura carnosa.",
+    "Los tomates salad tienen una pulpa densa, carnosa, con bajo contenido de humedad y pocas semillas, lo que los hace ideales para salsas de tomate, platos horneados y ensaladas."
+  ],
 
-<!-- PRODUCTO -->
-<div class="product-container">
-  <div class="product-image">
-    <% if product_image.present? %>
-      <%= image_tag product_image, class: "red-container" %>
-    <% end %>
-  </div>
-  <div class="product-info">
-    <% if product_title.present? %>
-      <h2><%= product_title %></h2>
-    <% else %>
-      <h2>Pronto actualizaremos esta sección</h2>
-    <% end %>
-    
-    <% if product_description.present? %>
-      <p><%= product_description %></p>
-    <% else %>
-      <p>Pronto actualizaremos esta sección</p>
-    <% end %>
-    
-    <div class="product-details">
-      <!-- CARACTERÍSTICAS -->
-      <h3>Características</h3>
-      <% if product_features.present? && product_features.any? %>
-        <ul>
-          <% product_features.each do |feature| %>
-            <li><%= feature %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-      
-      <!-- IDEALES PARA -->
-      <h3>Ideales Para</h3>
-      <% if product_uses.present? && product_uses.any? %>
-        <ul>
-          <% product_uses.each do |use| %>
-            <li><%= use %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-      
-      <!-- DISPONIBLE -->
-      <h3>Disponible</h3>
-      <% if product_availability.present? && product_availability.any? %>
-        <ul>
-          <% product_availability.each do |avail| %>
-            <li><%= avail %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-      
-      <!-- FORMATOS DISPONIBLES -->
-      <h3>Formatos Disponibles</h3>
-      <% if product_formats.present? && product_formats.any? %>
-        <ul>
-          <% product_formats.each do |format| %>
-            <li><%= format.html_safe %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-      
-      <!-- GRADOS BRIX -->
-      <h3>Grados Brix</h3>
-      <% if product_brix.present? && product_brix.any? %>
-        <ul>
-          <% product_brix.each do |brix_value| %>
-            <li><%= brix_value %></li>
-          <% end %>
-        </ul>
-      <% else %>
-        <p>Pronto actualizaremos esta sección</p>
-      <% end %>
-    </div>
-  </div>
-</div>
-
-<!-- BANDEJA -->
-<div class="bandeja">
-  <%= image_tag 'us/BANDEJA_1_US.jpg', alt: 'Bandeja 1', class: "bandeja-img" %>
-  <div class="content">
-    <h1>Así de rico puedes cocinar con estos <br>tomates</h1>
-    <p>Agrícola Teruel lleva a tu mesa lo mejor del campo con productos frescos, respetando la inocuidad y sustentabilidad de cada tomate para acompañar tu paladar y salud!</p>
-    <a href="/catalogo" class="boton-bandeja">Ver Catálogo</a>
-  </div>
-</div>
-
-<!-- CONTENT & NUTRICIÓN -->
-<div class="content-container">
-  <div class="description-container">
-    <% if description_title.present? %>
-      <h1><%= description_title %></h1>
-    <% else %>
-      <h1>Pronto actualizaremos esta sección</h1>
-    <% end %>
-    
-    <% if description_paragraphs.present? && description_paragraphs.any? %>
-      <% description_paragraphs.each do |paragraph| %>
-        <p><%= paragraph %></p>
-      <% end %>
-    <% else %>
-      <p>Pronto actualizaremos esta sección</p>
-    <% end %>
-  </div>
-  
-  <div class="nutrition-container">
-    <h2>Información Nutricional</h2>
-    
-    <% if nutrition_serving_size.present? ||
-          nutrition_calories.present? ||
-          nutrition_proteins.present? ||
-          nutrition_fats.present? ||
-          nutrition_carbs.present? ||
-          nutrition_sugars.present? ||
-          nutrition_sodium.present? %>
-      <table>
-        <tr>
-          <th>Tamaño de porción:</th>
-          <td><%= nutrition_serving_size.presence || "Pronto..." %></td>
-        </tr>
-        <tr>
-          <td>Energía (kcal)</td>
-          <td><%= nutrition_calories.presence || "Pronto..." %></td>
-        </tr>
-        <tr>
-          <td>Proteínas (g)</td>
-          <td><%= nutrition_proteins.presence || "Pronto..." %></td>
-        </tr>
-        <tr>
-          <td>Grasas Totales (g)</td>
-          <td><%= nutrition_fats.presence || "Pronto..." %></td>
-        </tr>
-        <tr>
-          <td>Hidratos de Carbono disponibles (g)</td>
-          <td><%= nutrition_carbs.presence || "Pronto..." %></td>
-        </tr>
-        <tr>
-          <td>Azúcares Totales (g)</td>
-          <td><%= nutrition_sugars.presence || "Pronto..." %></td>
-        </tr>
-        <tr>
-          <td>Sodio (mg)</td>
-          <td><%= nutrition_sodium.presence || "Pronto..." %></td>
-        </tr>
-      </table>
-    <% else %>
-      <p>Pronto actualizaremos esta sección</p>
-    <% end %>
-  </div>
-</div>
-
-<!-- BOTÓN COTIZAR / MODAL -->
-<div class="columnas_4_contenedor">
-  <div class="column-empty" style="width: 40%;">
-    <button type="button" class="button-style" data-bs-toggle="modal" data-bs-target="#talkModal" style="width: 100%; text-align: center; background-color: var(--primary-color)">Cotizar</button>
-    
-    <div class="modal fade" id="talkModal" tabindex="-1" aria-labelledby="talkModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="talkModalLabel">Añadir Nuevo Comentario</h5>
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <%= render 'comments/new', comment: @comment %>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+  # NUTRICIÓN
+  # (Si tu parcial contempla una sola fila de "Tamaño de porción", puedes concatenar el detalle adicional
+  # en la misma variable. De lo contrario, podrías requerir variables extra o modificar la tabla del parcial.)
+  nutrition_serving_size: '1 Tomate 160 g (100gr / 1 porción)',
+  nutrition_calories:     '18 / 29',
+  nutrition_proteins:     '0.88 / 1.4',
+  nutrition_fats:         '0.2 / 0.32',
+  nutrition_carbs:        '3.89 / 6.2',
+  nutrition_sugars:       '2.63 / 4.2',
+  nutrition_sodium:       '5 / 8'
+%>
