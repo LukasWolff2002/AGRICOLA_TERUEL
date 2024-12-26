@@ -184,11 +184,6 @@
 
 
 
-
-
-
-
-
 <div class="contenedor-inf">
   <!-- Sección superior de color -->
   <div class="seccion-superior-inf"></div>
@@ -359,61 +354,63 @@
 
 
 
-<div class="contenedor-punteo">
-  <div class="contenedor-texto-punteo">
+<div class="contenedor-imagenes">
+  <div class="contenedor-texto">
     <h2>
-      <span class="titulo-texto-punteo colored-text font-georgia-normal">Ideales para</span>
+      <span class="titulo-texto colored-text font-georgia-normal">Ideales para</span>
     </h2>
   </div>
-  <ul class="lista-punteada">
-    <li><i class="bi bi-bookmark-heart-fill"></i></li>
-    <li><i class="bi bi-bookmark-heart-fill"></i></li>
-    <li><i class="bi bi-bookmark-heart-fill"></i></li>
-  </ul>
+  <% if product_uses_icons.present? && product_uses_icons.any? %>
+    <div class="imagenes">
+      <% product_uses_icons.each do |image| %>
+        <img src="<%= asset_path(image) %>" alt="Icono" class="imagen-item" />
+      <% end %>
+    </div>
+  <% end %>
 </div>
 
+
+
+
 <style>
-  .contenedor-punteo {
-    /* POSICIÓN RELATIVA para anclar hijos con position: absolute */
-    position: relative;
-    background-color: var(--primary-color);
-    color: #fff;         /* Texto por defecto en blanco */
-    font-size: 3rem;     /* Tamaño de los íconos */
-    height: 17rem;       /* Ajusta la altura a tu preferencia */
-  }
+/* Contenedor principal */
+.contenedor-imagenes {
+  position: relative;
+  background-color: var(--primary-color);
+  color: #fff; /* Texto por defecto en blanco */
+  text-align: left; /* Centra contenido si hay una sola imagen */
+  padding: 2rem; /* Espaciado interno */
+}
 
-  .lista-punteada {
-    list-style: none;
-    /* Aquí eliminamos el margin-bottom negativo */
-    margin: 0; 
-    padding: 0;
-    display: flex;
-    gap: 6rem;
-    justify-content: center; 
-    align-items: center; 
-    height: 100%; /* Para centrar verticalmente dentro del contenedor */
-  }
+/* Contenedor del texto */
+.contenedor-texto {
+  margin-bottom: 2rem; /* Separación entre texto e imágenes */
+  margin-left: 8rem; /* Ajuste de margen izquierdo */
+}
 
-  .lista-punteada li i {
-    color: inherit; /* Hereda el color (#fff) del padre */
-  }
+/* Título del texto */
+.titulo-texto {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+}
 
-  /* Contenedor de texto */
-  .contenedor-texto-punteo {
-    position: absolute;
-    top: 1rem;        
-    left: 10rem;      
-    z-index: 3;       
-    text-align: left;
-  }
+/* Contenedor de las imágenes */
+.imagenes {
+  display: flex; /* Flexbox para alinear elementos */
+  justify-content: center; /* Centrar horizontalmente */
+  gap: 2rem; /* Espaciado entre imágenes */
+  flex-wrap: wrap; /* Permitir que las imágenes se ajusten en varias filas si es necesario */
+}
 
-  /* Título del texto */
-  .titulo-texto-punteo {
-    font-size: 4rem;
-    font-weight: bold;
-    color: #fff;  
-    margin-bottom: -4rem;
-  }
+/* Estilo de cada imagen */
+.imagen-item {
+  width: 5rem; /* Ajusta el ancho de las imágenes */
+  height: 5rem; /* Ajusta el alto de las imágenes */
+  object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+  
+}
+
 </style>
 
 
