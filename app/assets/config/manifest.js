@@ -25,6 +25,7 @@
 //= link home/carrousel.css
 //= link jumbotron.css
 //= link catalogo/serpenteante_inf.css
+//= link catalogo/serpenteante_sup.css
 
 //= link video_jumbo.mp4
 

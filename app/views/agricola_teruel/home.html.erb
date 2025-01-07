@@ -11,82 +11,77 @@
 <%= stylesheet_link_tag 'home/carrousel' %>
 
 
-<div class="contenedor">
+<div class="contenedor-portada-home">
   <!-- Sección superior de color -->
-  <div class="seccion-superior"></div>
+  <div class="seccion-superior-portada-home"></div>
 
   <!-- Línea serpenteante -->
-  <svg class="separador-serpenteante" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path class="color-serpenteante" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  <svg class="separador-serpenteante-portada-home" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-portada-home" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
   </svg>
 
-  <div class="contenedor-texto-portada">
-      <h2>
-        <span class="titulo-texto-portada colored-text font-georgia-normal" style="color: var(--primary-color)"></span>
-      </h2>
+  <div class="contenedor-texto-portada-home">
+    <h2>
+      <span class="titulo-texto-portada-home colored-text font-georgia-normal" style="color: var(--primary-color)"></span>
+    </h2>
   </div>
 
   <!-- Contenedor principal -->
-  <div class="contenedor-principal">
+  <div class="contenedor-principal-portada-home">
     <!-- Imagen centrada -->
-    <img class="imagen-centrada" src="<%= asset_path('home/MANOS_TOMATES.png') %>" alt="Imagen centrada">
-  
-    <div class="contenedor-texto-static-portada">
+    <img class="imagen-centrada-portada-home" src="<%= asset_path('home/MANOS_TOMATES.png') %>" alt="Imagen centrada">
+
+    <div class="contenedor-texto-static-portada-home">
       <h2 style='margin-top: 20px;'>
         <span class="colored-text font-georgia-normal" style="color: var(--fifth-color)"></span>
       </h2>
-      <p class="descripcion-texto-static-portada" style="color: black"></p>
+      <p class="descripcion-texto-static-portada-home" style="color: black"></p>
     </div>
-
   </div>
 </div>
 
-
-
-
-
 <style>
 /* Contenedor principal que envuelve todo */
-.contenedor {
+.contenedor-portada-home {
   position: relative;
-  width: 100%; /* Ocupa todo el ancho */
-  height: 20rem; /* Altura fija del contenedor */
-  overflow: hidden; /* Asegura que no haya desbordes */
+  width: 100%;
+  height: 20rem;
+  overflow: hidden;
 }
 
 /* Sección superior de color */
-.seccion-superior {
-  background-color: var(--secondary-color); /* Color de la parte superior */
+.seccion-superior-portada-home {
+  background-color: var(--secondary-color);
   width: 100%;
-  height: 1rem; /* Altura fija de la sección superior */
+  height: 1rem;
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
-  animation: subir-seccion 1.5s ease-out forwards;
+  animation: subir-seccion-portada-home 1.5s ease-out forwards;
 }
 
 /* Línea serpenteante */
-.separador-serpenteante {
+.separador-serpenteante-portada-home {
   position: absolute;
-  top: 10rem; /* Ubica la línea justo debajo de la sección superior */
+  top: 10rem;
   width: 100%;
   height: 40rem;
   z-index: 2;
-  animation: subir-seccion 1.5s ease-out forwards;
+  animation: subir-seccion-portada-home 1.5s ease-out forwards;
 }
 
-.color-serpenteante {
-  fill: var(--secondary-color); /* Color de la línea serpenteante */
+.color-serpenteante-portada-home {
+  fill: var(--secondary-color);
 }
 
 /* Contenedor principal */
-.contenedor-principal {
-  background-color: var(--tertiary-color); /* Color del contenedor principal */
-  padding: 2rem; /* Espaciado interno */
+.contenedor-principal-portada-home {
+  background-color: var(--tertiary-color);
+  padding: 2rem;
   position: relative;
   z-index: 1;
-  margin-top: 14rem; /* Espacio para que quede debajo de la línea serpenteante */
+  margin-top: 14rem;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -95,66 +90,66 @@
 }
 
 /* Imagen centrada */
-.imagen-centrada {
-  max-width: 5cm; /* Ajusta el ancho máximo de la imagen */
-  height: auto; /* Mantiene la proporción de la imagen */
+.imagen-centrada-portada-home {
+  max-width: 5cm;
+  height: auto;
   margin-bottom: 1rem;
   object-fit: contain;
   position: relative;
   z-index: 0;
-  animation: bajar-imagen 1.5s ease-out forwards;
+  animation: bajar-imagen-portada-home 1.5s ease-out forwards;
 }
 
 /* Contenedor de texto */
-.contenedor-texto-portada {
+.contenedor-texto-portada-home {
   position: absolute;
-  top: 9rem; /* Ajustable */
-  left: 10rem; /* Ajustable */
+  top: 9rem;
+  left: 10rem;
   width: 60rem;
   padding: 0rem;
-  z-index: 3; /* Por encima de la imagen */
+  z-index: 3;
   text-align: left;
 }
 
 /* Título del texto */
-.titulo-texto-portada {
+.titulo-texto-portada-home {
   font-size: 4rem;
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
-/* Título del texto */
-.titulo-texto-static-portada {
+/* Título del texto estático */
+.titulo-texto-static-portada-home {
   font-size: 2rem;
   font-weight: bold;
   color: var(--primary-color);
   margin-bottom: 0.5rem;
 }
 
-/* Descripción del texto */
-.descripcion-texto-static-portada {
+/* Descripción del texto estático */
+.descripcion-texto-static-portada-home {
   font-size: 1rem;
   color: var(--secondary-color);
 }
 
 /* Animación para subir la sección superior y la línea serpenteante */
-@keyframes subir-seccion {
+@keyframes subir-seccion-portada-home {
   from {
-    transform: translateY(-10rem); /* Posición inicial */
+    transform: translateY(-10rem);
   }
   to {
-    transform: translateY(-17rem); /* Sección sube 5rem */
+    transform: translateY(-17rem);
   }
 }
 
 /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
+@keyframes bajar-imagen-portada-home {
   from {
-    transform: translateY(-25rem); /* Posición inicial */
+    transform: translateY(-25rem);
   }
   to {
-    transform: translateY(-14rem); /* Imagen baja 5rem */
+    transform: translateY(-14rem);
   }
 }
 
@@ -162,159 +157,190 @@
 /* Media Queries para Responsividad */
 /* ========================= */
 
-/* Pantallas grandes (1024px o más) */
-@media (min-width: 1024px) {
-  .contenedor {
+/* Pantallas grandes (1500px o más) */
+@media (min-width: 1500px) {
+  .contenedor-portada-home {
     height: 25rem; /* Aumenta la altura */
   }
 
-  .contenedor-principal {
+  .contenedor-principal-portada-home {
     margin-top: 16rem; /* Mayor espacio bajo la línea */
   }
 
-  .imagen-centrada {
+  .imagen-centrada-portada-home {
     max-width: 40rem; /* Imagen más grande */
   }
 
-  .separador-serpenteante {
+  .separador-serpenteante-portada-home {
     top: 12rem; /* Ajusta la posición de la línea */
   }
 
-  @keyframes subir-seccion {
-  from {
-    transform: translateY(-25rem); /* Posición inicial */
+  @keyframes subir-seccion-portada-home {
+    from {
+      transform: translateY(-25rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-30rem); /* Sección sube más */
+    }
   }
-  to {
-    transform: translateY(-30rem); /* Sección sube 5rem */
+
+  @keyframes bajar-imagen-portada-home {
+    from {
+      transform: translateY(-30rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-15rem); /* Imagen baja menos */
+    }
   }
 }
 
-  /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(-30rem); /* Posición inicial */
+/* Pantallas medianas (1024px a 1500px) */
+@media (min-width: 1024px) and (max-width: 1500px) {
+  .contenedor-portada-home {
+    height: 22rem; /* Altura intermedia */
   }
-  to {
-    transform: translateY(-16rem); /* Imagen baja 5rem */
+
+  .contenedor-principal-portada-home {
+    margin-top: 14rem; /* Espacio bajo la línea */
   }
-}
+
+  .imagen-centrada-portada-home {
+    max-width: 32rem; /* Imagen más pequeña */
+  }
+
+  .separador-serpenteante-portada-home {
+    top: 10rem; /* Ajusta la posición de la línea */
+  }
+
+  @keyframes subir-seccion-portada-home {
+    from {
+      transform: translateY(-24rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-27rem); /* Sección sube intermedio */
+    }
+  }
+
+  @keyframes bajar-imagen-portada-home {
+    from {
+      transform: translateY(-25rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-20rem); /* Imagen baja intermedio */
+    }
+  }
 }
 
-/* Pantallas medianas (entre 768px y 1024px) */
+/* Pantallas pequeñas (768px a 1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
-  .contenedor {
+  .contenedor-portada-home {
     height: 18rem; /* Altura más reducida */
   }
 
-  .contenedor-principal {
+  .contenedor-principal-portada-home {
     margin-top: 12rem; /* Menor espacio bajo la línea */
   }
 
-  .imagen-centrada {
-    max-width: 32rem; /* Imagen ligeramente más pequeña */
+  .imagen-centrada-portada-home {
+    max-width: 28rem; /* Imagen más pequeña */
   }
 
-  .separador-serpenteante {
+  .separador-serpenteante-portada-home {
     top: 9rem; /* Ajusta la posición de la línea */
   }
 
-  @keyframes subir-seccion {
-  from {
-    transform: translateY(-24rem); /* Posición inicial */
+  @keyframes subir-seccion-portada-home {
+    from {
+      transform: translateY(-25rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-28rem); /* Sección sube menos */
+    }
   }
-  to {
-    transform: translateY(-27rem); /* Sección sube 5rem */
+
+  @keyframes bajar-imagen-portada-home {
+    from {
+      transform: translateY(-22rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-16rem); /* Imagen baja menos */
+    }
   }
 }
 
-  /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(-25rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-14rem); /* Imagen baja 5rem */
-  }
-}
-}
-
-/* Pantallas pequeñas (menores a 768px) */
-@media (max-width: 768px) {
- .contenedor {
-    height: 14rem; /* Altura más reducida */
+/* Pantallas extra pequeñas (480px a 768px) */
+@media (max-width: 768px) and (min-width: 480px) {
+  .contenedor-portada-home {
+    height: 14rem; /* Altura compacta */
   }
 
-  .contenedor-principal {
-    margin-top: 12rem; /* Menor espacio bajo la línea */
+  .contenedor-principal-portada-home {
+    margin-top: 10rem; /* Espacio ajustado */
   }
 
-  .imagen-centrada {
-    max-width: 22rem; /* Imagen ligeramente más pequeña */
+  .imagen-centrada-portada-home {
+    max-width: 22rem; /* Imagen proporcional */
   }
 
-  .separador-serpenteante {
-    top: 9rem; /* Ajusta la posición de la línea */
+  .separador-serpenteante-portada-home {
+    top: 8rem; /* Ajusta la línea */
   }
 
-  @keyframes subir-seccion {
-  from {
-    transform: translateY(-24rem); /* Posición inicial */
+  @keyframes subir-seccion-portada-home {
+    from {
+      transform: translateY(-24rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-26rem); /* Sección sube menos */
+    }
   }
-  to {
-    transform: translateY(-28rem); /* Sección sube 5rem */
-  }
-}
 
-  /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(-25rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-14rem); /* Imagen baja 5rem */
+  @keyframes bajar-imagen-portada-home {
+    from {
+      transform: translateY(-20rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-11rem); /* Imagen baja menos */
+    }
   }
 }
 
-}
-/* Pantallas pequeñas (menores a 768px) */
+/* Pantallas muy pequeñas (menores a 480px) */
 @media (max-width: 480px) {
- .contenedor {
+  .contenedor-portada-home {
     height: 10rem; /* Altura más reducida */
   }
 
-  .contenedor-principal {
-    margin-top: 12rem; /* Menor espacio bajo la línea */
+  .contenedor-principal-portada-home {
+    margin-top: 8rem; /* Menor espacio bajo la línea */
   }
 
-  .imagen-centrada {
-    max-width: 15rem; /* Imagen ligeramente más pequeña */
+  .imagen-centrada-portada-home {
+    max-width: 15rem; /* Imagen más compacta */
   }
 
-  .separador-serpenteante {
-    top: 9rem; /* Ajusta la posición de la línea */
+  .separador-serpenteante-portada-home {
+    top: 6rem; /* Ajusta la posición de la línea */
   }
 
-  @keyframes subir-seccion {
-  from {
-    transform: translateY(-26.5rem); /* Posición inicial */
+  @keyframes subir-seccion-portada-home {
+    from {
+      transform: translateY(-24rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-25rem); /* Sección sube poco */
+    }
   }
-  to {
-    transform: translateY(-28rem); /* Sección sube 5rem */
+
+  @keyframes bajar-imagen-portada-home {
+    from {
+      transform: translateY(-18rem); /* Posición inicial */
+    }
+    to {
+      transform: translateY(-10rem); /* Imagen baja poco */
+    }
   }
 }
-
-  /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(-19rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-14rem); /* Imagen baja 5rem */
-  }
-}
-
-}
-
 
 </style>
 
@@ -336,10 +362,8 @@
 
     <!-- Contenedor para texto -->
     <div class="contenedor-texto-6">
-      <h2 class="text-with-line" style='margin-top: 20px;'>
-        <span class="colored-text font-georgia-normal" style="color: white">Entrégale Vida<br>A Tu Mesa</span>
-      </h2>
-      <p class="descripcion-texto-6" style="color: white">Comparte con nosotros el placer de una alimentación<br>sana y entretenida con distintos formatos de productos</p>
+      <p class="titulo-texto-6 colored-text font-georgia-normal" style="color: white">Entrégale Vida A Tu Mesa</p>
+      <p class="descripcion-texto-6" style="color: white">Comparte con nosotros el placer de una alimentación sana y entretenida con distintos formatos de productos</p>
     </div>
   </div>
 </div>
@@ -466,10 +490,47 @@
 /* Media Queries para Responsividad */
 /* ========================= */
 
-/* Pantallas Grandes (1024px o más) */
-@media (min-width: 1024px) {
+@media (min-width: 1500px) {
   .contenedor-6 {
-    height: 22rem; /* Altura más grande */
+    height: 25rem; /* Altura más grande */
+  }
+
+  .separador-serpenteante-6 {
+    top: -7rem; /* Línea más arriba */
+  }
+
+  .imagen-centrada-6 {
+    width: 32rem;
+    margin-top: -23rem;
+    margin-left: 40rem;
+  }
+
+  .contenedor-texto-6 {
+    top: -5rem;
+    left: 10rem;
+    width: 30rem;
+  }
+
+  .titulo-texto-6 {
+    font-size: 3rem;
+  }
+
+  .descripcion-texto-6 {
+    font-size: 1rem;
+  }
+
+  .boton-estilo {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+
+}
+
+/* Pantallas Grandes (1024px o más) */
+@media (min-width: 1024px) and (max-width: 1500px) {
+  .contenedor-6 {
+    height: 20rem; /* Altura más grande */
   }
 
   .separador-serpenteante-6 {
@@ -478,7 +539,7 @@
 
   .imagen-centrada-6 {
     width: 26rem;
-    margin-top: -20rem;
+    margin-top: -24rem;
     margin-left: 37rem;
   }
 
@@ -489,7 +550,8 @@
   }
 
   .titulo-texto-6 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+    width: 20rem;
   }
 
   .descripcion-texto-6 {
@@ -505,7 +567,7 @@
 /* Pantallas Medianas (768px - 1024px) */
 @media (max-width: 1024px) and (min-width: 768px) {
   .contenedor-6 {
-    height: 24rem;
+    height: 16rem;
   }
 
   .separador-serpenteante-6 {
@@ -520,7 +582,7 @@
 
   .contenedor-texto-6 {
     top: -8rem;
-    left: 6rem;
+    left: 3rem;
     width: 28rem;
   }
 
@@ -541,7 +603,7 @@
 /* Pantallas Pequeñas (Menores a 768px) */
 @media (max-width: 768px) {
   .contenedor-6 {
-    height: 23rem;
+    height: 18rem;
   }
 
   .separador-serpenteante-6 {
@@ -550,19 +612,19 @@
 
   .imagen-centrada-6 {
     width: 15rem;
-    margin-top: -20rem;
-    margin-left: 19rem;
+    margin-top: -21rem;
+    margin-left: 20rem;
   }
 
   .contenedor-texto-6 {
     top: -8rem;
     left: 4rem;
-    width: 22rem;
+    width: 18rem;
     text-align: left;
   }
 
   .titulo-texto-6 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .descripcion-texto-6 {
@@ -578,7 +640,7 @@
 /* Pantallas Muy Pequeñas (Menores a 480px) */
 @media (max-width: 480px) {
   .contenedor-6 {
-    height: 22rem;
+    height: 18rem;
   }
 
   .separador-serpenteante-6 {
@@ -587,19 +649,19 @@
 
   .imagen-centrada-6 {
     width: 10rem;
-    margin-top: -20rem;
-    margin-left: 15rem;
+    margin-top: -28rem;
+    margin-left: 0rem;
   }
 
   .contenedor-texto-6 {
-    top: -12rem;
+    top: -5rem;
     left: 2rem;
-    width: 12rem;
+    width: 90%;
     text-align: left;
   }
 
   .titulo-texto-6 {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
 
   .descripcion-texto-2{
@@ -654,7 +716,11 @@
 
 
 
-
+<div class="text-container">
+  <div class="text-with-line">
+    <span class="colored-text font-georgia-normal">Nuestros Productos</span>
+  </div>
+</div>
 
 
 
@@ -729,9 +795,9 @@
 
     <!-- Contenedor para texto -->
     <div class="contenedor-texto-2">
-      <h2 class="text-with-line" style='margin-top: 20px;'>
-        <span class="colored-text font-georgia-normal" style="color: white">Un Secreto Que <br>Muy Pocos Saben</span>
-      </h2>
+
+        <p class="titulo-texto-2 colored-text font-georgia-normal" style="color: white">Un Secreto Que <br>Muy Pocos Saben</p>
+  
       <p class="descripcion-texto-2" style="color: white">Nuestros tomates respetan procesos de inocuidad y de baja utilización de pesticidas. Sólo así cuidamos el área donde está la mayor cantidad de nutrientes: La piel. ¿Lo sabías?</p>
       <!-- Botones -->
       <div class="botones-container">
@@ -866,8 +932,45 @@
 /* Media Queries para Responsividad */
 /* ========================= */
 
+@media (min-width: 1500px) {
+  .contenedor-2 {
+    height: 28rem; /* Altura más grande */
+  }
+
+  .separador-serpenteante-2 {
+    top: -7rem; /* Línea más arriba */
+  }
+
+  .imagen-centrada-2 {
+    width: 32rem;
+    margin-top: -30rem;
+    margin-left: 40rem;
+  }
+
+  .contenedor-texto-2 {
+    top: -5rem;
+    left: 10rem;
+    width: 30rem;
+  }
+
+  .titulo-texto-2 {
+    font-size: 3rem;
+  }
+
+  .descripcion-texto-2 {
+    font-size: 1rem;
+  }
+
+  .boton-estilo {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+
+}
+
 /* Pantallas Grandes (1024px o más) */
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1500px) {
   .contenedor-2 {
     height: 24rem; /* Altura más grande */
   }
@@ -1075,7 +1178,32 @@
   justify-content: center; /* Centra verticalmente los elementos */
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1501px) {
+
+  .contenedor-principal-3 {
+    padding: 2rem; /* Espaciado interno estándar */
+    margin-top: 5rem; /* Margen superior estándar */
+  }
+
+  /* Ajustes para la sección superior */
+  .seccion-superior-3 {
+    height: 0rem; /* Mantener altura original */
+  }
+
+  /* Ajustes para la línea serpenteante */
+  .separador-serpenteante-3 {
+    top: -11.15rem; /* Posición original */
+  }
+
+  /* Contenedor principal flex-direction */
+  .contenedor-principal-3 {
+    flex-direction: column; /* Mantener dirección vertical */
+    align-items: center; /* Centrar elementos */
+    justify-content: center; /* Centrar verticalmente */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
   /* Contenedor principal */
   .contenedor-principal-3 {
     padding: 2rem; /* Espaciado interno estándar */
@@ -1089,7 +1217,7 @@
   
   /* Ajustes para la línea serpenteante */
   .separador-serpenteante-3 {
-    top: -8rem; /* Posición original */
+    top: -7rem; /* Posición original */
   }
   
   /* Contenedor principal flex-direction */
@@ -1706,7 +1834,7 @@ $(document).ready(function () {
         autoCarouselInterval = setInterval(function () {
           // Simular clic en el botón derecho
           $('.carosel-control-right').click();
-        }, 1500);
+        }, 4000);
       }
     }
 

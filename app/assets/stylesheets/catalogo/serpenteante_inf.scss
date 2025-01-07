@@ -3,7 +3,7 @@
 .contenedor-inf {
   position: relative; /* Para manejar posiciones absolutas dentro */
   width: 100%; /* Ocupa todo el ancho */
-  height: 5rem; /* Altura fija del contenedor */
+ 
   overflow: hidden; /* Asegura que no haya desbordes */
 }
 
@@ -44,3 +44,97 @@
   align-items: center; /* Centra horizontalmente los elementos */
   justify-content: center; /* Centra verticalmente los elementos */
 }
+
+@media (min-width: 1501px) {
+
+  .contenedor-inf {
+    height: 10rem; /* Ajusta la altura del contenedor */
+  }
+
+  .seccion-superior-inf {
+    height: 0rem; /* Ajusta la altura de la sección superior */
+  }
+
+  .separador-serpenteante-inf {
+    top: -9rem; /* Ajusta la posición de la línea serpenteante */
+  }
+
+  .contenedor-principal-inf {
+    margin-top: 16rem; /* Ajusta el espacio superior */
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+
+  .contenedor-inf {
+    height: 12rem; /* Ajusta la altura del contenedor */
+  }
+
+  .seccion-superior-inf {
+    height: 0rem; /* Ajusta la altura de la sección superior */
+  }
+
+  .separador-serpenteante-inf {
+    top: -6rem; /* Ajusta la posición de la línea serpenteante */
+  }
+
+  .contenedor-principal-inf {
+    margin-top: 16rem; /* Ajusta el espacio superior */
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .contenedor-inf {
+    height: 8rem; /* Ajusta la altura del contenedor */
+  }
+
+  .seccion-superior-inf {
+    height: 0rem; /* Ajusta la altura de la sección superior */
+  }
+
+  .separador-serpenteante-inf {
+    top: -2rem; /* Ajusta la posición de la línea serpenteante */
+  }
+
+  .contenedor-principal-inf {
+    margin-top: 16rem; /* Ajusta el espacio superior */
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) {
+  .contenedor-inf {
+    height: 5rem; /* Ajusta la altura del contenedor */
+  }
+
+  .seccion-superior-inf {
+    height: 0rem; /* Ajusta la altura de la sección superior */
+  }
+
+  .separador-serpenteante-inf {
+    top: -3rem; /* Ajusta la posición de la línea serpenteante */
+  }
+
+  .contenedor-principal-inf {
+    margin-top: 16rem; /* Ajusta el espacio superior */
+  } 
+}
+
+@media (max-width: 480px) {
+  .contenedor-inf {
+    height: 5rem; /* Ajusta la altura del contenedor */
+  }
+
+  .seccion-superior-inf {
+    height: 0rem; /* Ajusta la altura de la sección superior */
+  }
+
+  .separador-serpenteante-inf {
+    top: -1rem; /* Ajusta la posición de la línea serpenteante */
+  }
+
+  .contenedor-principal-inf {
+    margin-top: 16rem; /* Ajusta el espacio superior */
+  } 
+
+} 

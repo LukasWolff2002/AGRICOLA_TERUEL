@@ -8,37 +8,35 @@
 <%= stylesheet_link_tag 'text_with_line' %>
 <%= stylesheet_link_tag 'paragraph' %>
 <%= stylesheet_link_tag 'catalogo/serpenteante_inf' %>
+<%= stylesheet_link_tag 'catalogo/serpenteante_sup' %>
 
 
 
-
-<div class="contenedor-2">
+<div class="contenedor-portada-catalogo">
   <!-- Sección superior de color -->
-  <div class="seccion-superior-2"></div>
+  <div class="seccion-superior-portada-catalogo"></div>
 
   <!-- Línea serpenteante -->
-  <svg class="separador-serpenteante-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path class="color-serpenteante-2" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  <svg class="separador-serpenteante-portada-catalogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-portada-catalogo" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
   </svg>
 
   <!-- Contenedor principal -->
-  <div class="contenedor-principal-2">
+  <div class="contenedor-principal-portada-catalogo">
     <!-- Imagen centrada -->
     <% if portada_image.present? %>
-      <img class="imagen-centrada-2" src="<%= asset_path(portada_image) %>" alt="Imagen centrada">
-  
+      <img class="imagen-centrada-portada-catalogo" src="<%= asset_path(portada_image) %>" alt="Imagen centrada">
     <% end %>
-    
 
     <!-- Contenedor para texto -->
-    <div class="contenedor-texto-2">
+    <div class="contenedor-texto-portada-catalogo">
       <h2>
         <% if product_title.present? %>
-          <span class="titulo-texto-2 colored-text font-georgia-normal" style="color: white"><%= product_title %></span>
+          <span class="titulo-texto-portada-catalogo colored-text font-georgia-normal" style="color: white"><%= product_title %></span>
         <% end %>
       </h2>
       <% if product_description.present? %>
-        <p class="descripcion-texto-2" style="color: white"><%= product_description %></p>
+        <p class="descripcion-texto-portada-catalogo" style="color: white"><%= product_description %></p>
       <% else %>
         <p>Pronto actualizaremos esta sección</p>
       <% end %>
@@ -46,22 +44,19 @@
   </div>
 </div>
 
-
-
 <style>
 /* ========================= */
 /* Estilos Generales del Contenedor */
 /* ========================= */
-.contenedor-2 {
+.contenedor-portada-catalogo {
   position: relative;
   width: 100%;
-  height: 25rem;
   overflow: hidden;
   background-color: var(--sex-color); /* Color de fondo */
 }
 
 /* Sección superior de color */
-.seccion-superior-2 {
+.seccion-superior-portada-catalogo {
   background-color: var(--sex-color);
   width: 100%;
   height: 1rem;
@@ -72,21 +67,20 @@
 }
 
 /* Línea serpenteante */
-.separador-serpenteante-2 {
+.separador-serpenteante-portada-catalogo {
   position: absolute;
   top: -3rem; /* Posición inicial */
   width: 100%;
   height: auto;
   z-index: 1;
-
 }
 
-.color-serpenteante-2 {
+.color-serpenteante-portada-catalogo {
   fill: var(--secondary-color);
 }
 
 /* Contenedor principal */
-.contenedor-principal-2 {
+.contenedor-principal-portada-catalogo {
   background-color: var(--sex-color);
   padding: 2rem;
   position: relative;
@@ -100,7 +94,7 @@
 }
 
 /* Imagen centrada */
-.imagen-centrada-2 {
+.imagen-centrada-portada-catalogo {
   width: 25rem;
   height: auto;
   margin-top: -17rem;
@@ -111,7 +105,7 @@
 }
 
 /* Contenedor de texto */
-.contenedor-texto-2 {
+.contenedor-texto-portada-catalogo {
   position: absolute;
   top: -1rem; /* Ajustable */
   left: 10rem; /* Ajustable */
@@ -122,7 +116,7 @@
 }
 
 /* Título del texto */
-.titulo-texto-2 {
+.titulo-texto-portada-catalogo {
   font-size: 4rem;
   font-weight: bold;
   color: var(--primary-color);
@@ -130,7 +124,7 @@
 }
 
 /* Descripción del texto */
-.descripcion-texto-2 {
+.descripcion-texto-portada-catalogo {
   font-size: 1rem;
   color: var(--secondary-color);
   width: 30rem;
@@ -171,7 +165,171 @@
 /* Media Queries para Responsividad */
 /* ========================= */
 
+@media (min-width: 1501px) {
+  .contenedor-principal-portada-catalogo {
+    margin-top: 10rem;
+    height: 15rem;
+  }
+
+  .separador-serpenteante-portada-catalogo {
+    top: -8rem;
+  }
+
+  .imagen-centrada-portada-catalogo {
+    width: 30rem;
+    margin-top: -14rem;
+    margin-left: 40rem;
+  }
+
+  .contenedor-texto-portada-catalogo {
+    top: 0rem;
+    left: 15rem;
+    width: 60rem;
+  }
+
+  .titulo-texto-portada-catalogo {
+    font-size: 4rem;
+  }
+
+  .descripcion-texto-portada-catalogo {
+    font-size: 1.3rem;
+    width: 30rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+  .contenedor-principal-portada-catalogo {
+    margin-top: 10rem;
+    height: 10rem
+  }
+
+  .separador-serpenteante-portada-catalogo {
+    top: -4rem;
+  }
+
+  .imagen-centrada-portada-catalogo {
+    width: 20rem;
+    margin-top: -20rem;
+    margin-left: 35rem;
+  }
+
+  .contenedor-texto-portada-catalogo {
+    top: -2rem;
+    left: 6rem;
+    width: 60rem;
+  }
+
+  .titulo-texto-portada-catalogo {
+    font-size: 3rem;
+  }
+
+  .descripcion-texto-portada-catalogo {
+    font-size: 1.15rem;
+    width: 30rem;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .contenedor-principal-portada-catalogo {
+    margin-top: 10rem;
+    height: 10rem
+  }
+
+  .separador-serpenteante-portada-catalogo {
+    top: -4rem;
+  }
+
+  .imagen-centrada-portada-catalogo {
+    width: 20rem;
+    margin-top: -12rem;
+    margin-left: 25rem;
+  }
+
+  .contenedor-texto-portada-catalogo {
+    top: -2rem;
+    left: 5rem;
+    width: 30rem;
+  }
+
+  .titulo-texto-portada-catalogo {
+    font-size: 2.5rem;
+  }
+
+  .descripcion-texto-portada-catalogo {
+    font-size: 1.15rem;
+    width: 25rem;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+  .contenedor-principal-portada-catalogo {
+    margin-top: 10rem;
+    height: 10rem
+  }
+
+  .separador-serpenteante-portada-catalogo {
+    top: -3rem;
+  }
+
+  .imagen-centrada-portada-catalogo {
+    width: 15rem;
+    margin-top: -16rem;
+    margin-left: 18rem;
+  }
+
+  .contenedor-texto-portada-catalogo {
+    top: -5rem;
+    left: 5rem;
+    width: 10rem;
+  }
+
+  .titulo-texto-portada-catalogo {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .descripcion-texto-portada-catalogo {
+    font-size: 1rem;
+    width: 14rem;
+    text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor-principal-portada-catalogo {
+    margin-top: 6rem;
+    height: 10rem
+  }
+
+  .separador-serpenteante-portada-catalogo {
+    top: 0rem;
+  }
+
+  .imagen-centrada-portada-catalogo {
+    width: 15rem;
+    margin-top: -8rem;
+    margin-left: 13rem;
+  }
+
+  .contenedor-texto-portada-catalogo {
+    top: -1rem;
+    left: 3rem;
+    width: 10rem;
+  }
+
+  .titulo-texto-portada-catalogo {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  .descripcion-texto-portada-catalogo {
+    font-size: 1rem;
+    width: 14rem;
+    text-align: left;
+  }
+}
 </style>
+
 
 
 
@@ -220,13 +378,13 @@
 
 
 
-<div class="contenedor-4">
+<div class="contenedor-sup">
   <!-- Sección superior de color -->
-  <div class="seccion-superior-4"></div>
+  <div class="seccion-sup"></div>
 
   <!-- Línea serpenteante -->
-  <svg class="separador-serpenteante-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path class="color-serpenteante-4" style="fill: var(--tertiary-color);" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  <svg class="separador-sup" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-sup" style="fill: var(--tertiary-color);" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
   </svg>
 
   </div>
@@ -235,121 +393,6 @@
 
 
 
-<style>
-/* Contenedor principal que envuelve todo */
-.contenedor-4 {
-  position: relative;
-  width: 100%;
-  height: 7rem;
-  overflow: hidden;
-  background-color: var(--primary-color); /* Color de fondo */
-}
-
-/* Sección superior de color */
-.seccion-superior-4 {
-  background-color: var(--sex-color);
-  width: 100%;
-  height: 1rem;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-
-/* Línea serpenteante */
-.separador-serpenteante-4 {
-  position: absolute;
-  top: -7rem;
-  width: 100%;
-  height: auto;
-  z-index: 2;
-}
-
-.color-serpenteante-4 {
-  fill: var(--tertiary-color);
-}
-
-/* Contenedor principal */
-.contenedor-principal-4 {
-  background-color: var(--primary-color);
-  padding: 2rem;
-  position: relative;
-  z-index: 1;
-  margin-top: 14rem;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Imagen centrada */
-.imagen-centrada-4 {
-  width: 32rem;
-  height: auto;
-  margin-top: -30rem;
-  margin-left: 40rem;
-  object-fit: contain;
-  position: relative;
-  z-index: 0;
-}
-
-/* Contenedor de texto */
-.contenedor-texto-4 {
-  position: absolute;
-  top: -5rem; /* Posición inicial (ajustable) */
-  left: 10rem; /* Posición inicial (ajustable) */
-  width: 30rem; /* Dimensiones del contenedor */
-  padding: 0rem;
-  z-index: 3; /* Por encima de la imagen */
-  text-align: left; /* Centrar texto */
-}
-
-/* Título del texto */
-.titulo-texto-4 {
-  font-size: 2rem;
-  font-weight: bold;
-  color: var(--primary-color);
-  margin-bottom: 0.5rem;
-}
-
-/* Descripción del texto */
-.descripcion-texto-4 {
-  font-size: 1rem;
-  color: var(--secondary-color);
-}
-
-/* Contenedor de botones */
-.botones-container {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: left;
-  gap: 1rem; /* Espacio entre enlaces */
-}
-
-/* Botones (enlaces) */
-.boton-estilo {
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: white;
-  text-decoration: none; /* Quitar subrayado */
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: inline-block; /* Asegurar que se comporte como un botón */
-}
-
-.boton-estilo:hover {
-  background-color: var(--secondary-color);
-  transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
-}
-
-.boton-estilo:active {
-  background-color: var(--tertiary-color);
-  transform: scale(0.95); /* Reducir ligeramente al hacer clic */
-}
-</style>
 
 
 

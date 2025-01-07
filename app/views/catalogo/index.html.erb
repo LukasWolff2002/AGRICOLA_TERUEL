@@ -3,15 +3,331 @@
 <%= stylesheet_link_tag 'paragraph' %>
 <%= stylesheet_link_tag 'columns' %>
 <%= stylesheet_link_tag 'slides' %>
+<%= stylesheet_link_tag 'catalogo/serpenteante_inf' %>
 
-<div class="portada-container" id='catalogo-index'>
-  <%= image_tag 'catalogo/CATALOGO_LOGO.jpg', class: "portada-position", style: "position: relative; top: 20px; left: 0px; transform: translate(0%, -4%);" %>
-  <div class="image-text" style='background-color: rgba(229, 8, 8, 0.7);'>
-    Catálogo
+
+
+
+<div class="contenedor-portada-catalogo">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-portada-catalogo"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-portada-catalogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-portada-catalogo" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+
+  <!-- Contenedor principal -->
+  <div class="contenedor-principal-portada-catalogo">
+    <!-- Imagen centrada -->
+    <div class="contenedor-imagenes">
+      <img class="imagen-1" src="<%= asset_path('catalogo/granel.png') %>" alt="Imagen 1">
+      <img class="imagen-2" src="<%= asset_path('catalogo/cherry_2.png') %>" alt="Imagen 2">
+      <img class="imagen-3" src="<%= asset_path('home/rama_tomates.png') %>" alt="Imagen 3">  
+    </div>
+
+    <!-- Contenedor para texto -->
+    <div class="contenedor-texto-portada-catalogo">
+      <h2>
+       
+        <span class="titulo-texto-portada-catalogo colored-text font-georgia-normal" style="color: white">Catalogo</span>
+        
+      </h2>
+      
+    </div>
   </div>
 </div>
 
-<div class='container' style='margin-top: 30px;'></div>
+<style>
+/* ========================= */
+/* Estilos Generales del Contenedor */
+/* ========================= */
+.contenedor-portada-catalogo {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--sex-color); /* Color de fondo */
+}
+
+/* Sección superior de color */
+.seccion-superior-portada-catalogo {
+  background-color: var(--sex-color);
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Línea serpenteante */
+.separador-serpenteante-portada-catalogo {
+  position: absolute;
+  top: -3rem; /* Posición inicial */
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+
+.color-serpenteante-portada-catalogo {
+  fill: var(--secondary-color);
+}
+
+/* Contenedor principal */
+.contenedor-principal-portada-catalogo {
+  background-color: var(--sex-color);
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 14rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor-imagenes {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+/* Imagen centrada */
+.imagen-1 {
+  
+  object-fit: contain;
+  position: relative;
+  z-index: 10;
+}
+
+/* Imagen centrada */
+.imagen-2 {
+  
+  object-fit: contain;
+  position: relative;
+  z-index: 11;
+}
+
+/* Imagen centrada */
+.imagen-3 {
+ 
+  object-fit: contain;
+  position: relative;
+  z-index: 12;
+}
+
+/* Imagen centrada */
+.imagen-4 {
+ 
+  object-fit: contain;
+  position: relative;
+  z-index: 13;
+}
+
+/* Imagen centrada */
+.imagen-5 {
+  
+  object-fit: contain;
+  position: relative;
+  z-index: 14;
+}
+
+/* Contenedor de texto */
+.contenedor-texto-portada-catalogo {
+  position: absolute;
+  top: -1rem; /* Ajustable */
+  left: 10rem; /* Ajustable */
+  width: 60rem;
+  padding: 0rem;
+  z-index: 3; /* Por encima de la imagen */
+  text-align: left;
+}
+
+/* Título del texto */
+.titulo-texto-portada-catalogo {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción del texto */
+.descripcion-texto-portada-catalogo {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  width: 30rem;
+}
+
+/* Contenedor de botones */
+.botones-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
+
+/* Botones (enlaces) */
+.boton-estilo {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.boton-estilo:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.boton-estilo:active {
+  background-color: var(--tertiary-color);
+  transform: scale(0.95);
+}
+
+/* ========================= */
+/* Media Queries para Responsividad */
+/* ========================= */
+
+@media (min-width: 1501px) {
+  .contenedor-principal-portada-catalogo {
+    margin-top: 10rem;
+    height: 15rem;
+  }
+
+  .separador-serpenteante-portada-catalogo {
+    top: -8rem;
+  }
+
+  .contenedor-imagenes {
+    height: 50rem;
+    margin-top: -15rem;
+  }
+
+
+
+  .contenedor-texto-portada-catalogo {
+    top: 0rem;
+    left: 15rem;
+    width: 60rem;
+  }
+
+  .titulo-texto-portada-catalogo {
+    font-size: 4rem;
+  }
+
+  .descripcion-texto-portada-catalogo {
+    font-size: 1.3rem;
+    width: 30rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px) {
+  .contenedor-principal-portada-catalogo {
+    margin-top: 10rem;
+    height: 10rem
+  }
+
+  .separador-serpenteante-portada-catalogo {
+    top: -4rem;
+  }
+
+  .contenedor-imagenes {
+    height: 50rem;
+    margin-top: -15rem;
+  }
+
+  .imagen-1 {
+    width: 20rem;
+    margin-top: 0rem;
+    margin-left: 70%;
+  }
+
+  .imagen-2 {
+    width: 20rem;
+    margin-top: -35rem;
+    margin-left: 0%;
+  }
+
+  .imagen-3 {
+    width: 15rem;
+    margin-top: -30rem;
+    margin-left: 10%;
+  }
+
+  .contenedor-texto-portada-catalogo {
+    top: 0rem;
+    left: 6rem;
+    width: 60rem;
+  }
+
+  .titulo-texto-portada-catalogo {
+    font-size: 5rem;
+  }
+
+  .descripcion-texto-portada-catalogo {
+    font-size: 1.15rem;
+    width: 30rem;
+  }
+}
+</style>
+
+
+
+<div class="contenedor-inf">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-inf"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-inf" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-inf" style="fill: var(--sex-color);" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+</div>
+
+
+
+
+
+
+<div class="container" style="height: 300px"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="columnas_4_contenedor">
   <div class="column">

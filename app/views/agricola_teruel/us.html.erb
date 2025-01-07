@@ -7,7 +7,145 @@
 <%= stylesheet_link_tag 'images_hover' %>
 
 
-<div class="container" style="height: 50px"></div>
+<div class="contenedor-2">
+  <!-- Sección superior de color -->
+  <div class="seccion-superior-2"></div>
+
+  <!-- Línea serpenteante -->
+  <svg class="separador-serpenteante-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path class="color-serpenteante-2" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+  </svg>
+
+</div>
+
+
+
+<style>
+/* ========================= */
+/* Estilos Generales del Contenedor */
+/* ========================= */
+.contenedor-2 {
+  position: relative;
+  width: 100%;
+  height: 5rem;
+  overflow: hidden;
+  background-color: var(--sex-color); /* Color de fondo */
+}
+
+/* Sección superior de color */
+.seccion-superior-2 {
+  background-color: var(--sex-color);
+  width: 100%;
+  height: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Línea serpenteante */
+.separador-serpenteante-2 {
+  position: absolute;
+  top: -8rem; /* Posición inicial */
+  width: 100%;
+  height: auto;
+  z-index: 1;
+
+}
+
+.color-serpenteante-2 {
+  fill: var(--secondary-color);
+}
+
+/* Contenedor principal */
+.contenedor-principal-2 {
+  background-color: var(--sex-color);
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  margin-top: 14rem;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen centrada */
+.imagen-centrada-2 {
+  width: 25rem;
+  height: auto;
+  margin-top: -17rem;
+  margin-left: 40rem;
+  object-fit: contain;
+  position: relative;
+  z-index: 10;
+}
+
+/* Contenedor de texto */
+.contenedor-texto-2 {
+  position: absolute;
+  top: -1rem; /* Ajustable */
+  left: 10rem; /* Ajustable */
+  width: 60rem;
+  padding: 0rem;
+  z-index: 3; /* Por encima de la imagen */
+  text-align: left;
+}
+
+/* Título del texto */
+.titulo-texto-2 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+/* Descripción del texto */
+.descripcion-texto-2 {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  width: 30rem;
+}
+
+/* Contenedor de botones */
+.botones-container {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: left;
+  gap: 1rem;
+}
+
+/* Botones (enlaces) */
+.boton-estilo {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+.boton-estilo:hover {
+  background-color: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.boton-estilo:active {
+  background-color: var(--secondary-color);
+  transform: scale(0.95);
+}
+
+/* ========================= */
+/* Media Queries para Responsividad */
+/* ========================= */
+
+</style>
+
+
 
 <!-- Contenedor de Texto -->
 <div class="contenedor-texto-full">
@@ -40,12 +178,14 @@
 <div class="text-container">
   <div class="text-with-line">
     <span class="colored-text font-georgia-normal">Nuestro Equipo</span>
+    
   </div>
+  <p class="parrafo-texto-lineafont-georgia-normal">Recogemos lo que sembranos, y en nuestro caso, sembramos y cultivamos amor,<br> paciencia y consciencia por productos limpios para tu familia y mesa.</p>
 </div>
 
-<div class="container">
-  <p class="font-avenir-normal">Recogemos lo que sembranos, y en nuestro caso, sembramos y cultivamos amor,<br> paciencia y consciencia por productos limpios para tu familia y mesa.</p>
-</div>
+<div class='container' style='height: 30px'></div>
+
+
 
 <div class="container">
   <div class="row align-items-start">
@@ -84,7 +224,6 @@
 
 
 
-<div class="container" style="height: 1000px"></div>
 
 
 
@@ -147,271 +286,6 @@
 
 
 
-<div class="contenedor">
-  <!-- Línea serpenteante -->
-  <svg class="separador-serpenteante" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path fill="var(--sex-color)" fill-opacity="1" d="M0,192L40,170.7C80,149,160,107,240,117.3C320,128,400,192,480,202.7C560,213,640,171,720,138.7C800,107,880,85,960,74.7C1040,64,1120,64,1200,74.7C1280,85,1360,107,1400,117.3L1440,128L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
-  </svg>
-
-  <!-- Contenedor principal -->
-  <div class="contenedor-principal">
-    <!-- Imagen centrada -->
-    <img class="imagen-centrada" src="<%= asset_path('us/PORTADA.png') %>" alt="Imagen centrada">
-  </div>
-</div>
-
-<style>
-/* Contenedor principal que envuelve todo */
-.contenedor {
-  position: relative; /* Para manejar posiciones absolutas dentro */
-  width: 100%; /* Ocupa todo el ancho */
-  height: 25rem; /* Altura fija del contenedor */
-  overflow: hidden; /* Asegura que no haya desbordes */
-}
-
-/* Sección superior de color */
-.seccion-superior {
-  background-color: var(--secondary-color); /* Color de la parte superior */
-  width: 100%; /* Ocupa todo el ancho */
-  height: 1rem; /* Altura fija de la sección superior */
-  position: absolute;
-  top: 0; /* Posición inicial */
-  left: 0;
-  z-index: 1; /* Aparece por encima del contenedor principal */
-  animation: subir-seccion 1.5s ease-out forwards; /* Animación para subir */
-}
-
-/* Línea serpenteante */
-.separador-serpenteante {
-  position: absolute;
-  top: 10rem; /* Ubica la línea justo debajo de la sección superior */
-  width: 100%; /* Ocupa todo el ancho */
-  height: auto; /* Ajusta automáticamente su altura */
-  z-index: 2; /* Aparece sobre el contenedor principal pero junto con la sección superior */
-  animation: subir-seccion 1.5s ease-out forwards; /* Animación para que suba junto con la sección */
-}
-
-.color-serpenteante {
-  fill: var(--secondary-color); /* Color de la línea serpenteante */
-}
-
-/* Contenedor principal */
-.contenedor-principal {
-  background-color: var(--tertiary-color); /* Color del contenedor principal */
-  padding: 2rem; /* Espaciado interno */
-  position: relative; /* Flujo normal dentro del contenedor */
-  z-index: 1; /* Aparece debajo de la sección superior */
-  margin-top: 14rem; /* Espacio para que quede debajo de la línea serpenteante */
-  height: auto;
-  display: flex; /* Habilita Flexbox */
-  flex-direction: column; /* Asegura que los elementos se apilen verticalmente */
-  align-items: center; /* Centra horizontalmente los elementos */
-  justify-content: center; /* Centra verticalmente los elementos */
-}
-
-/* Imagen centrada */
-.imagen-centrada {
-  max-width: 40%; /* Ajusta el ancho máximo de la imagen */
-  height: auto; /* Mantiene la proporción de la imagen */
-  margin-bottom: 1rem; /* Espaciado debajo de la imagen */
-  margin-left: 40rem;
-  object-fit: contain; /* Evita la distorsión de la imagen */
-  position: relative; /* Para permitir la animación */
-  z-index: 0; /* Asegura que esté sobre la sección superior */
-  animation: bajar-imagen 1.5s ease-out forwards; /* Animación para bajar la imagen */
-}
-
-/* Animación para subir la sección superior y la línea serpenteante */
-@keyframes subir-seccion {
-  from {
-    transform: translateY(-4rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(1rem); /* Sección sube 7rem */
-  }
-}
-
-/* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(1rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-14rem); /* Imagen baja 11rem */
-  }
-}
-
-@media (min-width: 1024px) {
-    .contenedor {
-    height: 25rem; /* Aumenta la altura */
-  }
-
-  .contenedor-principal {
-    margin-top: 16rem; /* Mayor espacio bajo la línea */
-  }
-
-  .imagen-centrada {
-    max-width: 40rem; /* Imagen más grande */
-  }
-
-  .separador-serpenteante {
-    top: 12rem; /* Ajusta la posición de la línea */
-  }
-
-  @keyframes subir-seccion {
-  from {
-    transform: translateY(0.5rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-1rem); /* Sección sube 5rem */
-  }
-}
-
-  /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(0rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-16rem); /* Imagen baja 5rem */
-  }
-}
-}
-
-@media (max-width: 1024px) and (min-width: 768px) {
-    .contenedor {
-    height: 18rem; /* Aumenta la altura */
-  }
-
-  .contenedor-principal {
-    margin-top: 16rem; /* Mayor espacio bajo la línea */
-  }
-
-  .imagen-centrada {
-    max-width: 25rem; /* Imagen más grande */
-    margin-left: 30rem;
-  }
-
-  .separador-serpenteante {
-    top: 12rem; /* Ajusta la posición de la línea */
-  }
-
-  @keyframes subir-seccion {
-  from {
-    transform: translateY(0.5rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-4rem); /* Sección sube 5rem */
-  }
-}
-
-  /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(0rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-16rem); /* Imagen baja 5rem */
-  }
-}
-}
-
-@media (max-width: 768px) {
-   .contenedor {
-    height: 17rem; /* Aumenta la altura */
-  }
-
-  .contenedor-principal {
-    margin-top: 16rem; /* Mayor espacio bajo la línea */
-  }
-
-  .imagen-centrada {
-    max-width: 18rem; /* Imagen más grande */
-    margin-left: 20rem;
-  }
-
-  .separador-serpenteante {
-    top: 12rem; /* Ajusta la posición de la línea */
-  }
-
-  @keyframes subir-seccion {
-  from {
-    transform: translateY(0.5rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-1.6rem); /* Sección sube 5rem */
-  }
-}
-
-  /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(0rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-16rem); /* Imagen baja 5rem */
-  }
-}
-}
-
-@media (max-width: 480px) {
-   .contenedor {
-    height: 13rem; /* Aumenta la altura */
-  }
-
-  .contenedor-principal {
-    margin-top: 16rem; /* Mayor espacio bajo la línea */
-  }
-
-  .imagen-centrada {
-    max-width: 18rem; /* Imagen más grande */
-    margin-left: 15rem;
-  }
-
-  .separador-serpenteante {
-    top: 12rem; /* Ajusta la posición de la línea */
-  }
-
-  @keyframes subir-seccion {
-  from {
-    transform: translateY(0.5rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-3rem); /* Sección sube 5rem */
-  }
-}
-
-  /* Animación para bajar la imagen */
-@keyframes bajar-imagen {
-  from {
-    transform: translateY(0rem); /* Posición inicial */
-  }
-  to {
-    transform: translateY(-16rem); /* Imagen baja 5rem */
-  }
-}
-
-}
-</style>
-
-
-<!-- Contenedor de Texto -->
-<div class="contenedor-texto-full">
-    <div class="contenedor-texto">
-      <p>
-        Empresa fue fundada en 2015 por dos amigos especialistas en la producción de hortalizas. El propósito central siempre fue lograr el producto más inocuo posible. Esta iniciativa fue tomada por la gran cantidad de pesticidas que se utiliza en la agricultura y porque los consumidores pelan el tomate para evitar problemas de contaminación, pero muy pocos saben que la mayor concentración de nutrientes y sustancias benéficas se encuentran en la piel. ¡Agrícola Teruel quiere lograr producir tomates limpios y nutritivos para el ser humano!
-      </p>
-      <ul class="lista-beneficios">
-      <li><i class="bi bi-check-lg icono-lista"></i> Producimos con un Manejo Integrado de Plagas (MIP)</li>
-      <li><i class="bi bi-check-lg icono-lista"></i> Utilizamos técnicas de producción de baja cantidad de pesticidas, para garantizar productos limpios y de bajo residuo.</li>
-      <li><i class="bi bi-check-lg icono-lista"></i> Nuestro proceso productivo permite obtener un producto de calidad que disminuya riesgos de enfermedades cardíacas, hipertensión, cáncer, envejecimiento, asma, cataratas, entre otros.</li>
-      <li><i class="bi bi-check-lg icono-lista"></i> Contamos con Certificaciones GlobalGap, FSMA, GRASP.</li>
-    </ul>
-    
-    </div>
-    
-    
-  </div>
 
 
 
@@ -466,43 +340,6 @@
     
 
 </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="contenedor-3">
-  <!-- Sección superior de color -->
-  <div class="seccion-superior-3"></div>
-
-  <!-- Línea serpenteante -->
-  <svg class="separador-serpenteante-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-    <path class="color-serpenteante-3" d="M0,192L60,186.7C120,181,240,171,360,181.3C480,192,600,224,720,218.7C840,213,960,171,1080,154.7C1200,139,1320,149,1380,154.7L1440,160L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
-  </svg>
-</div>
 
 <style>
 
@@ -660,43 +497,6 @@
 
 
 
-
-
-
-<div class='container' style='margin-top: 30px;'></div>
-
-<div class="text-container">
-  <div class="text-with-line">
-    <span class="colored-text font-georgia-normal">Nuestro Equipo</span>
-  </div>
-</div>
-
-<div class="container">
-  <p class="font-avenir-normal">Recogemos lo que sembranos, y en nuestro caso, sembramos y cultivamos amor,<br> paciencia y consciencia por productos limpios para tu familia y mesa.</p>
-</div>
-
-<div class="container">
-  <div class="row align-items-start">
-    <div class="col">
-      <div class="image-container">
-        <%= image_tag 'us/DIEGO_US.jpg', alt: "Diego Ortiz", class: "hover-image" %>
-        <div class="fixed-text">
-          <div class="name font-georgia-normal">Diego Ortiz</div>
-          <div class="description">Gerente General</div>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="image-container">
-        <%= image_tag 'us/JAVIER.jpg', alt: "Javier Martínez", class: "hover-image" %>
-        <div class="fixed-text">
-          <div class="name font-georgia-normal">Javier Devia</div>
-          <div class="description">Gerente Técnico - Director</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
